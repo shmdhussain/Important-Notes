@@ -1,0 +1,10 @@
+@dw : (-2px);
+.rwd-half( @w ) {
+  @ww : (@w + @dw);
+  @media screen and (max-width: @ww ) {
+    input, select, textarea, .input-append {
+      width: (@w - 82px);
+    }
+  }
+}
+.rwd-half( 482px );
