@@ -1,0 +1,76 @@
+On the host computer where you want to run weinre, perform the following steps:
+Download and install node.js
+http://nodejs.org/download/
+Use npm to download and install weinre
+Open a command prompt window
+Mac OS: The Mac command prompt can be accessed through a utility called terminal. To access the terminal utility:
+ Command + Space will bring up your Spotlight search (Magnifying glass in the upper right of your screen)
+Start typing "terminal".
+Select the terminal application
+Win: Click the Start button and type cmd into "Search programs and files" input box and press enter
+Enter the following command:
+Mac OS: sudo npm install -g weinre
+Win: 
+ 
+(Note: the -g option here means "global" and installs weinre to a folder in your path so you can run weinre without needing to navigate to a folder or specify a path to weinre.)
+Launch weinre
+Open a command prompt window
+Type the following command line
+WINDOWS node weinre --boundHost -all- ("-all-" makes weinre available on localhost and all your IP addresses)
+MAC weinre --boundHost -all-
+You should see a message similar to this: "2012-10-12T20:33:06.957Z weinre: starting server at http://localhost:8080"
+Ensure weinre is running
+From the computer you want to use Edge Inspect with your new weinre instance, go to a browser and enter the URL and port number you saw in the previous step.
+You should see a page with information about weinre. If you do, weinre is up and running on that computer.
+Tell Edge Inspect to use your new shiny new weinre server
+Right-click on the Edge Inspect Chrome extension icon and choose Options
+Look for the Weinre Server section and change the dropdown from "Default (Adobe)" to "Custom".
+Edit the text input field next to the dropdown and put in the your computer's IP address and port number. You may enter
+ localhost:8080 
+or you can find your computer's IP address displayed at the top of the Edge Inspect dialog in Chrome.
+Click the Save button next to the URL field.
+ 
+You should now be able to use Edge Inspect and do remote inspection from your own weinre instance.
+ 
+ 
+Shutting down weinre
+You can stop the weinre server at any time either by closing the command prompt window where it's running or by giving that window focus and pressing Ctrl-C.
+ 
+ 
+How to handle host computer IP address changes
+If the IP address of the machine you're running weinre on ever changes, you can deal with that pretty easily.
+Shut down weinre as detailed above.
+Open a new command prompt window (or re-use the one it was running in)
+Type the following command line:
+WINDOWS node weinre --boundHost -all- 
+MAC weinre --boundHost -all- 
+Switch to Chrome, and right-click on the Edge Inspect icon, choose Options, and in the weinre Server section, update the IP address.
+
+npm config set proxy http://proxy.company.com:8080
+npm config set https-proxy http://proxy.company.com:8080
+
+
+npm config set proxy http://139.76.69.1:8080
+npm config set https-proxy http://139.76.69.1:8080
+
+npm config set proxy http://135.28.13.11:8080
+	
+
+
+weinre [options]
+The server will run until you kill it. Control-C will do the job.
+
+Options available are:
+
+--help (or -? or -h)
+Display this help.
+
+--httpPort [portNumber]
+The port to run the HTTP server on.
+
+Default: 8080
+weinre --boundHost -all- --httpPort 8082
+<script src="http://10.87.136.56:8082/target/target-script-min.js#hus"></script>
+netsh int tcp set global autotuninglevel=disabled
+
+http://10.87.136.56:8082/client/#hus
