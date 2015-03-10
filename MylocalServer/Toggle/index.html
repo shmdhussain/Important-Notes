@@ -1,0 +1,18 @@
+	<html xmlns:ng="http://angularjs.org" lang="en" id="ng-app" ng-app="myApp">
+		<head>
+			<meta charset="utf-8">
+			<title>Angular App</title>
+			<script src="/lib/angular.js"></script>
+			<script src="/lib/angular-route.js"></script>
+			
+			<script src="app.js"></script>
+			<script src="js/controllers/ctrl.js"></script>
+		</head>
+		<body>
+			<div ng-controller="parentCtrl" class="">
+				<div ng-view>
+					
+				</div>
+			</div>
+		</body>
+	</html>
