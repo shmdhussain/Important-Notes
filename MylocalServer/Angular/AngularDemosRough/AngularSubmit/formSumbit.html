@@ -1,0 +1,60 @@
+	<!DOCTYPE html>
+	<html lang="en" ng-app="testapp">
+	<head>
+		<meta charset="utf-8"/>
+		<title>BoilerPlate</title>
+		<link rel="stylesheet" type="text/css" href="/reset.css"></link>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css"></link>
+		
+		
+		<script src="/lib/angular/angular.js" ></script>
+		<script src="/lib/angular/angular-route.js" ></script>
+		<script src="/jquery.min.js" ></script>
+		<script src="/lib/bootstrap/js/bootstrap.js" ></script>
+		
+		<script>
+		var app=angular.module('testapp', ['ngRoute']);
+		 app.controller('signupController', ['$scope', function($scope) {
+		  $scope.submitted = false;
+		  $scope.signupForm = function() {
+			console.log("hi");
+			if ($scope.signup_form.$valid) {
+			  // Submit as normal
+			} else {
+			  $scope.signup_form.submitted = true;
+			}
+		  }
+		}]);
+		</script>
+		<style type="text/css">
+		.error{color:red}
+		</style>
+
+	  </head>
+	  <body>
+		<div>
+				<form name="signup_form"  ng-submit="signupForm()" novalidate >
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" name="name"  ng-model="testform.name" required class="form-control" id="name" placeholder="Name"/>
+						<div class="error" ng-show="signup_form.name.$dirty && signup_form.name.$error.required && signup_form.submitted">
+							<small class="error">
+								Your name is required.
+							</small>
+							
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" name="email"  ng-model="testform.email"  class="form-control" id="email" placeholder="Enter email"/>
+						 <div class="error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid && signup_form.submitted">
+							<small class="error" ng-show="signup_form.email.$error.email">
+									Your email not valid
+							</small>
+						 </div>
+				   </div>
+				   <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+		</div>
+	  </body>
+	</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AT & T Digital Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+BODY {
+	LINE-HEIGHT: 18px; BACKGROUND-COLOR: #ffffff; MARGIN: 0px; FONT-FAMILY: "Ubuntu", Helvetica, Arial, sans-serif; COLOR: #555555; FONT-SIZE: 13px; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2); width:100%
+}
+
+	.billing-info-container
+	{
+		padding-bottom: 20px;
+		margin-left:40px;
+		margin-right:40px;
+		width:100%;		
+	}
+
+.floating-container {
+
+float:left; 
+min-width:200px;
+max-width:600px;
+}
+	
+	.billing-info-title {
+		margin-left:20px;
+		padding-bottom: 20px;
+		
+	}
+	
+
+	.billing-section {
+        
+		width:300px;
+		min-width:300px;
+		padding: 19px 29px 29px 19px;
+        margin: 0px 10px 10px 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+	 
+	 
+	 .table-section {
+		margin-left:60px;
+		max-width: 600px;
+		min-width: 200px;
+		width:80%;
+		}
+	 
+	@media (min-width: 767px) {
+
+      .table-section {
+		margin-left:60px;
+		max-width: 70%;
+		min-width: 200px;
+		width:70%;
+		}
+
+	.billing-section {
+        
+		width:400px;
+		min-width:400px;
+		padding: 19px 29px 29px 19px;
+        margin: 0px 10px 10px 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }		
+	
+	}
+		
+	.box {
+	BORDER-BOTTOM: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; MARGIN-TOP: 1px; MARGIN-BOTTOM: 15px; BORDER-TOP: #dedede 1px solid; BORDER-RIGHT: #dedede 1px solid; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4); -moz-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4); box-shadow: 0 0 10px rgba(189, 189, 189, 0.4); width=100%;
+}
+
+TABLE {
+	BACKGROUND-COLOR: transparent; BORDER-SPACING: 0; BORDER-COLLAPSE: collapse; MAX-WIDTH: 100%
+}
+.table {
+	WIDTH: 100%; MARGIN-BOTTOM: 18px
+}
+.table TH {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 8px; LINE-HEIGHT: 18px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; VERTICAL-ALIGN: top; BORDER-TOP: #dddddd 1px solid; PADDING-TOP: 8px
+}
+.table TD {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 8px; LINE-HEIGHT: 18px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; VERTICAL-ALIGN: top; BORDER-TOP: #dddddd 1px solid; PADDING-TOP: 8px
+}
+.table TH {
+	FONT-WEIGHT: bold
+}
+.table THEAD TH {
+	VERTICAL-ALIGN: bottom
+}
+.table CAPTION + THEAD TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table CAPTION + THEAD TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table COLGROUP + THEAD TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table COLGROUP + THEAD TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table THEAD:first-child TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table THEAD:first-child TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table TBODY + TBODY {
+	BORDER-TOP: #dddddd 2px solid
+}
+.table-condensed TH {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 4px
+}
+.table-condensed TD {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 4px
+}
+.table-bordered {
+	BORDER-BOTTOM: #dddddd 1px solid; BORDER-LEFT: 0px; BORDER-COLLAPSE: separate; BORDER-TOP: #dddddd 1px solid; BORDER-RIGHT: #dddddd 1px solid; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px
+}
+.table-bordered TH {
+	BORDER-LEFT: #dddddd 1px solid
+}
+.table-bordered TD {
+	BORDER-LEFT: #dddddd 1px solid
+}
+.table-bordered CAPTION + THEAD TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered CAPTION + TBODY TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered CAPTION + TBODY TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table-bordered COLGROUP + THEAD TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered COLGROUP + TBODY TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered COLGROUP + TBODY TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table-bordered THEAD:first-child TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered TBODY:first-child TR:first-child TH {
+	BORDER-TOP: 0px
+}
+.table-bordered TBODY:first-child TR:first-child TD {
+	BORDER-TOP: 0px
+}
+.table-bordered THEAD:first-child TR:first-child TH:first-child {
+	-webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topleft: 4px
+}
+.table-bordered TBODY:first-child TR:first-child TD:first-child {
+	-webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topleft: 4px
+}
+.table TBODY TR:hover TD {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.table TBODY TR:hover TH {
+	BACKGROUND-COLOR: #f5f5f5
+}
+TABLE .span1 {
+	WIDTH: 44px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span2 {
+	WIDTH: 124px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span3 {
+	WIDTH: 204px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span4 {
+	WIDTH: 284px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span5 {
+	WIDTH: 364px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span6 {
+	WIDTH: 444px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span7 {
+	WIDTH: 524px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span8 {
+	WIDTH: 604px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span9 {
+	WIDTH: 684px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span10 {
+	WIDTH: 764px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span11 {
+	WIDTH: 844px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span12 {
+	WIDTH: 924px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span13 {
+	WIDTH: 1004px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span14 {
+	WIDTH: 1084px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span15 {
+	WIDTH: 1164px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span16 {
+	WIDTH: 1244px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span17 {
+	WIDTH: 1324px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span18 {
+	WIDTH: 1404px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span19 {
+	WIDTH: 1484px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span20 {
+	WIDTH: 1564px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span21 {
+	WIDTH: 1644px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span22 {
+	WIDTH: 1724px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span23 {
+	WIDTH: 1804px; FLOAT: none; MARGIN-LEFT: 0px
+}
+TABLE .span24 {
+	WIDTH: 1884px; FLOAT: none; MARGIN-LEFT: 0px
+}
+[class^='icon-'] {
+	BACKGROUND-IMAGE: url(../img/glyphicons-halflings.png); LINE-HEIGHT: 14px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 14px 14px; HEIGHT: 14px; VERTICAL-ALIGN: text-top
+}
+[class*=' icon-'] {
+	BACKGROUND-IMAGE: url(../img/glyphicons-halflings.png); LINE-HEIGHT: 14px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 14px 14px; HEIGHT: 14px; VERTICAL-ALIGN: text-top
+}
+
+.box-header {
+	BORDER-BOTTOM: #dedede 1px solid; FILTER: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1a000000',GradientType=0 ); BORDER-LEFT: medium none; MIN-HEIGHT: 12px; MARGIN-BOTTOM: 0px; HEIGHT: 12px; FONT-SIZE: 16px; BORDER-TOP: medium none; CURSOR: move; FONT-WEIGHT: bold; BORDER-RIGHT: medium none; PADDING-TOP: 5px; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0
+}
+.box-header H2 {
+	LINE-HEIGHT: 25px; WIDTH: auto; FLOAT: left; CLEAR: none; FONT-SIZE: 15px
+}
+
+.box-icon {
+	FLOAT: right
+}
+.box-icon A {
+	MARGIN: -1px 2px 0px; WIDTH: 5px; FLOAT: left; HEIGHT: 18px; CLEAR: none
+}
+.box-icon A I {
+	MARGIN-LEFT: -4.5px
+}
+.box-content {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px; width=100%
+}
+.btn-round {
+	FONT-SIZE: 12px; PADDING-TOP: 4px; -webkit-border-radius: 40px; -moz-border-radius: 40px; border-radius: 40px
+}
+
+.pagination {
+	MARGIN: 18px 0px; HEIGHT: 36px
+}
+.pagination UL {
+	DISPLAY: inline-block; MARGIN-BOTTOM: 0px; MARGIN-LEFT: 0px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+}
+.pagination LI {
+	DISPLAY: inline
+}
+.pagination A {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 0px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 14px; PADDING-RIGHT: 14px; FLOAT: left; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.pagination A:hover {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.pagination .active A {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.pagination .active A {
+	COLOR: #999999; CURSOR: default
+}
+.pagination .disabled SPAN {
+	BACKGROUND-COLOR: transparent; COLOR: #999999; CURSOR: default
+}
+.pagination .disabled A {
+	BACKGROUND-COLOR: transparent; COLOR: #999999; CURSOR: default
+}
+.pagination .disabled A:hover {
+	BACKGROUND-COLOR: transparent; COLOR: #999999; CURSOR: default
+}
+.pagination LI:first-child A {
+	BORDER-LEFT-WIDTH: 1px; -webkit-border-radius: 3px 0 0 3px; -moz-border-radius: 3px 0 0 3px; border-radius: 3px 0 0 3px
+}
+.pagination-centered {
+	TEXT-ALIGN: center
+}
+.pagination-right {
+	TEXT-ALIGN: right
+}    	  
+
+.well {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; PADDING-BOTTOM: 19px; BACKGROUND-COLOR: #f5f5f5; MIN-HEIGHT: 20px; PADDING-LEFT: 19px; PADDING-RIGHT: 19px; MARGIN-BOTTOM: 20px; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid; PADDING-TOP: 19px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+.icon-chevron-up {
+	BACKGROUND-POSITION: -288px -120px
+}
+.icon-chevron-down {
+	BACKGROUND-POSITION: -313px -119px
+}
+
+
+	</style>
+
+       
+  <body>
+  
+  <div width="100%" style="margin:0px 0px 0px 0px; padding:10px 10px 10px 10px;">
+    
+	<div class="billing-info-container">
+		<h2 class="billing-info-title">Billing &amp; Payment History</h2>
+		
+		<div class="floating-container">
+			<div class="billing-section">
+				<div> OSDDATALD </div>
+				<div> Account Number : 276017289646 </DIV>
+			</div>
+	  
+			<div class="billing-section">
+				<div class="row left-align"> Current Balance </div> <div class="right-align"> $ 390.72 </div>
+				<div class="row left-align"> Bill Due Date </div> <div class="right-align">06/24/2012</div>
+				<div class="row left-align"> <a href="">Make Payment</a> </div>
+				<div class="right-align"> <a href="">View Bill Detail</a> </div>
+			</div>
+	  
+	     </div>
+	   
+	    <!--Right Section Begin -->
+	     <div class="floating-container">
+		
+		  <div class="billing-section">
+			 <div> AutoPay </DIV>
+			 <div> 
+				Want one less thing on your to-do list? Sign up for AutoPay and have your payments made automatically each month. Save some trees by never mailing a payment again
+			  </div>
+			<p><a href="" class="btn btn-primary btn-medium">Signup Now</a></p>
+		 </div>
+	 
+		</div>
+	  
+	  <!-- EOF Right Section -->
+	  </div>
+	  
+	<div class="table-section" style="float:left"> 
+			
+				<div class="box">
+					
+					<div class="box-header well">
+						<h2>Billing History</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+					</div> <!-- Box Header -->
+					
+					<div class="box-content">
+						<table class="table table-bordered">
+							  <thead>
+								  <tr>
+									  <th>Period</th>
+									  <th>Amount</th>
+									  <th>Details</th>
+									                                        
+								  </tr>
+							  </thead>   
+							  <tbody>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+
+								
+								</tbody>
+						 </table>  
+						 
+						 <div class="pagination pagination-centered">
+						  <ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						  </ul>
+						</div>     
+						
+					</div> <!-- box content -->
+				</div><!--/span 6-->
+ 
+ 
+ 		<div class="box">
+					
+					<div class="box-header well">
+						<h2>Billing History</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+					</div> <!-- Box Header -->
+					
+					<div class="box-content">
+						<table class="table table-bordered">
+							  <thead>
+								  <tr>
+									  <th>Period</th>
+									  <th>Amount</th>
+									  <th>Details</th>
+									                                        
+								  </tr>
+							  </thead>   
+							  <tbody>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+
+								
+								</tbody>
+						 </table>  
+						 
+						 <div class="pagination pagination-centered">
+						  <ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						  </ul>
+						</div>     
+						
+					</div> <!-- box content -->
+				</div><!--/span 6-->
+ </div>
+ </div>
+ <script src="../lib/jquery.js"></script>
+ <script>
+      !function ($) {
+        $('.btn-minimize').click(function(e){
+		e.preventDefault();
+		var $target = $(this).parent().parent().next('.box-content');
+		//var $target = $('.box-content');
+		if($target.is(':visible')) $('i',$(this)).removeClass('icon-chevron-up').addClass('icon-chevron-down');
+		else 					   $('i',$(this)).removeClass('icon-chevron-down').addClass('icon-chevron-up');
+		$target.slideToggle();
+	});
+		
+      }(window.jQuery)
+    </script>	  
+	
+</body></html>

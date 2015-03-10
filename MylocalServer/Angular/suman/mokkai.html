@@ -1,0 +1,19 @@
+<!Doctype html>
+<html data-ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>angular JS directive demo</title>
+	<script src="/angular.js"></script>
+</head>
+<body>
+	Name:
+	<input type="text" data-ng-model="name" /> {{ name }}
+	<div class="container" data-ng-init="names=['suman','aswin','anand']">
+		<!-- <h3 Looping with the ng-Repeat Directive /> -->
+		<ul>
+			<li ng-repeat="personName in names"> {{ personName }}</li>
+		</ul>
+	</div>
+
+</body>
+</html>

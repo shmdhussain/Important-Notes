@@ -1,0 +1,66 @@
+	<!DOCTYPE html>
+	<html lang="en" ng-app="testapp">
+	<head>
+		<meta charset="utf-8"/>
+		<title>BoilerPlate</title>
+		<link rel="stylesheet" type="text/css" href="/reset.css"></link>
+		<link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css"></link>
+		
+		
+		<script src="/lib/angular/angular.js" ></script>
+		<script src="/lib/angular/angular-route.js" ></script>
+		<script src="/jquery.min.js" ></script>
+		<script src="/lib/bootstrap/js/bootstrap.js" ></script>
+		
+		<script>
+		var myapp =angular.module('testapp',['ngRoute']);
+
+		myapp.controller('testappCtrl', ['$scope',function ($scope) {
+		   $scope.submitted = false;
+			$scope.connectFormSubmit = function() {
+				console.log("hiee");
+				console.log($scope.connect_form.name.$valid);
+				
+				if ($scope.connect_form.name.$valid) {
+				  // Submit as normal
+				  console.log("1");
+				} else {
+				  console.log("2");
+				  $scope.signup_form.submitted = true;
+				}
+		  }
+		}]);
+		</script>
+		<style type="text/css">
+		.error{color:red}
+		</style>
+
+	  </head>
+	  <body>
+		<div>
+			<form class="form-horizontal" name="connect_form" novalidate ng-submit="connectFormSubmit()">
+				<fieldset>
+				<p>Tell us about yourself and let's figure out how cip can help.</p>
+				  <div class="form-group">
+					<label for="name">Name</label>
+					<input id="name" type="text" name="name" placeholder="Name" required class="form-control" ng-model="connect.name"/>
+					<p class="error text-right" ng-show="connect_form.name.$dirty && connect_form.name.$error.required && connect_form.submitted">Please enter valid Name</p>
+				</div>
+				 
+				 <div class="form-group">
+					  <label for="email">E mail</label>
+					  <input id="email" type="email" name="email" placeholder="Email" required class="form-control" ng-model="connect.email"/>
+					  <p class="error text-right" ng-show="connect_form.email.$dirty && connect_form.email.$error.email && connect_form.submitted">Please enter valid Email</p>
+				 </div>
+				  <div class="form-group">
+					<span class="form-group-btn">
+					  <button class="btn btn-default col-xs-4 col-sm-4 col-md-3 col-lg-2" type="submit">Submit</button>
+					</span>
+				  </div>
+				</fieldset>
+			</form>
+			
+		
+		</div>
+	  </body>
+	</html>

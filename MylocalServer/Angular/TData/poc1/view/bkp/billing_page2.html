@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AT & T Digital Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="../css/bootstrap-cerulean.css" rel="stylesheet">
+	<link href="../css/charisma-app.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+.billing-block {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+.form-signin {
+        max-width: 400px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      
+      .container-fluid .form-signin-heading {
+        margin-bottom: 10px;
+		margin-left: 30px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+	
+	.row { float: left; margin-right: 20px; margin-left: 0px;}
+	.left-align { margin-right: 50px;}
+	.right-align { margin-left: 0px;}
+	.table-section {margin-left: 40px;}
+	
+
+
+[class^='icon-'] {
+	BACKGROUND-IMAGE: url(../img/glyphicons-halflings.png); LINE-HEIGHT: 14px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 14px 14px; HEIGHT: 14px; VERTICAL-ALIGN: text-top
+}
+[class*=' icon-'] {
+	BACKGROUND-IMAGE: url(../img/glyphicons-halflings.png); LINE-HEIGHT: 14px; WIDTH: 14px; DISPLAY: inline-block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 14px 14px; HEIGHT: 14px; VERTICAL-ALIGN: text-top
+}	
+
+.icon-chevron-up {
+	BACKGROUND-POSITION: -288px -120px
+}
+.icon-chevron-down {
+	BACKGROUND-POSITION: -313px -119px
+}
+    </style>
+
+       
+  <body>
+    
+<div class="container-fluid">
+      
+	<h2 class="form-signin-heading">Billing &amp; Payment History</h2>
+	  <div class="span5">
+		<div>
+			
+			<div class="form-signin">
+				<div> OSDDATALD </DIV>
+				<div> Account Number : 276017289646 </DIV>
+			</div>
+	  
+			<div class="form-signin">
+				<div class="row left-align"> Current Balance </div> <div class="right-align"> $ 390.72 </div>
+				<div class="row left-align"> Bill Due Date </div> <div class="right-align">06/24/2012</div>
+				<div class="row left-align"> <a href="">Make Payment</a> </div>
+				<div class="right-align"> <a href="">View Bill Detail</a> </div>
+			</div>
+	  
+		</div>
+	  </div> <!-- Span 5-->
+	  
+	  <div class="span5">
+		  <div class="form-signin">
+			 <div> AutoPay </DIV>
+			 <div> 
+				Want one less thing on your to-do list? Sign up for AutoPay and have your payments made automatically each month. Save some trees by never mailing a payment again
+			</div>
+			<p><a href="" class="btn btn-primary btn-medium">Signup Now</a></p>
+		  </div>
+	 
+	  </div> <!--Span 5 -->
+	  </div>
+	  
+	  <div class="table-section"> 
+			<div class="row-fluid">
+				<div class="box span8">
+					<div class="box-header well">
+						<h2>Billing History</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+					</div> <!-- Box Header -->
+					<div class="box-content">
+						<table class="table table-bordered">
+							  <thead>
+								  <tr>
+									  <th>Period</th>
+									  <th>Amount</th>
+									  <th>Details</th>
+									                                        
+								  </tr>
+							  </thead>   
+							  <tbody>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	<a href="">View Bill Detail</a></td>
+									                                       
+								</tr>
+
+								
+								</tbody>
+						 </table>  
+						 <div class="pagination pagination-centered">
+						  <ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						  </ul>
+						</div>     
+					</div> <!-- box content -->
+				</div><!--/span 6-->
+ </div> <!-- Row  Fluid -->
+ 
+ 		<div class="row-fluid">
+				<div class="box span8">
+					<div class="box-header well" data-original-title="">
+						<h2>Payment History</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+						</div>
+					</div> <!-- Box Header -->
+					<div class="box-content">
+						<table class="table table-bordered">
+							  <thead>
+								  <tr>
+									  <th>Date Posted</th>
+									  <th>Amount</th>
+									  <th>Payment Method</th>
+									                                        
+								  </tr>
+							  </thead>   
+							  <tbody>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	Credit Card</td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+										<td class="center">	Credit Card</td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+										<td class="center">	Credit Card</td>
+									                                       
+								</tr>
+								<tr>
+									
+									<td class="center">2012/01/01</td>
+									<td class="center">$200</td>
+									<td class="center">	Credit Card</td>
+									                                       
+								</tr>
+
+								
+								</tbody>
+						 </table>  
+						 <div class="pagination pagination-centered">
+						  <ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						  </ul>
+						</div>     
+					</div> <!-- box content -->
+				</div><!--/span 6-->
+ </div> <!-- Row  Fluid -->
+ </div>
+ <script src="../lib/jquery.js"></script>
+ <script>
+      !function ($) {
+        $('.btn-minimize').click(function(e){
+		e.preventDefault();
+		var $target = $(this).parent().parent().next('.box-content');
+		//var $target = $('.box-content');
+		if($target.is(':visible')) $('i',$(this)).removeClass('icon-chevron-up').addClass('icon-chevron-down');
+		else 					   $('i',$(this)).removeClass('icon-chevron-down').addClass('icon-chevron-up');
+		$target.slideToggle();
+	});
+		
+      }(window.jQuery)
+    </script>
+</body></html>

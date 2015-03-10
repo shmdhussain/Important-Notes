@@ -1,0 +1,22 @@
+	<html lang="en" ng-app="">
+		<head>
+			<meta charset="utf-8">
+			<title>Angular Boiler Plate</title>
+			<link rel="stylesheet" href="css/app.css"/>
+			<script src="/angular.js"></script>
+			<style>
+			.r1{color:red}
+			.r2{color:blue}
+			</style>
+		</head>
+		<body>
+			<div ng-init="friends = [{name:'John', age:25}, {name:'Mary', age:28}]">
+			  I have {{friends.length}} friends. They are:
+			  <ul>
+				 <li ng-repeat="friend in friends" class="r{{$index+1}}">
+				  [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+				</li>
+			  </ul>
+			</div>
+		</body>
+	</html>

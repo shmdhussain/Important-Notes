@@ -1,0 +1,103 @@
+
+.rwd-side( @w ) {
+  @ww : (@w + @dw);
+
+  @media screen and (max-width: @ww ) {
+
+    .btn-ok, .btn-esc-1 {
+      width: (@w - 246px);
+    }
+
+    input, select, textarea, .input-append {
+      width: (@w - 258px);
+    }
+
+    .modal-footer {
+      .btn-ok, .btn-esc-1 {
+        width: (@w/2 - 54px) !important;
+      }
+    }
+
+    .btn-one {
+      width: (@w - 66px);
+    }
+
+    .rwd-2(@w);
+  }
+}
+
+.rwd-half( @w ) {
+  @ww : (@w + @dw);
+
+  @media screen and (max-width: @ww ) {
+
+    .btn-ok, .btn-esc-1 {
+      width: (@w/2 - 44px);
+    }
+
+    input, select, textarea, .input-append {
+      width: (@w - 82px);
+    }
+
+    .modal-footer {
+      .btn-ok, .btn-esc-1 {
+        width: (@w/2 - 54px) !important;
+      }
+    }
+
+    .btn-one {
+      width: (@w - 66px);
+    }
+
+    .rwd-2(@w);
+  }
+}
+
+.rwd-above( @w ) {
+  @ww : (@w + @dw);
+
+  @media screen and (max-width: @ww ) {
+
+    .btn-ok, .btn-esc-2, .btn-one {
+      width: (@w - 66px);
+    }
+
+    input, select, textarea, .input-append {
+      width: (@w - 76px);
+    }
+
+    .modal-footer {
+      .btn-ok, .btn-esc-2, .btn-one {
+        width: (@w - 86px) !important;
+      }
+    }
+
+    .rwd-2(@w);
+  }
+}
+
+.rwd-2( @w ) {
+  .btn-two {
+    width: (@w/2 - 44px);
+    padding: 5px !important;
+  }
+}
+
+  .rwd-side( 760px );
+  .rwd-side( 720px );
+  .rwd-side( 680px );
+  .rwd-side( 640px );
+  .rwd-side( 600px );
+  .rwd-side( 560px );
+  .rwd-side( 520px );
+
+  .rwd-half( 480px );
+  .rwd-half( 486px );
+  .rwd-half( 440px );
+  .rwd-half( 400px );
+
+  .rwd-above( 360px );
+  .rwd-above( 320px );
+  .rwd-above( 280px );
+  .rwd-above( 240px );
+

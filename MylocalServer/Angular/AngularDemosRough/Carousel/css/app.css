@@ -1,0 +1,14 @@
+.bx-wrapper img{width:100%}
+.bx-wrapper .bx-viewport{left:0px;}
+.bx-controls-auto{display:none}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager{text-align: center;width: 100%;padding-top:0px;bottom:10px}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{background:#FFF}
+.bx-wrapper .bx-pager.bx-default-pager a{background:#666}
+.bx-wrapper .bx-viewport{border:none}
+
+.bx-wrapper .bx-prev{background:url(../images/b_arw_left.png) no-repeat }
+.bx-wrapper .bx-prev:hover{background:url(../images/b_arw_left_hover.png) no-repeat }
+.bx-wrapper .bx-next{background:url(../images/b_arw_right.png) no-repeat }
+.bx-wrapper .bx-next:hover{background:url(../images/b_arw_right_hover.png) no-repeat }
+.bx-wrapper .bx-controls-direction a{height:50px;width:40px}
+

@@ -1,1 +1,1 @@
-This contains Important notes which are taken when working for different projects.
+This contains Important notes in UI coding taken by me which can be reused and referred when needed.
