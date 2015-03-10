@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Angular Radios</title>
+    <link rel="stylesheet" type="text/css" href="/reset.css"></link>
+	<script src="/lib/angular/angular.js" ></script>
+	<script src="/lib/angular/angular-route.js" ></script>
+	<script src="/lib/angular/angular-resource.js" ></script>
+	<script src="app.js" ></script>
+	
+  </head>
+  <body >
+  <form name="myForm" ng-controller="SampleCtrl">
+	Check me to check both: <input type="checkbox" ng-model="master"><br/>
+	<input id="checkSlave" type="checkbox" ng-checked="master">
+  </form>
+  </body>
+</html>

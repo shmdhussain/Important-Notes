@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Angular Radios</title>
+    <link rel="stylesheet" type="text/css" href="/reset.css"></link>
+	<script src="/lib/angular/angular.js" ></script>
+	<script src="/lib/angular/angular-route.js" ></script>
+	<script src="/lib/angular/angular-resource.js" ></script>
+	<script src="app.js" ></script>
+	
+  </head>
+  <body >
+  <div>
+		<form name="myForm" ng-controller="SampleCtrl">
+		   <div class="radio" data-ng-repeat="obj in sampleobj1">
+				<input name="r1" data-ng-init="initcheck1($index);" data-ng-click="clickradio1($event)" data-ng-checked="checkObj[0].check1[$index]"  data-ng-model="modalss[0].radiomodal1" value="{{obj.value}}" type="radio"  id="rb1-{{$index}}"/>Radio1-{{$index}}<br/>
+				 $scope.checkObj[0].check[{{$index}}]:<span data-ng-bind="checkObj[0].check1[$index]"></span>
+		  </div>
+		   modalss[0].radiomodal1:<span data-ng-bind="modalss[0].radiomodal1"></span><br/>
+		   $scope.checkObj[0].check1:<span data-ng-bind="checkObj[0].check1"></span>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <div class="radio" data-ng-repeat="obj in sampleobj2">
+				<input name="r2" data-ng-init="initcheck2($index);" value="{{obj.value}}" type="radio"  data-ng-click="clickradio2($event)" data-ng-checked="checkObj[1].check2[$index]"   data-ng-model="modalss[1].radiomodal2"  id="rb2-{{$index}}"/>Radio2-{{$index}}<br/>
+				$scope.checkObj[1].check[{{$index}}]:<span data-ng-bind="checkObj[1].check2[$index]"></span>
+		  </div>
+			modalss[1].radiomodal2:<span data-ng-bind="modalss[1].radiomodal2"></span><br/>
+			$scope.checkObj[1].check2:<span data-ng-bind="checkObj[1].check2"></span>
+		</form>
+  </div>
+   
+  </body>
+</html>
