@@ -1,0 +1,19 @@
+************************************************************************
+Git Proxy:
+
+git config --global url."https://".insteadOf git://
+
+
+************************************************************************
+
+npm install -g yo
+
+npm install -g bower
+
+C:\Users\mohamed_hussain01.ITLINFOSYS\AppData\Roaming\Notepad++\plugins\config\ZenCodingPython\zencoding
+%HomePath%\AppData\Roaming\Notepad++\plugins\config\ZenCodingPython\zencoding
+
+%HomePath%\AppData\Roaming\Notepad++\plugins\config\ZenCodingPython\zencoding
+zen_settings.py	
+------------------------------------------
+
