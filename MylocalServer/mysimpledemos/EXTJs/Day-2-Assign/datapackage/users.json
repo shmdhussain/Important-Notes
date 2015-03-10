@@ -1,0 +1,17 @@
+{
+	success: true,
+	users: [
+		{id: "620081", name: "Amit Dhiman"},
+		{id: "620054", name: "Ajay Singh"},
+		{id: "625874", name: "Rajesh Kumar"},
+		{id: "698521", name: "Sanjeev Sharma"},
+		{id: "631254", name: "Rajat Kumar"}
+	],
+	products: [
+		{id: "620081", name: "soap11"},
+		{id: "620054", name: "shampoo22"},
+		{id: "625874", name: "bags"},
+		{id: "698521", name: "jewels"},
+		{id: "631254", name: "drinks"}
+	]
+}

@@ -1,0 +1,19 @@
+/*Data for the store*/
+{
+    "success": true,
+    "participants": [
+        {empID: '160088', name: 'Sandeep Pande'},
+		{empID: '118342', name: 'Rakesh Kumar'},
+		{empID: '602512', name: 'Vishal Sawant'},
+		{empID: '602736', name: 'Shilpa'},
+		{empID: '602706', name: 'Aruna Narayanan'},
+		{empID: '620081', name: 'Amit Dhiman'},
+		{empID: '185375', name: 'Kavya Narayana'},
+		{empID: '608588', name: 'Nayyar Armani'},
+		{empID: '186289', name: 'Amit Chakraborty'},
+		{empID: '609213', name: 'Ishani Ghosh'},
+		{empID: '629743', name: 'Ajay Suresh'},
+		{empID: '136633', name: 'Mahaveer'},
+		{empID: '156833', name: 'Prasad Premkumar'}
+    ]
+}
