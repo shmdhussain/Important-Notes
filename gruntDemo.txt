@@ -1,0 +1,54 @@
+Install NodeJS 
+
+npm install -g grunt-cli
+
+
+create package.json
+
+{
+"name": "gruntProject",
+"version": "0.0.1",
+"devDependencies": {
+ }
+}
+
+install grunt package
+
+npm install grunt --save-dev
+
+install jshint other usefull modules.
+
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-concat --save-dev
+
+create gruntjs file and register tasks
+
+module.exports = function(grunt) {
+ 
+    grunt.initConfig({
+        //grunt tasks go here
+    });
+}
+
+and show them how to replace with jshint and run task as
+
+ grunt.initConfig({
+ 
+        //our JSHint options
+        jshint: {
+            all: ['build/script/*.js'] //files to lint
+        }
+    });
+ 
+    //load our tasks
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+
+run and show grunt jshint
+
+and show with concat and then modify the fruntfile.js and show default task
+
+grunt
+grunt development
+
+
