@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html"/>
+	<meta charset="UTF-8"/>
+	<title>Media Query Demos</title>
+	<style type="text/css">
+		.forAll {
+			border: solid 1px black;
+			padding: 10px 10px;
+			margin: 20px;
+		}
+		.viewing-area span {
+			color: #black;
+			display: none;
+		}
+
+		/* min-width */
+		@media screen and (min-width: 900px) {
+			.one {
+				background: #F90;
+			}
+			span.gt900 {
+				display: inline-block;
+			}
+		}
+
+		/* min-width & max-width */
+		@media screen and (min-width: 600px) and (max-width: 900px) {
+			.two {
+				background: #9CF;
+			}
+			span.bt600-900 {
+				display: inline-block;
+			}
+		}
+
+		/* max-width */
+		@media screen and (max-width: 600px) {
+			.three {
+				background: #F9C;
+			}
+			span.lt600 {
+				display: inline-block;
+			}
+		}
+
+		/* max device width */
+		/* max-width means the viewing area resolution	and max-device-width
+		means the actual resolution of the device */
+		@media screen and (max-device-width: 480px) {
+			.mdevice {
+				background: #ccc;
+			}
+		}
+	</style>
+</head>
+<body>
+	<p class="viewing-area"><strong>Your current viewing area is: </strong> <span class="gt900">greater than 900px</span> <span class="bt600-900">between 600 - 900px</span> <span class="lt600">less than 600px</span></p>
+	<div class="forAll one">I will turn to orange if the viewing area is greater than 900px</div>
+	<div class="forAll two">I will turn to blue if the viewing area is between 600px and 900px</div>
+	<div class="forAll three">I will turn to pink if the viewing area is less than 600px</div>
+	<div class="forAll mdevice">I will only apply to devices with max-device-width: 480px (eg: iPhone)</div>
+</body>
+</html>

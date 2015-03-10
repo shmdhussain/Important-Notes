@@ -1,0 +1,476 @@
+Here are the Important points on iCinema:
+1.	Your HTML files should contain only required tags, i.e., display elements, layout info and static content. Style should be in CSS and event handlers should be in .js files
+2.	For OOJS design, split the data in supplied JSON to corresponding JS classes as discussed. Users.js, Movies.js, Screens.js, BookingDetails.js and the wrapper for all iCinemaWrapper.js should all be present.
+3.	Add all the business logic code to iCinemaWrapper.js as methods and all the global variables and of course, user, movie etc object as properties in it.
+4.	In the EventHandler.js, have the $(document).ready();  in which you are creating the JSON objects, creating Users, Movies, Screens, Transactions and Wrapper objects. Use the data from JSON to populate the corresponding objects
+5.	Then, you can call the event handlers  eg: click and hover event functions in there itself, which would be calling the corresponding method of the Wrapper object
+6.	Use classes in place of element or id in css.   
+
+PFB the filtered Data JSON, you need to modify this JS files into separate JSON files and access them using ajax calls.(We will see this tomorrow)
+iCinema = function(){
+                                return{
+                                                "users":[
+                                                                                {
+                                                                                                "userID":"someID@somewhere.com", //emailid itself is userid
+                                                                                                "name":"Some One",
+                                                                                                "phone":9999991212,
+                                                                                                "password":"myPass1"
+                                                                                },
+                                                                                {
+                                                                                                "userID":"someotherID@somewhereelse.com", //emailid itself is userid
+                                                                                                "name":"Some Other",
+                                                                                                "phone":9977881212,
+                                                                                                "password":"myPass2"
+                                                                                }
+                                                ],
+                                                "movies":{
+                                                                "1":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "2":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "3":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "4":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "5":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "6":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"NP", //Now playing
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "7":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"CS", //Coming Soon
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "8":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "category":"CS", //Coming Soon
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                }
+                                                },
+                                                "screens":{
+                                                                                
+                                                                                "1":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":1,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[7,8],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                },
+                                                                                "2":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":2,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                },
+                                                                                "3":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":3,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                },
+                                                                                "4":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":4,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                },
+                                                                                "5":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":5,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                },
+                                                                                "6":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":6,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[],[],[],[],[]],
+                                                                                                                "1":[[],[],[],[],[]],
+                                                                                                                "2":[[],[],[],[],[]],
+                                                                                                                "3":[[],[],[],[],[]],
+                                                                                                                "4":[[],[],[],[],[]],
+                                                                                                                "5":[[],[],[],[],[]],
+                                                                                                                "6":[[],[],[],[],[]]
+                                                                                                }
+                                                                                }
+                                                },
+                                                "bookingDetails":[
+                                                                                                                {
+                                                                                                                                "userID":"someID@somewhere.com",
+                                                                                                                                "screen":1
+                                                                                                                                "movieName":"M1",
+                                                                                                                                "date":"22-Oct-2012",
+                                                                                                                                "time":"10:30",
+                                                                                                                                "seatsBooked":[7,8],
+                                                                                                                                "amount":500
+                                                                                                                }
+                                                ]
+                                }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Thought I would remind you of the slider assignment. – use input type =”range” min 1, max 5 and capture the value change. The div content should be spilt into that many columns. ;-)
+
+1.	Just thought of a couples change in requirement:
+a.	Ticket can be booked max 2 days in advance for a show and till immediate Friday. So if its Monday, user can only book for Monday and Tuesday. If Tuesday, only for Wednesday – Thursday. But if is Thursday, user can only book for that day alone. (So it is better that the drop down values are Today – Date, Tomorrow – Date and for Thursday only Today – Date)
+b.	For a selected day, selected show, ticket can be booked online, if available, up to an hour before the actual show time. Else the show time should be disabled for the user (Assuming you are allowing the user to click on the link). Hint: find the system time at the time of booking.
+
+And,
+PFB the iCinema data jSON. As of now it has dummy data. Go through the structure and feel free to modify as you want J
+
+PS: Save this to a .js file. 
+
+iCinema = function(){
+                                return{
+                                                "users":[
+                                                                                {
+                                                                                                "userID":"someID@somewhere.com", //emailid itself is userid
+                                                                                                "name":"Some One",
+                                                                                                "phone":9999991212,
+                                                                                                "password":"myPass1"
+                                                                                },
+                                                                                {
+                                                                                                "userID":"someotherID@somewhereelse.com", //emailid itself is userid
+                                                                                                "name":"Some Other",
+                                                                                                "phone":9977881212,
+                                                                                                "password":"myPass2"
+                                                                                }
+                                                ],
+                                                "screens":{
+                                                                                
+                                                                                "1":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":1,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]]
+                                                                                                }
+                                                                                },
+                                                                                "2":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":2,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]],
+                                                                                                }
+                                                                                },
+                                                                                "3":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":3,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]],
+                                                                                                }
+                                                                                },
+                                                                                "4":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":4,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]],
+                                                                                                }
+                                                                                },
+                                                                                "5":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":5,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]],
+                                                                                                }
+                                                                                },
+                                                                                "6":{
+                                                                                                "seats":100, //total seats
+                                                                                                "movieKey":6,
+                                                                                                "availableForBooking":[50,60,60,60,60,50,50], /*No of seats avaialble for online booking per day, sunday to saturday for any show*/
+                                                                                                "seatsBooked":{/*Seat Nos already booked per day per show
+                                                                                                if the entry in 2D array is 0 that means no seats booked yet*/
+                                                                                                                "0":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "1":[[0],[20,21,23],[10,11,12,13],[0],[30,31,32,33,34]],
+                                                                                                                "2":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "3":[[1,7,8],[20,21,23],[0],[14,15],[30,31,32,33,34]],
+                                                                                                                "4":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "5":[[1,7,8],[0],[10,11,12,13],[14,15],[30,31,32,33,34]],
+                                                                                                                "6":[[1,7,8],[20,21,23],[10,11,12,13],[14,15],[0]],
+                                                                                                }
+                                                                                }
+                                                },
+                                                "movies":{
+                                                                "1":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "2":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "3":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "4":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "5":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                },
+                                                                "6":{
+                                                                                "name":"M1",   //Change the details
+                                                                                "duration":"2h 30 mins",
+                                                                                "language":"English",
+                                                                                "type":"2D",
+                                                                                "price":250,
+                                                                                "director":"D1",
+                                                                                "cast":"Give cast here",
+                                                                                "genre":"Romantic",
+                                                                                "description":"movie description here"
+                                                                }
+                                                },
+                                                "bookingDetails":[
+                                                                                                                {
+                                                                                                                                "userID":"someID@somewhere.com",
+                                                                                                                                "movieName":"M1",
+                                                                                                                                "date":"22-Oct-2012",
+                                                                                                                                "time":"10:30",
+                                                                                                                                "seatsBooked":[7,8],
+                                                                                                                                "amount":500
+                                                                                                                }
+                                                ]
+                                }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+iCinemas, a premier multiplex in the district wants to allow public to books tickets for its shows online.
+
+They have contacted you to design and create the website for them.
+
+The set of requirements they have given you are:
+
+#In the home page
+-----------------
+	-show posters of the movie being shown and/or coming soon, to aid the user to make the choice of movie. (Feel free to use your creativity here)
+	-allow the user to signup using phone no, email and a password of user's choice. Once registered, the user can login using emailID and accepted password.
+	-once the user logs in, display appropriate welcome message eg: Welcome, emailID
+	-allow the user to enter/select the date (only till the immediate next Friday). Polulate the list of movies based on the date (This actually does not need the user to have logged in)
+	-once the user selects the movie, navigate to show times section (either a new page or same page). Show times for any movie are 10:30 1:30, 4:30, 7:30 and 9:30, per screen
+
+#Once the user selects a show
+-----------------------------
+
+	-show the user the seating arrangement of the screen pictorially (assume 100 seats per screen,numbered from 1-100, 6 screens)
+	-allow the user to select/enter the no: of seats (max allowed 10).
+	-once the seat no: have been selected, user can select the seats in the graphical representation of the seating arrangement from the available seats.
+	  eg: if the user wants 4 seats, the seat he clicks plus 3 seats to the right of it should get selected and appear in a different color.
+	-once the user has selected the seats and proceeds to booking, ask the user to login/register if s/he has not done so.
+	-display the amount (250 for 2D and 350 for 3D) to the user with the message "Ticket Reservation Successful. Confirmation SMS has been sent to your registered number. Kindly collect the tickets 15 prior to the show time by paying at the counter". On Ok, take the user back to home page.
+
+#For a user
+-------------
+User's transactions should be tracked. A user once he has logged in, should be able to see past bookings with movie name, date and no of tickets.
+
+Provided Data:
+---------------
+6 screens
+100 seats per screen, numbered from 1 to 100
+2D movie rate 250
+3D movie rate 350
+
+We have based these set of requirements on BookMyShow.com. So, for your user research think like the end user and to get the insights you can refer that site.
+
+We have reduced the functionalities so that we can focus on design principles and User Experience.
+
+
+
+

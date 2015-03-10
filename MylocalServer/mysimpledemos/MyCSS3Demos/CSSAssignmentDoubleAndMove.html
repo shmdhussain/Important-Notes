@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css"> 
+#target
+{
+	width:100px;
+	height:100px;
+	background:red;
+	transition:all 2s ease;
+	-moz-transition:all 2s ease; /* Firefox 4 */
+	-webkit-transition:all 2s ease; /* Safari and Chrome */
+	-o-transition:all 2s ease; /* Opera */
+}
+
+#target:hover
+{
+	transform:translate(50px,100px) scale(2);
+	-webkit-transform:  translate(50px,100px) scale(2);
+	-o-transform:  translate(50px,100px) scale(2);
+	-moz-transform:  translate(50px,100px) scale(2);
+	
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer.</p>
+
+<div id="target">This is div which is under the test</div>
+
+<p>Hover over the div element above, to see the transition effect.</p>
+
+</body>
+</html>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/jquery-ui-1.10.0.custom.css"></link>
+	
+     <script src="js/jquery-1.6.2.js" ></script>
+     <script src="js/jquery-ui-1.10.0.custom.js" ></script>
+	 
+	<script>
+	$(fnDocReady);
+	function fnDocReady(){
+		console.log("Doc Ready");
+		$("#dat1").datepicker({
+			changeMonth:true,changeYear:true
+		});
+		$("#dat2").datepicker({
+			changeMonth:true,changeYear:true
+		});
+		
+		$("#bt1").click(fnShowDate1);
+		$("#bt2").click(fnShowDate2);
+		$("#bt3").click(fnAddDate);
+	}
+	
+	function fnShowDate1(){
+		var dat1=$('#dat1').val();
+		$('.date1').html(dat1);
+	}
+	function fnShowDate2(){
+		var dat2=$('#dat2').val();
+		$('.date2').html(dat2);
+	}
+	function fnAddDate(){
+		var dat1=new Date($('#dat1').val());
+		var dat2=new Date($('#dat2').val());
+		var add=dat2-dat1;
+		$('.date3').html(add);
+	}
+	</script>
+	<style>
+	
+	</style>
+</head>
+
+
+<body>
+    
+   <div class="">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+						<div id="mydatepicker">
+							<input id="dat1" type="text" />
+							<input id="dat2" type="text" />
+						</div>
+						<div id="">
+							<input id="bt1" type="button" value="show the first date value"/>
+							<input id="bt2" type="button" value="show the second date value"/>
+							<input id="bt3" type="button" value="add date values"/>
+						</div>
+						<div id="">
+							<p class="date1"></p>
+							<p class="date2"></p>
+							<p class="adddate"></p>
+						</div>
+					<!--END: Your Content-->
+			  
+			     </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

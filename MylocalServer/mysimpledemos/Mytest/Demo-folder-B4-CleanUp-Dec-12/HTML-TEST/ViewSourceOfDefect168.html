@@ -1,0 +1,1449 @@
+
+<!-- This comment will put IE 6, 7, 8, and 9 in quirks mode -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+ <head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>AT&T</title>
+<script type="text/javascript">
+var submitcount=0;
+var alert_text = "It appears that you have already submitted a PDF download request. " +
+"Please be patient, as it may take a while on large bills or at busy times.  " +
+"If you feel you have received this in error please close this window and try to View Full Bill.";
+function savePDF()
+{
+    window.location='/view/viewfullbillPDF.doview?reusewin=y&reportActionEvent=A_VB_VIEW_FULL_BILL_PDF_LINK';
+}                    
+
+function checkFields()
+{
+    if (submitcount == 0)
+    {
+        submitcount++;  
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}   
+
+function chkClick()
+{
+    if(checkFields())
+    {
+        savePDF();
+        return true;
+    }
+    else
+    {
+        alert(alert_text);
+        return false;
+    }
+}             
+</script>
+<style type="text/css" media="all">@import url('olam/css/edocs-mmc-estore-print-20090717.css');</style>
+<SCRIPT src="olam/js/prototype.js" type=text/javascript></SCRIPT>
+<SCRIPT src="olam/js/effects.js" type=text/javascript></SCRIPT>
+<link rel="stylesheet" type="text/css" href="olam/css/fullBill.css" media="screen" />
+
+
+<!--[if !IE]>-->
+<style media="print" type="text/css"> 
+@media print  
+{ head * { visibility: hidden; } body * { visibility: hidden; }  #BILL * { visibility: visible; overflow: visible  }  
+	#BILL { position: absolute; top: 0; left: 0; 
+			font: 10pt "Verdana";
+			background-color: #FFFFFF;
+			color #333;
+			padding: 0;
+			text-align: center;
+			page-break-after: always;
+	}
+
+	#BILL .Page {
+		float: none;
+		min-width: 1080;
+		margin: 0;
+		padding: 0;
+		background-color: #FFFFFF;
+		page-break-after: inherit;
+	}
+}  </style>  
+<!--<![endif]-->
+
+</head>
+
+<body style="width: 102em;"> 
+
+	
+<DIV id=primary-content>
+		<div id="header">
+			<a name="top"><IMG class=logo alt="" src="/olam/English/images/att_logo.gif"></a> <!--UTILITY NAV-->
+			<div id="utility-container">
+				<ul id="utility-nav">
+					<li><span class="print"><a href="#" onclick='window.print();'>Print</a></span></li>
+                    <li><span class='pdf'><a href='#' onclick='chkClick();' class='pdf'>Download PDF</a></span></li>                                        
+					<li class="last"><span class="close"><a href="#" onclick='window.close();'>Close</a></span></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+<TABLE class="tableGenNone bottomMargin10px" cellSpacing=0 cellPadding=0 width=1000>
+    <TR>
+      <TD width=1280 align=center>
+        <TABLE class="tableGenNone bottomMargin10px" cellSpacing=0 cellPadding=0>
+          <TR>
+            <TD align=left>
+				<DIV ID="BILL">
+					<DIV class="Page">
+						<DIV class="fcbn ch20 csbdorange cw740">
+							<li class="cw740 cac fcwhite">att.com</li>
+						</DIV>
+						<A NAME="1">
+							<DIV class="cmb30" ID="PageHead">
+								<DIV class="cmt20" ID="PageLogo">
+								<li class="cml10"><img src="/olam/images/L9/SBCATT_CLR.gif"></li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="CustHead">
+								<li class="fcbn cw205">OLIVERS GOLD SHOP</li>
+								<li class="fcbn cw205">8221 GLADES RD</li>
+								<li class="fcbn cw205">BOCA RATON       FL 33434-4072</li>
+								<li class="fcbn cw205"> </li><li class="fcbn cw205"> </li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="PageInfo">
+								<li class="fcbb cw90 car fsb">Page</li>
+								<li class="fcbn cw140 cal cml10">1 of 4</li>
+								<li class="fcbb cw90 car fsb">Account Number</li>
+								<li class="fcbn cw140 cal cml10">561 483-9733 709 0450</li>
+								<li class="fcbb cw90 car fsb">Billing Date</li>
+								<li class="fcbn cw140 cal cml10">Apr 04, 2012</li>
+								<li class="fcbb cw90 car fsb cmt10"></li>
+								<li class="fcbn cw140 cal cml10 cmt10"></li>
+								<li class="fcbb cw90 car fsb">Web Site</li>
+								<li class="fcbb cw140 cal cml10">att.com</li>
+								</DIV>
+							</DIV>
+						</A>
+						<DIV class="fcbn fs20 fcblue cw740 cal">Monthly Statement</DIV>
+						<DIV class="cal" ID="Left">
+							<DIV class="cmt25" ID="SECTION">
+							<DIV class="fcbbrvh fs10 cw375 cal csb000 fcwhite">Bill-At-A-Glance</DIV>
+							<DIV class="csborange fs8 cw375">
+							<li class="cw260 cml10 cal cbbdb cmt10">Previous Bill</li>
+							<li class="cw70 car cbbdb cmt10">234.70</li>
+							<li class="cw30 cal cbbdb cmt10">&nbsp;</li>
+							</DIV>
+							<DIV class="csborange fs8 cw375">
+								<li class="cw260 cml10 cal cbbdb cmt10">Payment - Thank You!</li>
+								<li class="cw70 car cbbdb cmt10">230.70</li>
+								<li class="cw30 cal cbbdb cmt10">CR&nbsp;</li>
+							</DIV>
+								<DIV class="csborange fs8 cw375">
+								<li class="cw260 cml10 cal cbbdb cmt10">Adjustments</li>
+								<li class="cw70 car cbbdb cmt10">4.00</li>
+								<li class="cw30 cal cbbdb cmt10">CR&nbsp;</li>
+								</DIV>
+								<DIV class="csborange fs8 cw375">
+								<li class="cw260 cml10 cal cbbdb cmt10">Balance</li>
+								<li class="cw70 car cbbdb cmt10">.00</li>
+								<li class="cw30 cal cbbdb cmt10">&nbsp;</li>
+								</DIV>
+								<DIV class="csborange fs8 cw375">
+								<li class="cw260 cml10 cal cbbdb cmt10">Current Charges</li>
+								<li class="cw70 car cbbdb cmt10">245.12</li>
+								<li class="cw30 cal cbbdb cmt10">&nbsp;</li>
+								</DIV><DIV class="fs10">
+								<li class="fcbb cml10 cw225 cal cmt10 cbbdb">Total Amount Due</li>
+								<li class="fcbb cw105 car cmt10 cbbdb">$245.12</li>
+								<li class="fcbb cw30 cal cbbdb cmt10">&nbsp;</li>
+								</DIV>
+								<DIV class="csborange fs8 cw375">
+								<li class="cml10 cw230 cal cmt10">Amount Due in Full by</li>
+								<li class="fcbb cw100 car cmt10">May 4, 2012</li>
+								<li class="cw30 cal cmt10">&nbsp;</li>
+								</DIV>
+							</DIV>
+							<DIV class="cmt25 cmb25" ID="SECTION">
+								<DIV class="fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">Billing Summary</DIV>
+								<DIV class="fs8">
+									<li class="fcbb cml30 cw180 cal">Questions? Visit att.com</li>
+									<li class="fcbb cw100 cal">Page</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="fcbb cw215 cal cmt10">
+										<A class=" ffV fs8 fcbb cml30 cw245 cal " href="#CARRIERNAMEPlans and Services"> Plans and Services</A>
+									</li>
+									<li class="cw50 cal cmt10">1</li>
+									<li class="cw75 car cmt10">50.81</li>
+									<li class="cw20 cal cmt10"></li>
+									<li class="cw10 cal cmt10"></li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal">1 866 620-6000</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal fcbb">PIN: 4194</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml20 cw270 cal">Repair Service:</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal">1 866 620-6900</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="fcbb cw215 cal cmt10">
+										<A class=" ffV fs8 fcbb cml30 cw245 cal " href="#CARRIERNAMEAT&T Long Distance Service"> AT&T Long Distance Service</A>
+									</li>
+									<li class="cw50 cal cmt10">2</li>
+									<li class="cw75 car cmt10">15.75</li>
+									<li class="cw20 cal cmt10"></li>
+									<li class="cw10 cal cmt10"></li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal">1 866 620-6000</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="fcbb cw215 cal cmt10"><A class=" ffV fs8 fcbb cml30 cw245 cal " href="#CARRIERNAMEInternet Services"> Internet Services</A></li>
+									<li class="cw50 cal cmt10">2</li>
+									<li class="cw75 car cmt10">30.00</li>
+									<li class="cw20 cal cmt10"></li>
+									<li class="cw10 cal cmt10"></li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal">1 888 321-2375</li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="fcbb cw215 cal cmt10"><A class=" ffV fs8 fcbb cml30 cw245 cal " href="#CARRIERNAMEAT&T Wireless Services"> AT&T Wireless Services</A></li>
+									<li class="cw50 cal cmt10">2</li>
+									<li class="cw75 car cmt10">148.56</li>
+									<li class="cw20 cal cmt10"></li>
+									<li class="cw10 cal cmt10"></li>
+								</DIV>
+								<DIV class="fs8">
+									<li class="cml50 cw270 cal">1 800 331-0500</li>
+								</DIV>
+								<DIV class="fs9">
+									<li class="fcbb cw245 cal cmt10">Total Current Charges</li>
+									<li class="fcbb cw95 car cmt10">245.12</li>
+									<li class="cw20 cal cmt10"></li>
+								</DIV>
+							</DIV>
+							
+							<DIV class="fcbn cw525">
+								<li class="ffV fs8"><A HREF="http://www.att.com/billinserts/3PI000017178/3PI000017178.html "TARGET="_BLANK" title="Opens a new browser window">Be prepared if disaster strikes - AT&T can help</A></li>
+							</DIV>
+							<br>
+							<DIV class="fcbn cw525">
+								<li class="ffV fs8"><A HREF="http://www.att.com/billinserts/3PI000017180/3PI000017180.html "TARGET="_BLANK" title="Opens a new browser window">Auto Ins from GEICO for your Business Car or Truck</A></li>
+							</DIV>
+							<br>
+							<DIV ID="SECTION">
+								<DIV class="fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">News You Can Use Summary</DIV>
+								<DIV class="ffV fs7 cw375">
+								<li class="cw170">&#149; PREVENT DISCONNECT</li>
+								<li class="cw170 cml5">&#149; CARRIER INFORMATION</li>
+							</DIV>
+							<DIV class="ffV fs7 cw375">
+								<li class="cw170">&#149; 3RD PARTY BILL BLOCK</li>
+								<li class="cw170 cml5"></li>
+							</DIV>
+							<DIV class="ffV fs7">
+								<li class="cw375">See "News You Can Use" for additional information.</li>
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="cal" ID="Right">
+						<DIV class="cmt25" ID="SECTION">
+							<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">Detail of Payments and Adjustments</DIV>
+							<DIV class="ffCN fs7">
+							<li class="cw375 cal">Item  </li>
+							</DIV><DIV class="ffCN fs7 tdul">
+							<li class="cw25 cal">No.</li>
+							<li class="cw30 cal">Date</li>
+							<li class="cw175 cal">Description</li>
+							<li class="cw20 cal"></li>
+							<li class="cw70 cal">Adjustments</li>
+							<li class="cw55 cal">Payments</li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">1.</li>
+							<li class="cw30 cal">3-17</li>
+							<li class="cw145">AT&T Wireless Services</li>
+							<li class="cw15 car"></li>
+							<li class="cw80 car">4.00</li>
+							<li class="cw10 cal">CR</li>
+							<li class="cw55 car"></li>
+							<li class="cw15 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">2.</li>
+							<li class="cw30 cal">3-30</li>
+							<li class="cw145">Payment</li>
+							<li class="cw15 car"></li>
+							<li class="cw80 car"></li>
+							<li class="cw10 cal"></li>
+							<li class="cw55 car">230.70</li>
+							<li class="cw15 cal"></li>
+							</DIV>
+							<DIV class="fs7 ffV">
+								<li class="fcbb cw220">Totals</li>
+								<li class="fcbb cw70 car">4.00</li>
+								<li class="fcbb cw15 cal">CR</li>
+								<li class="fcbb cw55 car">230.70</li>
+								<li class="fcbb cw15 car"></li>
+							</DIV>
+						</DIV>
+						<DIV class="cmt25" ID="SECTION">
+							<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">
+								<A name="CARRIERNAMEPlans and Services"></A>
+								<A class="ffV fcbbrvh fs10 cw527 csb000 fcwhite"  name="CARRIER00000">Plans and Services</A>
+							</DIV>
+							<DIV>
+								<li class="ffV fcbb fs7 cw375 cbb1 cmt10">Promotions and Discounts</li>
+							</DIV>
+							<DIV class="ffCN fs7">
+								<li class="cw375 cal">Item</li>
+							</DIV>
+							<DIV class="ffCN fs7 tdul">
+							<li class="cw25 cal">No.</li>
+							<li class="cw200 cal">Description</li>
+							<li class="cw70 cal"></li>
+							<li class="cw80 cal"></li>
+							</DIV>
+							<DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">3.</li>
+							<li class="cw215">Discount for All For Less - Complete Choice for Business for Bill Period Apr 4, 2012 EES007X40.</li>
+							<li class="cw45 cal"></li>
+							<li class="cw80 car fcbb">20.00</li>
+							<li class="cw10 cal fcbb">CR</li>
+							</DIV><DIV>
+							<li class="ffV fcbb fs7 cw375 cbb1 cmt10">Monthly Service - Apr 4 thru May 3</li>
+							</DIV><DIV class="ffCN fs7 tdul">
+							<li class="cw25 cal"></li><li class="cw200 cal"></li>
+							<li class="cw70 cal">Quantity</li>
+							<li class="cw80 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">4.</li>
+							<li class="cw215 fcbb">Complete Choice&reg; 1 Line</li>
+							<li class="cw45 cal">1</li>
+							<li class="cw80 car fcbb">55.00</li>
+							<li class="cw10 cal fcbb"></li>
+							</DIV>
+							<DIV class="ffCN fs7">
+							<li class="cml35 cw230">Business Line</li>
+							<li class="cw110 cal"></li>
+							</DIV>
+							<DIV class="ffCN fs7">
+							<li class="cml35 cw230">RingMaster&reg; 1</li>
+							<li class="cw110 cal"></li>
+							</DIV>
+							<DIV class="ffCN fs7">
+							<li class="cml35 cw230">3Way Calling with Transfer</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cml35 cw230">Remote Activation of Call</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cml35 cw230">Forwarding</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cml35 cw230">Repeat Dialing</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cml35 cw230">Enhanced Caller ID Anonymous</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cml35 cw230">Call Blocking</li>
+							<li class="cw110 cal"></li>
+							</DIV><DIV>
+							<li class="ffV fcbb fs7 cw375 cbb1 cmt10">Surcharges and Other Fees</li>
+							</DIV><DIV class="ffCN fs7"><li class="cw375 cal">Item</li>
+							</DIV><DIV class="ffCN fs7 tdul"><li class="cw25 cal">No.</li>
+							<li class="cw200 cal">Description</li>
+							<li class="cw70 cal">Quantity</li>
+							<li class="cw80 cal"></li></DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">5.</li>
+							<li class="cw215">Federal Universal Service Fee</li>
+							<li class="cw45 cal">1</li>
+							<li class="cw80 car">1.15</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">6.</li>
+							<li class="cw215">Federal Subscriber Line Charge</li>
+							<li class="cw45 cal">1</li>
+							<li class="cw80 car">6.45</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffV">
+							<li class="fcbb cw295">Total Surcharges and Other Fees</li>
+							<li class="fcbb cw70 car">7.60</li><li class="fcbb cw10 cal"></li>
+							</DIV><DIV><li class="ffV fcbb fs7 cw375 cbb1 cmt10">Government Fees and Taxes</li>
+							</DIV><DIV class="ffCN fs7"><li class="cw375 cal">Item</li>
+							</DIV><DIV class="ffCN fs7 tdul"><li class="cw25 cal">No.</li>
+							<li class="cw200 cal">Description</li><li class="cw70 cal">Quantity</li>
+							<li class="cw80 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">7.</li>
+							<li class="cw215">Federal Excise Tax</li>
+							<li class="cw45 cal"></li><li class="cw80 car">1.25</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">8.</li>
+							<li class="cw215">FL - State Communications Tax </li>
+							<li class="cw45 cal"></li><li class="cw80 car">3.91</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">9.</li>
+							<li class="cw215">FL - Local Communications Tax</li>
+							<li class="cw45 cal"></li>
+							<li class="cw80 car">2.44</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">10.</li>
+							<li class="cw215">Telecommunications Access</li>
+							<li class="cw45 cal">1</li><li class="cw80 car">.11</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="cw25"></li>
+							<li class="cw350">System Act Surcharge</li>
+							</DIV><DIV class="fs7 ffCN">
+							<li class="fcbn cw20 car cmr5">11.</li>
+							<li class="cw215">Emergency 911 Service</li>
+							<li class="cw45 cal"></li><li class="cw80 car">.50</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffV">
+							<li class="fcbb cw295">Total Government Fees and Taxes</li>
+							<li class="fcbb cw70 car">8.21</li>
+							<li class="fcbb cw10 cal"></li>
+							</DIV>
+							<DIV class="fs8 ffV cmt12">
+								<li class="fcbb cw295">Total Plans and Services</li>
+								<li class="fcbb cw70 car">50.81</li>
+								<li class="fcbb cw10 cal"></li>
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="Foot">
+						<DIV>
+							<li class="fcbb fs7 cml385 cw375 cal cmt10"><B>Local Services provided by AT&T Florida.</B></li>
+						</DIV>
+						<DIV>
+							<li class="fcbb fs7 cml385 cw375 cal cmt10"></li>
+						</DIV>
+					</DIV>
+				</DIV>
+					<p style="page-break-after: always;"></p>
+					<DIV class="Page">
+						<DIV class="fcbn ch20 csbdorange cw740"><li class="cw740 cac fcwhite">att.com</li></DIV>
+						<A NAME="2">
+							<DIV class="cmb30" ID="PageHead">
+								<DIV class="cmt20" ID="PageLogo">
+									<li class="cml10"><img src="/olam/images/L9/SBCATT.gif"></li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="CustHead">
+									<li class="fcbn cw205">OLIVERS GOLD SHOP</li>
+									<li class="fcbn cw205">8221 GLADES RD</li>
+									<li class="fcbn cw205">BOCA RATON       FL 33434-4072</li>
+									<li class="fcbn cw205"> </li><li class="fcbn cw205"> </li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="PageInfo">
+									<li class="fcbb cw90 car fsb">Page</li>
+									<li class="fcbn cw140 cal cml10">2 of 4</li>
+									<li class="fcbb cw90 car fsb">Account Number</li>
+									<li class="fcbn cw140 cal cml10">561 483-9733 709 0450</li>
+									<li class="fcbb cw90 car fsb">Billing Date</li>
+									<li class="fcbn cw140 cal cml10">Apr 04, 2012</li>
+									<li class="fcbb cw90 car fsb cmt10"></li>
+									<li class="fcbn cw140 cal cml10 cmt10"></li>
+								</DIV>
+							</DIV>
+						</A>
+						<DIV class="cal" ID="Left">
+							<DIV class="cmt25" ID="SECTION">
+								<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">
+									<A name="CARRIERNAMEAT&T Long Distance Service"></A>
+									<A class="ffV fcbbrvh fs10 cw527 csb000 fcwhite"  name="CARRIER00000">AT&T Long Distance Service</A>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Promotions and Discounts</li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">1.</li>
+									<li class="fcbn cw270">Reward for All For Less - Business Unlimited Calling for Bill Period Apr 4, 2012 EES007X3X.</li>
+									<li class="fcbb cw70 car">10.00</li>
+									<li class="fcbb cw10 cal">CR</li>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Monthly Service</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+									<li class="fcbb cw375">Charges for 561 483-9733</li>
+								</DIV>
+								<DIV class="ffCN fs7 tdul">
+									<li class="cw25 cal"></li>
+									<li class="cw200 cal">Type of Service</li>
+									<li class="cw60 cac">Period</li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">2.</li>
+									<li class="cw200">Bus Unlimited Clg Primary Line Monthly Fee</li>
+									<li class="cw60 cac">03/15-04/14</li>
+									<li class="cw80 car">20.00</li>
+									<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Surcharges and Other Fees</li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">3.</li>
+									<li class="fcbn cw270">Federal Regulatory Fee</li>
+									<li class="fcbn cw70 car">.33</li><li class="fcbn cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">4.</li>
+									<li class="fcbn cw270">Federal Universal Service Fee</li>
+									<li class="fcbn cw70 car">2.09</li>
+									<li class="fcbn cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffV">
+									<li class="fcbb cw295">Total Surcharges and Other Fees</li>
+									<li class="fcbb cw70 car">2.42</li>
+									<li class="fcbb cw10 cal"></li>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Government Fees and Taxes</li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">5.</li>
+									<li class="fcbn cw270">FL - State Communications Tax </li>
+									<li class="fcbn cw70 car">2.05</li>
+									<li class="fcbn cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">6.</li>
+									<li class="fcbn cw270">FL - Local Communications Tax</li>
+									<li class="fcbn cw70 car">1.28</li>
+									<li class="fcbn cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffV">
+									<li class="fcbb cw295">Total Government Fees and Taxes</li>
+									<li class="fcbb cw70 car">3.33</li><li class="fcbb cw10 cal"></li>
+								</DIV>
+								<DIV class="fs8 ffV cmt12">
+									<li class="fcbb cw295">Total AT&T Long Distance Service</li>
+									<li class="fcbb cw70 car">15.75</li>
+									<li class="fcbb cw10 cal"></li>
+								</DIV>
+							</DIV>
+							<DIV class="cmt25" ID="SECTION">
+								<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">
+									<A name="CARRIERNAMEInternet Services"></A><A class="ffV fcbbrvh fs10 cw527 csb000 fcwhite"  name="CARRIER00000">Internet Services</A>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Important Information</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Charges appearing in this section are for services that may be provided by</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">AT&T Internet Services and/or by BellSouth Telecommunications, Inc.</li>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Itemized Charges and Credits</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+									<li class="fcbb cw375">Billed on Behalf of BellSouth Telecommunications, Inc</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Questions Concerning Internet Charges (I90000)</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Call Toll Free 1 888 321-2375</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>561 483-9733</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Charges for Mar 01, 2012 thru Mar 31, 2012</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>AT&T Internet Charges</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>User ID: barbie2424@att.net</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>DSL: 561 483-9733</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+									<li class="cw20 car cmr5">7.</li>
+									<li class="cw305"><PRE>FastAccess(R) Business 6.0</PRE></li>
+									<li class="cw35 car">109.95</li>
+									<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>      From Mar 01 thru Mar 31</PRE></li>
+								</DIV>
+								<DIV class="fs7 ffCN">
+									<li class="fcbn cw20 car cmr5">8.</li>
+									<li class="fcbn cw270">Discount for All For Less - FastAccess DSL for Bill Period Apr 4, 2012 EES007X3M.</li>
+									<li class="fcbn cw70 car">79.95</li>
+									<li class="fcbn cw10 cal">CR</li>
+								</DIV>
+								<DIV class="fs7 ffCN fcbn">
+									<li class="fcbn cw295">Total Billed on Behalf of BellSouth Telecommunications, Inc</li>
+									<li class="fcbn cw70 car">30.00</li>
+									<li class="fcbn cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffV">
+									<li class="fcbb cw295">Total Itemized Charges and Credits</li>
+									<li class="fcbb cw70 car">30.00</li>
+									<li class="fcbb cw10 cal"></li>
+								</DIV>
+								<DIV class="fs8 ffV cmt12">
+									<li class="fcbb cw295">Total Internet Services</li>
+									<li class="fcbb cw70 car">30.00</li>
+									<li class="fcbb cw10 cal"></li>
+								</DIV>
+							</DIV>
+							<DIV class="cmt25" ID="SECTION">
+								<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">
+									<A name="CARRIERNAMEAT&T Wireless Services"></A>
+									<A class="ffV fcbbrvh fs10 cw527 csb000 fcwhite"  name="CARRIER00000">AT&T Wireless Services</A>
+								</DIV>
+							</DIV>
+						</DIV>
+						<DIV class="cal" ID="Right">
+							<DIV class="cmt25">
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Important Information</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Add a Line with Family Talkzz from AT&amp;T </li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">FamilyTalk(R) plans start at just $69.99/month including</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">700 Rollover Minutes. Add up to three additional lines</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">for only $9.99 each. Sign up now by calling 800-449-1672</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">or visit ATT.COM/ADDALINE</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal"></li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">AT&T Surcharges</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">AT&T surcharges include: Regulatory Cost Recovery Charge to</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">recover costs to comply with government assessments and</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">regulations; Universal Service Charges; and gross receipts</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">charges. They are not taxes and are subject to change.</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal"></li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">DirectBill Charges</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Detail of DirectBill charges can be viewed at</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">att.com/directbill.  The direct billing option offers you</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">the ability to purchase products such as ringtones, games,</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">graphics and wireless software from AT&T preferred</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Internet merchants.</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal"></li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Attention TTY Users</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">For Deaf/hard of hearing customers: (TTY) 1 866 241-6567</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">Questions on accessibility by persons with</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn">
+									<li class="cw375 cal">disabilities: 1 866 241-6568</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbb">
+									<li class="cw375 cal"><PRE>&nbsp;</PRE></li>
+								</DIV>	
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Wireless Summary - 287242618146</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+									<li class="fcbb cw375">Cycle Dates: Feb 25, 2012 - Mar 24, 2012</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>FAN: 04360949</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbb">
+									<li class="cw375 cal"><PRE>&nbsp;</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Monthly Service                             $124.99</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Credits, Adjustments and Other Charges        $4.93</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Data Usage                                    $2.00</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Taxes                                        $16.64</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Total Wireless Charges                      $148.56</PRE></li>
+								</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Mobile Charges Summary</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+									<li class="fcbb cw375">954 328-3023 Group: 1</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>BARBARA OLIVER</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Monthly Service                             $115.00</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Credits, Adjustments and Other Charges        $3.80</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Taxes                                        $14.48</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Charges for this mobile                     $133.28</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+									<li class="fcbb cw375">954 629-9390 Group: 1</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>IRA OLIVER</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Monthly Service                               $9.99</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Credits, Adjustments and Other Charges        $1.13</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Data Usage                                    $2.00</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Taxes                                         $2.16</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+									<li class="cw375 cal"><PRE>Charges for this mobile                      $15.28</PRE></li>
+								</DIV>
+							</DIV>
+						</DIV>
+					<DIV class="Foot">
+						<DIV>
+							<li class="ffV fcbb fs7 cml385 cw375 cal cmt10">
+								<B>&copy;2008 AT&T Intellectual Property. All rights reserved.</B>
+							</li>
+						</DIV>
+					</DIV>
+					
+				</DIV>
+				<p style="page-break-after: always;"></p>
+					<DIV class="Page">
+						<DIV class="fcbn ch20 csbdorange cw740">
+							<li class="cw740 cac fcwhite">att.com</li>
+						</DIV>
+						<A NAME="3">
+							<DIV class="cmb30" ID="PageHead">
+								<DIV class="cmt20" ID="PageLogo">
+									<li class="cml10"><img src="/olam/images/L9/SBCATT.gif"></li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="CustHead">
+									<li class="fcbn cw205">OLIVERS GOLD SHOP</li>
+									<li class="fcbn cw205">8221 GLADES RD</li>
+									<li class="fcbn cw205">BOCA RATON       FL 33434-4072</li>
+									<li class="fcbn cw205"> </li><li class="fcbn cw205"> </li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="PageInfo">
+									<li class="fcbb cw90 car fsb">Page</li>
+									<li class="fcbn cw140 cal cml10">3 of 4</li>
+									<li class="fcbb cw90 car fsb">Account Number</li>
+									<li class="fcbn cw140 cal cml10">561 483-9733 709 0450</li>
+									<li class="fcbb cw90 car fsb">Billing Date</li>
+									<li class="fcbn cw140 cal cml10">Apr 04, 2012</li>
+									<li class="fcbb cw90 car fsb cmt10"></li>
+									<li class="fcbn cw140 cal cml10 cmt10"></li>
+								</DIV>
+							</DIV>
+						</A>
+						<DIV class="cal" ID="Left">
+							<DIV class="cmt25" ID="SECTION">
+								<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">AT&T Wireless Services</DIV>
+								<DIV class="ffV">
+									<li class="fcbb fs7 cw375 cbb1 cmt10">Group Usage Summary - Group: 1</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Voice</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Rollover Summary</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Previous Balance                               919</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Unused Minutes Added                           482</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Minutes Expired (*)                              0</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Current Rollover Balance                     1,401</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>(*) Unused Plan Minutes Expired</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>After 12 Billing Periods</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">FT9NTN700RUMMUNW</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  154 Minutes Used by              954 328-3023</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  169 Minutes Used by              954 629-9390</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  323 Minutes Used by This Group</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>  700 Minutes Included</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Data</li></DIV><DIV class="ffCN fs7">
+								<li class="fcbb cw375">FT9NTN700RUMMUNW</li></DIV><DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>66 Text Messages Used by        954 328-3023</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>19 Text Messages Used by        954 629-9390</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>85 Text Messages Used by This Group</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>    8 MMS Messages Used by         954 328-3023</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>20 MMS Messages Used by         954 629-9390</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>28 MMS Messages Used by This Group</PRE></li>
+								</DIV>
+								<DIV class="ffV"><li class="fcbb fs7 cw375 cbb1 cmt10">954 328-3023 - BARBARA OLIVER</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Monthly Service</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Mar 25 thru Apr 24</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">1.</li>
+								<li class="cw305"><PRE>FT9NTN700RUMMUNW</PRE></li>
+								<li class="cw35 car">60.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>6 Way Calling</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>700 Anytime Mins</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Anytime Min Rollover</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Forward Conditional</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Forward Immediate</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Hold</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Waiting</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Caller ID</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Direct Bill Detail</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Family Talk</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Message Waiting Ind</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Nation GSM</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>UNL Nght & Wknd Min</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Unlimited M2M Expnd</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn"><li class="cw20 car cmr5">2.</li>
+								<li class="cw305"><PRE>AT&T Direct Bill</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">3.</li>
+								<li class="cw305"><PRE>AT&T Domestic LD</PRE></li><li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Toll Domestic</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Toll International</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">4.</li>
+								<li class="cw305"><PRE>AT&T Roam LD</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Toll Domestic</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Toll International</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">5.</li>
+								<li class="cw305"><PRE>FTUnltd SMS-MMS-M2AM</PRE></li>
+								<li class="cw35 car">30.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">6.</li>
+								<li class="cw305"><PRE>GSM Coverage Area</PRE></li>
+								<li class="cw35 car">.00</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">7.</li>
+								<li class="cw305"><PRE>Off-Network Roam</PRE></li>
+								<li class="cw35 car">.00</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">8.</li>
+								<li class="cw305"><PRE>Unlimited Expd M2M</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">9.</li>
+								<li class="cw305"><PRE>Unlimited N&W</PRE></li>
+								<li class="cw35 car">.00</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">10.</li>
+								<li class="cw305"><PRE>Unltd M2AM</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">11.</li>
+								<li class="cw305"><PRE>VISUAL VM POSTPD</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">12.</li>
+								<li class="cw305"><PRE>iPhone Customer</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+							</DIV>
+						</DIV>
+						<DIV class="cal" ID="Right">
+							<DIV class="cmt25">
+								<DIV class="ffV">
+								<li class="fcbb fs7 cw375 cbb1 cmt10">954 328-3023 - BARBARA OLIVER  -  Continued</li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">13.</li>
+								<li class="cw305"><PRE>2GB DATA</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">14.</li>
+								<li class="cw305"><PRE>DataPro 2GB 4S</PRE></li>
+								<li class="cw35 car">25.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">15.</li>
+								<li class="cw305"><PRE>Messaging Unlimited</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Pict Video MSG</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Text Messaging</PRE></li>
+								</DIV><DIV class="fs7 ffCN fcbn cmb5">
+								<li class="cw295">Total Monthly Service</li>
+								<li class="cw70 car">115.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Credits, Adjustments and Other Charges</li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">16.</li>
+								<li class="cw305"><PRE>Property Tax Allotment</PRE></li>
+								<li class="cw35 car">.31</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">17.</li>
+								<li class="cw305"><PRE>Regulatory Cost Recovery Charge</PRE></li>
+								<li class="cw35 car">.26</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">18.</li>
+								<li class="cw305"><PRE>Federal Universal Service Charge</PRE></li>
+								<li class="cw35 car">3.23</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fs7 ffCN fcbn cmb5">
+								<li class="cw295">Total Credits, Adjustments and Other Charges</li>
+								<li class="cw70 car">3.80</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Voice Usage Summary</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Rollover FM 700</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  135 Minutes Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Unlimited N&Wzz</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>   19 Minutes Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Unltd M2AM</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  703 Minutes Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Data Usage Summary</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Messaging Unlimited</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>   66 Text Messages Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>    8 Multimedia Messages Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">2GB DATA</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>  165 Megabytes Used</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>2,048 Megabytes Included</PRE></li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Taxes</li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">19.</li>
+								<li class="cw305"><PRE>911 Service Fee</PRE></li>
+								<li class="cw35 car">.50</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">20.</li>
+								<li class="cw305"><PRE>FL State Communications Tax</PRE></li>
+								<li class="cw35 car">8.61</li><li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">21.</li>
+								<li class="cw305"><PRE>County Communications Tax</PRE></li>
+								<li class="cw35 car">5.37</li><li class="cw10 cal"></li>
+								</DIV><DIV class="fs7 ffCN fcbn"><li class="cw295">Total Taxes</li>
+								<li class="cw70 car">14.48</li><li class="cw10 cal"></li>
+								</DIV><DIV class="fs7 ffV">
+								<li class="fcbb cw295">Total for  954 328-3023</li>
+								<li class="fcbb cw70 car">133.28</li>
+								<li class="fcbb cw10 cal"></li>
+								</DIV>
+								<DIV class="ffV">
+								<li class="fcbb fs7 cw375 cbb1 cmt10">954 629-9390 - IRA OLIVER</li>
+								</DIV>
+								<DIV class="ffCN fs7">
+								<li class="fcbb cw375">Monthly Service</li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw375 cal"><PRE>Mar 25 thru Apr 24</PRE></li>
+								</DIV><DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">22.</li>
+								<li class="cw305"><PRE>FT9NTN700RUMMUNW</PRE></li>
+								<li class="cw35 car">9.99</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>6 Way Calling</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>700 Anytime Mins</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Anytime Min Rollover</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>BasicVoiceMail</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Forward Conditional</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Forward Immediate</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Hold</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Call Waiting</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								
+								<li class="cw335 cml25"><PRE>Caller ID</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Direct Bill Detail</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Family Talk</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Message Waiting Ind</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>Nation GSM</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn">
+								<li class="cw335 cml25"><PRE>UNL Nght & Wknd Min</PRE></li>
+								</DIV>
+								<DIV class="ffCN fsIDB fcbn"><li class="cw335 cml25"><PRE>Unlimited M2M Expnd</PRE></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">23.</li>
+								<li class="cw305"><PRE>AT&T Direct Bill</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+								<DIV class="fsIDB ffCN fcbn">
+								<li class="cw20 car cmr5">24.</li>
+								<li class="cw305"><PRE>AT&T Domestic LD</PRE></li>
+								<li class="cw35 car">.00</li>
+								<li class="cw10 cal"></li>
+								</DIV>
+							</DIV>
+						</DIV>
+					</DIV>
+					<p style="page-break-after: always;"></p>
+					<DIV class="Page">
+						<DIV class="fcbn ch20 csbdorange cw740">
+							<li class="cw740 cac fcwhite">att.com</li>
+						</DIV>
+						<A NAME="4">
+							<DIV class="cmb30" ID="PageHead">
+								<DIV class="cmt20" ID="PageLogo">
+									<li class="cml10"><img src="/olam/images/L9/SBCATT.gif"></li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="CustHead">
+								<li class="fcbn cw205">OLIVERS GOLD SHOP</li>
+								<li class="fcbn cw205">8221 GLADES RD</li>
+								<li class="fcbn cw205">BOCA RATON       FL 33434-4072</li>
+								<li class="fcbn cw205"> </li>
+								<li class="fcbn cw205"> </li>
+								</DIV>
+								<DIV class="ffV fs7 cmt20" ID="PageInfo">
+								<li class="fcbb cw90 car fsb">Page</li>
+								<li class="fcbn cw140 cal cml10">4 of 4</li>
+								<li class="fcbb cw90 car fsb">Account Number</li>
+								<li class="fcbn cw140 cal cml10">561 483-9733 709 0450</li>
+								<li class="fcbb cw90 car fsb">Billing Date</li>
+								<li class="fcbn cw140 cal cml10">Apr 04, 2012</li>
+								<li class="fcbb cw90 car fsb cmt10"></li>
+								<li class="fcbn cw140 cal cml10 cmt10"></li>
+								</DIV>
+							</DIV>
+						</A>
+						<DIV class="cal" ID="Left">
+							<DIV class="cmt25" ID="SECTION">
+							<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">AT&T Wireless Services</DIV>
+							<DIV class="ffV">
+								<li class="fcbb fs7 cw375 cbb1 cmt10">954 629-9390 - IRA OLIVER  -  Continued</li>
+							</DIV>
+							<DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Toll Domestic</PRE></li>
+							</DIV>
+							<DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Toll International</PRE></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">1.</li>
+							<li class="cw305"><PRE>AT&T Roam LD</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Toll Domestic</PRE></li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Toll International</PRE></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">2.</li>
+							<li class="cw305"><PRE>FTUnltd SMS-MMS-M2AM</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">3.</li>
+							<li class="cw305"><PRE>GSM Coverage Area</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">4.</li>
+							<li class="cw305"><PRE>Off-Network Roam</PRE></li>
+							<li class="cw35 car">.00</li><li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">5.</li>
+							<li class="cw305"><PRE>Unlimited Expd M2M</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">6.</li>
+							<li class="cw305"><PRE>Unlimited N&W</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">7.</li>
+							<li class="cw305"><PRE>Unltd M2AM</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">8.</li>
+							<li class="cw305"><PRE>DATA PAY PER USE</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">9.</li>
+							<li class="cw305"><PRE>Messaging Unlimited</PRE></li>
+							<li class="cw35 car">.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Pict Video MSG</PRE></li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>Text Messaging</PRE></li>
+							</DIV><DIV class="fs7 ffCN fcbn cmb5">
+							<li class="cw295">Total Monthly Service</li>
+							<li class="cw70 car">9.99</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Credits, Adjustments and Other Charges</li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">10.</li>
+							<li class="cw305"><PRE>Property Tax Allotment</PRE></li>
+							<li class="cw35 car">.31</li><li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">11.</li>
+							<li class="cw305"><PRE>Regulatory Cost Recovery Charge</PRE></li>
+							<li class="cw35 car">.26</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">12.</li>
+							<li class="cw305"><PRE>Federal Universal Service Charge</PRE></li>
+							<li class="cw35 car">.56</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN fcbn cmb5">
+							<li class="cw295">Total Credits, Adjustments and Other Charges</li>
+							<li class="cw70 car">1.13</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Voice Usage Summary</li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Rollover FM 700</li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>   83 Minutes Used</PRE></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Unlimited N&Wzz</li></DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>   86 Minutes Used</PRE></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Unltd M2AM</li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>  667 Minutes Used</PRE></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Data Usage Summary</li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Messaging Unlimited</li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>   19 Text Messages Used</PRE></li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>   20 Multimedia Messages Used</PRE></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">DATA PAY PER USE</li>
+							</DIV><DIV class="ffCN fsIDB fcbn">
+							<li class="cw335 cml25"><PRE>    1 Megabytes Used</PRE></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">13.</li>
+							<li class="cw305"><PRE>1 Billed at   $2.00/1MB</PRE></li>
+							<li class="cw35 car">2.00</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="ffCN fs7">
+							<li class="fcbb cw375">Taxes</li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">14.</li>
+							<li class="cw305"><PRE>911 Service Fee</PRE></li>
+							<li class="cw35 car">.50</li><li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">15.</li>
+							<li class="cw305"><PRE>FL State Communications Tax</PRE></li>
+							<li class="cw35 car">1.02</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fsIDB ffCN fcbn">
+							<li class="cw20 car cmr5">16.</li>
+							<li class="cw305"><PRE>County Communications Tax</PRE></li>
+							<li class="cw35 car">.64</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffCN fcbn">
+							<li class="cw295">Total Taxes</li>
+							<li class="cw70 car">2.16</li>
+							<li class="cw10 cal"></li>
+							</DIV><DIV class="fs7 ffV">
+							<li class="fcbb cw295">Total for  954 629-9390</li>
+							<li class="fcbb cw70 car">15.28</li>
+							<li class="fcbb cw10 cal"></li>
+							</DIV><DIV class="fs8 ffV cmt12">
+							<li class="fcbb cw295">Total AT&T Wireless Services</li>
+							<li class="fcbb cw70 car">148.56</li>
+							<li class="fcbb cw10 cal"></li>
+							</DIV>
+							<DIV class="ffV fs7 fcbn">
+							<li class="cw375 cmt7">Wireless services provided by AT&T Mobility</li>
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="cal" ID="Right">
+						<DIV class="cmt25" ID="SECTION">
+							<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">News You Can Use</DIV>
+							<DIV class="fs5 cw375"></DIV>
+							<DIV class="fs5 cw375"></DIV>
+							<DIV class="ffV fsMSG_P fcbb cw350">
+								<li class="cw375 cal">PREVENT DISCONNECT </li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn">
+							<li class="cw375 cal">Thank you for being a valued customer. Please be aware that all charges must be paid each month to keep your account current and prevent collection activities. We are required to inform you that certain charges must be paid in order to prevent interruption of local service. THESE CHARGES ARE ALREADY INCLUDED IN THE TOTAL AMOUNT DUE AND ARE $65.95. Also, neglecting to pay for remaining charges may result in interruption or removal of these remaining services or further collection action, but will not result in disconnection of your local service. A Late Payment Charge of $15.00 may apply to an unpaid regulated balance and a 1.5% Interest charge may apply to an unpaid unregulated balance. For more information, call the Plans and Services number listed in the Billing Summary section on page 1. </li>
+							</DIV>
+							<DIV class="fs5 cw375"></DIV>
+							<DIV class="ffV fsMSG_P fcbn">
+							<li class="cw375 cal">CARRIER INFORMATION</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn">
+							<li class="cw375 cal">Our records indicate that you have selected AT&T Long Distance Service or a company that resells their services as your primary local toll carrier and AT&T Long Distance Service or a company that resells their services as your primary long distance carrier. Please contact us if this does not agree with your records. </li>
+							</DIV>
+							<DIV class="fs5 cw375"></DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>3RD PARTY BILL BLOCK</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>To reduce the risk of receiving unauthorized charges on your AT&Tzz</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>bill as a result of actions by a provider other than AT&T, you may</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>request a "third party bill block".  The "third party bill block" will not</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>block long distance charges.  You may obtain this block at no</li>
+							</DIV>
+							<DIV class="ffV fsMSG_P fcbn cw375">
+							<li>charge by contacting AT&T.  Certain restrictions apply.</li>
+							</DIV>
+							</DIV>
+							<DIV class="cmt25" ID="SECTION">
+								<DIV class="ffV fcbbrvh fs10 cw375 cmb10 cal csb000 fcwhite">Terms and Conditions</DIV>
+								<DIV class="fs5 cw375"></DIV>
+								<DIV class="fs5 cw375"></DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>DISPUTED DEBTS</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>Please note, any check or payment instrument in an amount less than the full</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>amount due that you send AT&T marked "PAID IN FULL" or otherwise tender as</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>full satisfaction of a disputed amount, must be sent to AT&T Accounts Receivable</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>Management, 2200 Pinecroft Road Suite 300, Greensboro, NC  27407-4990 and NOT</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>the payment address shown on the payment return document. Thank you for</li>
+								</DIV>
+								<DIV class="ffV fsMSG_P fcbn cw375">
+									<li>choosing AT&T for your communications needs.</li>
+								</DIV>
+							</DIV>
+						</DIV>
+					</DIV>
+					<p style="page-break-after: always;"></p>
+			</DIV>
+
+			</TD>
+          </TR>
+        </TABLE>
+      </TD>
+    </TR>
+  </TABLE>
+
+</DIV>
+</body>
+</html>

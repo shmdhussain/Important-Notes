@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+		<meta charset="utf-8">
+		<title>Content Editable</title>
+		<script type="text/javascript" charset="utf-8" src="../jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/contentedit.js"></script>
+
+	</head>
+<title>ContentEditable</title>
+
+
+<article>
+  <section>
+    <p>Any elements with the <code>contenteditable</code> attribute set will have a grey outline as you hover over. Local storage is used to maintain the changes.</p>
+  </section>
+  <section id="editable" contenteditable="true">
+    <h2>Edit it!</h2>
+    <p spellcheck="true" >This is a paragraph</p>
+    <ol class="myEditList">
+      <li>List Item1</li>
+      <li spellcheck="false">list Item2</li>
+    </ol>
+  </section>
+</article>

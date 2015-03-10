@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="JavaScript">
+function fnOver(){
+	e=document.getElementById("i1");
+	e.style.color="#00ff00";
+	e.style.fontSize="40pt";
+	e.innerHTML="<table border=1><tr><td>hello</td></tr></table>";
+}
+function fnOut(){
+	e=document.getElementById("i1");
+	e.style.color="#0000ff";
+	e.style.fontSize="30pt";
+}
+</script>
+	<style>
+	.one{
+		color:red;
+		font-size:20pt;
+	}
+	#i1{
+		color:#0000FF;
+		font-size:30pt;
+	}
+	</style>
+</head>
+
+<body>
+	<h1 class="one">Hello</h1>
+
+	<p id="i1" onMouseOver="fnOver()" onMouseOut="fnOut()"> :)</p>
+
+	<h1 class="one">CSS3 is easy</h1>
+</body>
+<html>

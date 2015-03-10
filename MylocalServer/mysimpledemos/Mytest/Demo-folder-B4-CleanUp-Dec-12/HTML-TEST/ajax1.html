@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="css/test-common.css" media="screen, projection, print" />
+<script type="text/javascript">
+    
+	jQuery(function(){
+		jQuery('a').click(function(){
+			console.log("content is executed after the page is loaded");
+			return false;
+		});
+	});
+</script>
+</head>
+
+<body id="top" class="extend3o">
+	<a href="#" class="">This is the link in Page 1</a>
+	
+	<select  class="parent">
+		<option selected="selected"><a href="ajax1.html">Tab 1</a></option>
+		<option><a href="ajax2.html">Tab 2</a></option>
+		<option><a href="ajax3.html">Tab 3</a></option>
+		
+	</select>
+
+	<!-- this time we have three unique panes for each tab-->
+	
+
+</body>
+
+
+</html>

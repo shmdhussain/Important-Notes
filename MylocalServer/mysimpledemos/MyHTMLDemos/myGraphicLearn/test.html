@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Welcome</title>
+		<style>
+		.object {
+			position: absolute;
+		}
+		.van {
+			top: 45%;
+			left: 44%;
+		}
+		#axis:hover .move-right{
+			transform: translate(350px,0);
+			-webkit-transform: translate(350px,0); /** Chrome & Safari **/
+			-o-transform: translate(350px,0); /** Opera **/
+			-moz-transform: translate(350px,0); /** Firefox **/
+		}
+		.object {
+			position: absolute;
+			transition: all 2s ease-in-out;
+			-webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
+			-moz-transition: all 2s ease-in-out; /** Firefox **/
+			-o-transition: all 2s ease-in-out; /** Opera **/
+		}
+		.rocket {
+			top: 43%;
+			left: 44%;
+		}
+		#axis:hover .move-up {
+			transform: translate(0,-350px);
+			-webkit-transform: translate(0,-350px);
+			-o-transform: translate(0,-350px);
+			-moz-transform: translate(0,-350px);
+		}
+		#axis:hover .rotate360cw {
+			transform: rotate(360deg);
+			-webkit-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+		}
+		#axis:hover .larger{
+			transform: scale(2);
+			-webkit-transform: scale(2);
+			-o-transform: scale(2);
+			-moz-transform: scale(2);
+		}
+		#axis:hover .multiple-move {
+			transform: translate(350px, 350px) rotate(360deg);
+			-webkit-transform: translate(350px, 350px) rotate(360deg);
+			-o-transform: translate(350px, 350px) rotate(360deg);
+			-moz-transform: translate(350px, 350px) rotate(360deg);
+		}
+		</style>
+	</head>
+	<body>
+		
+		<div id="axis" class="ten">
+			<img class="object boomerang multiple-move" src="images/pencil.png"/>
+		</div>
+				
+	</body>
+</html>

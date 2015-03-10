@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+   This is a jQuery Tools standalone demo. Feel free to copy/paste.
+   http://flowplayer.org/tools/demos/
+
+   Do *not* reference CSS files and images from flowplayer.org when in
+   production Enjoy!
+-->
+<head>
+  <title>jQuery Tools standalone demo</title>
+
+    <!-- include the Tools -->
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/test-common.css" media="screen, projection, print" />
+  
+</head>
+<body>
+	<select  class="parent">
+		<option><a href="ajax1.html">Tab 1</a></option>
+		<option><a href="ajax2.html">Tab 2</a></option>
+		<option><a href="ajax3.html">Tab 3</a></option>
+		
+	</select>
+
+<!-- this time we have three unique panes for each tab-->
+<div class="css-panes">
+  
+</div>
+
+<!-- activate tabs with JavaScript
+<script>
+   jQuery(function(){
+		jQuery('.parent').change(function() {
+			  alert('Handler for .change() called.');
+			});
+   });
+	
+</script>
+ -->
+<script>
+jQuery(function(){
+    jQuery(".parent").change(function () {
+          var str;
+          jQuery(".parent option:selected").each(function () {
+                str= jQuery(this).html();
+				//alert(str);
+				if(str=='Tab 1'){
+					//alert("1 content");
+					jQuery(".css-panes").load("ajax1.html", function(response, status, xhr) {
+						
+										
+					});
+				}
+				else if(str=='Tab 2'){
+					//alert("2 content");
+					jQuery(".css-panes").load("ajax2.html", function(response, status, xhr) {});
+				}
+				else if(str=='Tab 3'){
+					//alert("3 content");
+					jQuery(".css-panes").load("ajax3.html", function(response, status, xhr) {});
+				}
+              });
+        
+        });
+        
+});
+</script>
+
+
+</body>
+</html>

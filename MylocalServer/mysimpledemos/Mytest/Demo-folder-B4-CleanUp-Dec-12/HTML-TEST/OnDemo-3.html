@@ -1,0 +1,53 @@
+
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+	<!--START: Adding of javaScript library -->
+	<script type="text/javascript" src="script/jquery.min.js"></script>
+	<!--END:   Adding of javaScript library-->
+	<!--START: Adding of javaScript library need internet Connection-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--END: Adding of javaScript library need internet Connection-->
+	</head>
+	<script>
+			
+				
+				
+				jQuery(document).on("click", '.div1', div1);
+				jQuery(document).on("click", '.div2', div2);
+				jQuery(document).on("click", '.div3', div3);
+				jQuery(document).on("click", '.div4', div4);
+				function div1(event){
+					console.log("Red");
+					console.log("Stop");
+				}
+				function div2(event){
+					console.log("green");
+					console.log("Stop");
+				}function div3(event){
+					console.log("yellow");
+					console.log("Stop");
+				}function div4(event){
+					console.log("blue");
+					console.log("Stop");
+				}
+				
+	</script>
+	<style>
+		.div1{background-color:red}
+		.div2{background-color:green}
+		.div3{background-color:yellow}
+		.div4{background-color:blue}
+	</style>
+	<body>
+		<div class="div1" id="Container">Red
+			<div class="div2">Green
+				<div class="div3">yellow
+					<div class="div4">Blue</div>
+				yellow</div>
+			Green</div>
+		Red</div>
+		
+		
+		
+	</body>
+	</html>

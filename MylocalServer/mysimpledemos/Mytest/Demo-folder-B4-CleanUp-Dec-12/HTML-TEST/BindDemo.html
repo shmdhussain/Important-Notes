@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>TEST</title>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<meta name="robots" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--START: Adding of javaScript library -->
+<script type="text/javascript" src="script/jquery.min.js"></script>
+
+<!--END:   Adding of javaScript library-->
+<!--START: Adding of javaScript library need internet Connection-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--END: Adding of javaScript library need internet Connection-->
+
+</head>
+
+<body>
+	<div id="Container"><input value="click me" value="hklh" class="button" type="button"/></div>
+	<div class="status"></div>
+
+
+	
+<script>
+		jQuery(document).ready(function(){
+			
+		
+		
+		});
+		jQuery(".button").bind("click",function(event){
+				jQuery(".status").html("clicked");
+				console.log( "value binded on data is "+" and value on button is: " + jQuery(this).val() );
+		});
+		
+</script>	
+	
+</body>
+
+
+</html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>image slider</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <script src="js/myscript.js" ></script>
+	 
+</head>
+<script>
+
+
+
+</script>
+
+<body>
+    
+   <div class"main-pad">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div class="imgSliderCont">
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+               <div class="PadAll30">
+                    <div class="imgSliderContainer">
+						
+                        <div class="imgBox">
+                            <!--START: image Boxes-->
+								<div style="display:block" class="imgSlide img1 makecenterHor displayBlock">
+									<div class="center">
+										<img src="img/nat1.jpg" class="" height="300px" width="300px" />
+									</div>
+								</div> 
+								
+								<div style="display:none" class="imgSlide img2 makecenterHor displayNone">
+									<div class="center">
+										<img src="img/nat2.jpg" class="" height="300px" width="300px" />
+									</div>
+								</div> 
+								
+								<div style="display:none" class="imgSlide img3 makecenterHor displayNone">
+									<div class="center">
+										<img src="img/nat3.jpg" class="" height="300px" width="300px" />
+									</div>
+								</div> 
+								
+								<div style="display:none" class="imgSlide img4 makecenterHor displayNone">
+									<div class="center">
+										<img src="img/nat4.jpg" class="" height="300px" width="300px" />
+									</div>
+								</div> 
+								
+								<div style="display:none" class="imgSlide img5 makecenterHor displayNone">
+									<div class="center">
+										<img src="img/nat5.jpg" class="" height="300px" width="300px" />
+									</div>
+								</div> 
+							<!--END: image Boxes-->
+                        </div>
+							
+						<!--START:Control For the Slideshows-->	
+						<div class="">
+							<div class="">
+								<div class="PadTop20">
+									<div class="float-left labLeftSec">
+										 <label class="labRightPad right">Speed Of Slideshow:</label>
+									</div>
+								   <div class="float-left">
+										 <select id="imgspeed">
+											<option value="slow">Slow</option>
+											<option value="med">medium</option>
+											<option value="fast">fast</option>
+										 </select>
+								   </div>
+								   <div class="clear"></div>
+									<div class="float-left labLeftSec">
+										 <label class="labRightPad right">&nbsp;</label>
+									</div>
+									<div class="float-left">
+									   <div id="imgSpeed" class="PadTop5 error displayNone"><p>Please select slide show option</p></div>
+								    </div>
+									<div class="clear"></div>
+								</div>	
+								<div class="PadTop20">
+									<div class="float-left">
+										 <input id="playImg" type="button" value="play"/>
+									</div>
+									<div class="float-left PadLeft40">
+										 <input id="stopImg" type="button" value="stop"/>
+									</div>
+									<div class="clear"></div>
+								</div>		
+
+							</div>
+						</div>
+						<!--END:Control For the Slideshows-->
+                    </div>
+               </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

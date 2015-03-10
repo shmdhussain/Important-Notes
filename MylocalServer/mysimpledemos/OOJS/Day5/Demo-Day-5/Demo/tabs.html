@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/jquery-ui-1.10.0.custom.css"></link>
+	
+     <script src="js/jquery-1.6.2.js" ></script>
+     <script src="js/jquery-ui-1.10.0.custom.js" ></script>
+	 
+	<script>
+		
+		$(fnDocReady);
+		function fnDocReady(){
+			
+			console.log("Doc Ready");
+			$('#myTabs').tabs();
+		
+		};
+		
+	</script>
+	<style>
+	
+	</style>
+</head>
+
+
+<body>
+    
+   <div class="">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+						<div id="myTabs">
+							<ul class="" id="" >
+								<li><a href="#t1">Tab 1</a></li>
+								<li><a href="#t2">Tab 2</a></li>
+								<li><a href="#t3">Tab 3</a></li>
+							</ul>
+								<div id="t1">Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content Tab 1 Content </div>
+								<div id="t2">Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content Tab 2 Content </div>
+								<div id="t3">Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content Tab 3 Content </div>
+						</div>
+					<!--END: Your Content-->
+			  
+			     </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/*START:Fix for Tooltip in Ipad and Iphone*/
+	var userAgent=navigator.userAgent.toLowerCase(); 
+	if ((userAgent.indexOf("iphone")!=-1) || (userAgent.indexOf("ipad")!=-1)){
+		console.log("iphone or ipad device is");
+		jQuery(function() {
+			jQuery('body').not('.tooltips').bind({'touchstart':fnOffToolTip});
+			
+		});
+		
+		function fnOffToolTip(e){
+			console.log("body touch");
+			console.log(jQuery('.tip-white').css('visibility'));
+			
+			if(jQuery('.tip-white').css('visibility')=='visible'){
+				console.log("tooltip is there");
+				jQuery('.tooltips').mouseleave();
+			}
+			else{
+				console.log("tooltip is not there");
+			
+			}
+		}
+	}
+	/*END:Fix for Tooltip in Ipad and Iphone*/

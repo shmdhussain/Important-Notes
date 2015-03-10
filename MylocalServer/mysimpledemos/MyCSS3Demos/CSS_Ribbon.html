@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Ribbon</title>
+		<style>
+		{
+			/* Basic CSS reset */
+			margin:0;
+			padding:0;
+		}
+		body {
+			/* These styles have nothing to do with the ribbon */
+			background-color: black;
+			padding:35px 0 0;
+			margin:auto;
+			text-align:center;
+		}
+		.ribbon {
+			display:inline-block;
+		}
+		/*:before and :after pseudo-elements are used to create empty elements
+		  with a thick border. The border has one edge set to transparent.
+		  This leaves the element looking like it had a triangular section removed,
+		  creating the forked look.
+		*/
+		.ribbon:after, .ribbon:before {
+			margin-top:0.5em;
+			content: "";
+			float:left;
+			border:1.5em solid #fff;
+		}
+		.ribbon:after {
+			border-right-color:transparent;
+		}
+		.ribbon:before {
+			border-left-color:transparent;
+		}
+
+		/*The links and the forked ends are all floated left so that they
+		fit flush against each other. The hidden overflow hides the folds
+		that are positioned beneath the span elements.
+		*/
+		.ribbon a:link, .ribbon a:visited {
+			color:#000;
+			text-decoration:none;
+			float:left;
+			height:3.5em;
+			overflow:hidden;
+		}
+		.ribbon span {
+			background:#fff;
+			display:inline-block;
+			line-height:3em;
+			padding:0 1em;
+			margin-top:0.5em;
+			position:relative;
+
+			/*Transitions are an experimental feature and are not yet part of
+			the CSS3 specification.
+			*/
+			-webkit-transition: background, margin 0.2s; /* Saf3.2+, Chrome */
+			-moz-transition: background, margin 0.2s; /* FF4+ */
+			-ms-transition: background, margin 0.2s; /* IE10 */
+			-o-transition: background-color, margin-top 0.2s; /* Opera 10.5+ */
+			transition: background, margin 0.2s;
+		}
+		.ribbon a:hover span {
+			background:#FFD204;
+			margin-top:0;
+		}
+		.ribbon span:before {
+			content: "";
+			position:absolute;
+			top:3em;
+			left:0;
+			border-right:0.5em solid #9B8651;
+			border-bottom:0.5em solid #fff;
+		}
+		.ribbon span:after {
+			content: "";
+			position:absolute;
+			top:3em;
+			right:0;
+			border-left:0.5em solid #9B8651;
+			border-bottom:0.5em solid #fff;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="ribbon">
+			<a href="#">
+				<span>Home</span>
+			</a>
+			<a href="#">
+				<span>About</span>
+			</a>
+			<a href="#">
+				<span>Services</span>
+			</a>
+			<a href="#">
+				<span>Contact</span>
+			</a>
+		</div>
+	</body>
+</html>

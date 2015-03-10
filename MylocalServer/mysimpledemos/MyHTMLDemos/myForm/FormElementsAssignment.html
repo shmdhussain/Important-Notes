@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+	<script src="/jquery.min.js" ></script>
+     <script src="scripts/myscriptform.js" ></script>
+     
+	<script>
+		
+		function updateTextInput(val) {
+			console.log(val);
+		    document.getElementById('sliderval').innerHTML=val; 
+		}
+	</script>
+	<style>
+		.myform .ls,.myform .rs,.myform .content{height:auto}
+		body{height:auto;background-color:#D7FBFC}
+	</style>
+
+</head>
+
+<body>
+    
+   <div class="myform">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+					<form class="" id="myform" action="">
+                    <p class="strong font18 center">Contact Info</p>
+					
+					<!--START: First name-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">First Name:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="fn" type="text" requiredxx autofocus="on" value="">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="errorfn" class="PadTop5 error displayNone"><p>Please enter your first name</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--END: First name-->
+						
+					<!--START: Middle name-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Middle Name:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="mn" type="text"  value="">
+                       </div>
+                       <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: Middle name-->
+	
+					<!--START: Last name-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Last Name:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="ln" type="text" requiredxx  value="">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="errorln" class="PadTop5 error displayNone"><p>Please enter your Last name</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--END: Last name-->
+					
+					<!--START: DOB-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">DOB:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="dob" type="date" requiredxx  value="">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="errordob" class="PadTop5 error displayNone"><p>Please enter your  DOB</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--END: DOB-->
+					
+					<!--START: Gender--> 
+					<div>
+						 <div class="PadTop10">
+							<div class="float-left labLeftSec">
+								 <label class="labRightPad right">Gender</label>
+							</div>
+							<input type="radio" value="male" name="gend">
+							<label class="labLeftPad " value="">Male</label>
+						</div>
+						<div class="PadTop10">
+							<div class="float-left labLeftSec">
+								 <label class="labRightPad right">&nbsp;</label>
+							</div>
+							<input type="radio" name="gend" value="female">
+							<label class="labLeftPad ">Female</label>
+						</div>
+						  <div class="PadTop10">
+								 <div class="float-left labLeftSec">
+									 <label class="labRightPad right">&nbsp;</label>
+								</div>
+								<div class="float-left">
+									<div id="errorGender" class="PadTop5  error displayNone"><p>Please select your gender</p></div>
+							   </div>
+								<div class="clear"></div>
+						 </div>
+					 </div>
+					 <!--START: Gender--> 
+					 
+					  <!--START: Address-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Address:</label>
+                        </div>
+                       <div class="float-left">
+                             <textarea id="addr" type="text" requiredxx  value=""></textarea>
+                       </div>
+                        <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="erroraddr" class="PadTop5 error displayNone"><p>Please enter your Address</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--END: Address-->
+					
+					 
+					 <!--START: Occupation-->
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Occupation:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="occu" type="text" requiredxx  value="">
+                       </div>
+                        <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="errorocc" class="PadTop5 error displayNone"><p>Please enter your Occupation</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--END: Occupation-->
+					
+					 
+					 <!--START: Acct Type-->
+					<div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Account Type:</label>
+                        </div>
+                       <div class="float-left">
+                             <input type="text" list="accttype" requiredxx name="link" />
+							<datalist id="accttype">
+								<option label="W3Schools" value="Personal Acct" />
+								<option label="Google" value="Real Acct" />
+								<option label="Microsoft" value="Nominal Acct" />
+							</datalist>
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                             <div id="errorAcctType" class="PadTop5  error displayNone"><p>Please enter Acct Type</p></div>
+                       </div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: Acct Type--> 
+					
+					 
+					<!--START: Amount Range-->
+					<div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Amount Range:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="amount" requiredxx type="range"  min="10000" max="50000" step="1000" value="" onchange="updateTextInput(this.value);" title="this is my custom email invalid msg">
+							 <label id="sliderval"></label>
+                       </div>
+					   
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                             <div id="erroramount" class="PadTop5  error displayNone"><p>Please select ur amount range</p></div>
+                       </div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: Amount Range--> 
+					
+					
+					<!--START: EMail-->
+					<div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Email:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="email" requiredxx type="email" value="" title="this is my custom email invalid msg">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                             <div id="errorEmail" class="PadTop5  error displayNone"><p>Please enter your email</p></div>
+                       </div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: EMail--> 
+					
+					<!--START: Phone-->
+					<div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">Phone No:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="phone" requiredxx type="tel" pattern="[0-9]{10}" value="" title="this is my custom phone invalid msg">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                             <div id="errorphone" class="PadTop5  error displayNone"><p>Please enter your phone no</p></div>
+                       </div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: Phone--> 
+					
+					<!--START: url-->
+					<div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">HomePage URL </label>
+                        </div>
+                       <div class="float-left">
+                             <input id="url" type="url" placeholder="http://yourwebsite.com" requiredxx value="" title="this is my custom url invalid msg">
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                             <div id="errorurl" class="PadTop5  error displayNone"><p>Please enter your url </p></div>
+                       </div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                    <!--END: url--> 
+					
+					
+                    <!--START: Submit-->
+                     <div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                       <div class="float-left">
+                            <input type="button" class="submit"  value="submit form">
+                            <input type="button" class="save"  value="save form">
+                            <input type="button" class="load"  value="load form">
+                            <input type="button" class="clearform"  value="clear form">
+                            <input type="button" class="clearmem"  value="clear mem">
+							
+                       </div>
+                       <div class="clear"></div>
+                    </div>
+					<!--END: Submit-->
+                  </form>
+					
+					<!--END: Your Content-->
+			  
+			    </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

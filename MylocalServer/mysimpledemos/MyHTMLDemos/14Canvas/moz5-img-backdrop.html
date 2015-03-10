@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <script type="application/javascript">
+  function draw() {
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  var img = new Image();
+	  img.onload = function(){
+		ctx.drawImage(img,0,0);
+		ctx.beginPath();
+		ctx.moveTo(30,96);
+		ctx.lineTo(70,76);
+		ctx.lineTo(103,56);
+		ctx.lineTo(150,36);
+		ctx.stroke();
+	  };
+	  img.src = 'img/backdrop.png';
+	}
+</script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="500"></canvas>
+ </body>
+</html>

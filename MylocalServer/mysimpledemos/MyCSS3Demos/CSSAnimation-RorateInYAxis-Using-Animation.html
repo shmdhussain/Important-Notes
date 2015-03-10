@@ -1,0 +1,81 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css"> 
+#target
+{
+	width:100px;
+	height:100px;
+	background:red;
+	font-size:56px;
+
+	
+	animation-name:myfirst;
+	animation-duration:8s;
+	animation-timing-function:linear;
+	animation-delay:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+
+	-moz-animation-name:myfirst;
+	-moz-animation-duration:8s;
+	-moz-animation-timing-function:linear;
+	-moz-animation-delay:2s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-direction:alternate;
+	-moz-animation-play-state:running;
+
+	-webkit-animation-name:myfirst;
+	-webkit-animation-duration:8s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:running;
+
+}
+
+@keyframes myfirst
+{
+0%   {background:red;transform:rotateX(0deg);}
+25%  {background:yellow;transform:rotateX(90deg);}
+50%  {background:blue;transform:rotateX(180deg);}
+75%  {background:white;transform:rotateX(270deg);}
+100% {background:green;transform:rotateX(360deg);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:red;-moz-transform:rotateX(0deg);}
+25%  {background:yellow;-moz-transform:rotateX(90deg);}
+50%  {background:blue;-moz-transform:rotateX(180deg);}
+75%  {background:white;-moz-transform:rotateX(270deg);}
+100% {background:green;-moz-transform:rotateX(360deg);}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red;-webkit-transform:rotateX(0deg);}
+25%  {background:yellow;-webkit-transform:rotateX(90deg);}
+50%  {background:blue;-webkit-transform:rotateX(180deg);}
+75%  {background:white;-webkit-transform:rotateX(270deg);}
+100% {background:green;-webkit-transform:rotateX(360deg);}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer.</p>
+
+<div id="target">This</div>
+
+<p>Hover over the div element above, to see the transition effect.</p>
+
+</body>
+</html>
+

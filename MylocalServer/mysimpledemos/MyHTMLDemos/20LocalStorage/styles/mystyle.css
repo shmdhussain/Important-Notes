@@ -1,0 +1,58 @@
+form > div {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+label{
+	float: left;
+	width: 200px;
+	min-width: 200px;
+}
+.personalTable{
+	width: 50%;
+	
+}
+.source {
+	width: 200px;
+	height: 200px;
+}
+.destination
+{
+	width: 400px;
+	height: 400px;
+	
+	overflow: hidden;
+}
+.mainTitle {
+	width: 300px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.formTitle{
+	font-size: 18px;
+}
+
+.valid{
+	color: green;
+}
+.invalid{
+	color: red;
+}
+tbody tr:nth-child(odd) {
+	background-color: #dddddd;
+}
+
+.personalDetailsForm{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.controls input {
+	width: 100px;
+}
+.borderSolidBlack1px{
+
+	border: 1px solid black;
+
+}

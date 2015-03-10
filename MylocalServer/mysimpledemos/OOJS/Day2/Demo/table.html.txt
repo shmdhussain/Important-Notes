@@ -1,0 +1,31 @@
+										 		<table class="table sortable striped mobileTable">
+												<thead>
+													<tr>
+														<th id="h1" width="auto" class="header headerSortDown">&nbsp;</th>
+														<th  id="h2" width="auto" class="header">&nbsp;</th>
+														
+													</tr>
+												</thead>
+												<tfoot>
+													<tr>
+														<td colspan="2" rowspan="2" headers="h1" >&nbsp;</td>
+														<td headers="h2"  colspan="2">&nbsp;</td>
+														
+													</tr>
+
+												</tfoot>
+												<tbody>
+
+												 	<tr class="">
+														<td colspan="2" rowspan="2" headers="h1" >&nbsp;</td>
+														
+														
+													</tr>
+													<tr class="">
+														<td headers="h1" >&nbsp;</td>
+														
+														
+													</tr>
+													
+												</tbody>
+												</table>

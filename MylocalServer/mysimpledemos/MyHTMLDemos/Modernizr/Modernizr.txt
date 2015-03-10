@@ -1,0 +1,195 @@
+Modernizr
+=========
+
+Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user’s browser.It makes it easy for you to write conditional 
+JavaScript and CSS to handle each situation, whether a browser supports a feature or not.
+
+Modernizr runs quickly on page load to detect features; it then creates a JavaScript object with the results, and adds classes to the html 
+element for you to key your CSS on. Modernizr supports dozens of tests, and optionally includes YepNope.js for conditional loading of 
+external .js and .css resources.
+
+
+While Modernizr gives you finer control over the experience through JavaScript-driven feature detection, it is important to continue to use 
+best practices throughout your development process. Use progressive enhancement wherever you can, and don’t sacrifice accessibility for 
+convenience or performance.
+
+What is Modernizr?
+------------------
+Modernizr is a small JavaScript library that detects the availability of native implementations for next-generation web technologies, i.e. 
+features that stem from the HTML5 and CSS3 specifications. Many of these features are already implemented in at least one major browser 
+(most of them in two or more), and what Modernizr does is, very simply, tell you whether the current browser has this feature natively 
+implemented or not.
+
+Modernizr makes feature detection convenient for you in a variety of ways:
+
+    It tests for over 40 next-generation features, all in a matter of milliseconds
+    It creates a JavaScript object (named Modernizr) that contains the results of these tests as boolean properties
+    It adds classes to the html element that explain precisely what features are and are not natively supported
+    It provides a script loader so you can pull in polyfills to backfill functionality in old browsers
+
+Installing Modernizr
+--------------------
+
+Download the development version or customised production version from http://modernizr.com/download/ and add it in as a script source in 
+head of your page after all the style links.
+
+Looking for polyfills (js fallback) for html5 features? check this 
+out:https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills)
+
+Just be warned that using polyfills is slows the web page, since there are many js scripts to be loaded. Though there is no hard and fast 
+rule reagrding using fallbacks, the trade off is between loading time and maintaining a consistent look and feel across all browsers
+
+Modernizr.load()
+----------------
+
+Modernizr.load is a resource loader (CSS and JavaScript) that was made to specifically to work side-by-side with Modernizr. It’s optional in 
+your build, but if you are loading polyfills, There’s a good chance it can save you some bandwidth and a marginal boost in performance since 
+it loads scripts asynchronously.
+
+Modernizr.load({
+  test: Modernizr.geolocation,
+  yep : 'geo.js',		//conditional loading of script depending on whether geolocation is supported
+  nope: 'geo-polyfill.js'
+});
+
+Give Modernizr.load a string, an object, or an array of strings and objects - it takes all :-). For eg:
+
+Modernizr.load([
+  // Presentational polyfills
+  {
+    // Logical list of things we would normally need
+    test : Modernizr.fontface && Modernizr.canvas && Modernizr.cssgradients,
+    // Modernizr.load loads css and javascript by default
+    nope : ['presentational-polyfill.js', 'presentational.css']
+  },
+  // Functional polyfills
+  {
+    // This just has to be truthy
+    test : Modernizr.websockets && window.JSON,
+    // socket-io.js and json2.js
+    nope : 'functional-polyfills.js',
+    // You can also give arrays of resources to load.
+    both : [ 'app.js', 'extra.js' ],
+    complete : function () {
+      // Run this after everything in this group has downloaded
+      // and executed, as well everything in all previous groups
+      myApp.init();
+    }
+  },
+  // Run your analytics after you've already kicked off all the rest
+  // of your app.
+  'post-analytics.js'
+]); 
+
+It can also be used to load js libraries in browsers:
+
+Modernizr.load([
+  {
+    load: '//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js',
+    complete: function () {
+      if ( !window.jQuery ) {
+            Modernizr.load('js/libs/jquery-1.7.1.min.js');
+      }
+    }
+  },
+  {
+    // This will wait for the fallback to load and
+    // execute if it needs to.
+    load: 'needs-jQuery.js'
+  }
+]);
+
+Note: only use this technique as a method for fallbacks, because it can hurt performance by forcing scripts to load in serial
+
+How Modernizr works
+-------------------
+For a lot of the tests, Modernizr does its “magic” by creating an element, setting a specific style instruction on that element and then 
+immediately retrieving it. Browsers that understand the instruction will return something sensible; browsers that don’t understand it will 
+return nothing or “undefined”.
+
+Supported browsers
+------------------
+IE6+, Firefox 3.5+, Opera 9.6+, Safari 2+, Chrome, iOS's mobile Safari, Android's WebKit browser, Opera Mobile, Firefox Mobile and soon 
+Blackberry 6+.
+
+Some eg:
+--------
+
+Modernizr matches the HTML5 spec in returning a string representing the browser's level of confidence that it can handle that codec. These 
+return values are an empty string (negative response), "maybe" and "probably".
+
+
+If audio support is detected, Modernizr assesses which formats the current browser will play. Currently, Modernizr tests ogg, mp3, wav and 
+m4a-
+
+var audio = new Audio();
+audio.src = Modernizr.audio.ogg ? 'background.ogg' :
+            Modernizr.audio.mp3 ? 'background.mp3' :
+                                  'background.m4a';
+audio.play();
+
+Modernizr.touch test only indicates if the browser supports touch events, which does not necessarily reflect a touchscreen device-
+
+if (Modernizr.touch){
+   // bind to touchstart, touchmove, etc and watch `event.streamId`
+} else {
+   // bind to normal click, mousemove, etc
+}
+
+WebGL
+
+if (Modernizr.webgl){
+   loadAllWebGLScripts(); // webgl assets can easily be > 300k
+} else {
+   var msg = 'With a different browser you’ll get to see the WebGL experience here: \
+            get.webgl.org.';
+   document.getElementById( '#notice' ).innerHTML = msg;
+}
+
+Modernizr can also be used for testing CSS features with/without prefixes, DOM features even media queries
+
+If you are testing solely for Media Query support itself, use:
+
+Modernizr.mq('only all'); // true if MQ are supported, false if not
+
+Sample usage:
+
+Modernizr.mq('only screen and (max-width: 768px)')  // true
+
+**The tests in Modernizr core may not cover all your cases, but there is a full set of APIs available for you to plug your own feature tests 
+into Modernizr. You will find most of them here:-https://github.com/Modernizr/Modernizr/tree/master/feature-detects  **
+
+Let me explain in a simple way, why use modernizr
+
+$('#myElement').on('click', function() {
+	var transform = 'scale(2)';
+	this.style.MozTransform = transform; /* Firefox */
+	this.style.msTransform = transform; /* IE (9+) - note ms is lowercase */
+	this.style.OTransform = transform; /* Opera */
+	this.style.WebkitTransform = transform; /* Safari and Chrome */
+	this.style.transform = transform; /* One day in near future */ 
+});
+
+this becomes
+
+$('#myElement').click(function() {
+	var transform = 'scale(2)';
+	this.style[Modernizr.prefixed('transform')] = transform;
+});
+
+viola - lots of lines of code saved :-)
+
+Oh and forgot to mention 
+-------------------------
+
+Add the class “no-js” to the <html> element:
+
+<html class=“no-js”>
+
+When Modernizr runs, it will replace that class with the class “js” which allows you to know, in your CSS, whether or not JavaScript is 
+enabled. But Modernizr doesn’t stop there: It will add classes for every feature it detects, prefixing them with “no-” if the browser 
+doesn’t support it. For eg: (if js is enabled)
+
+<html class=“js canvas canvastext no-geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns 
+cssgradients cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache 
+fontface”>

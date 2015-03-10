@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Welcome</title>
+	</head>
+	
+	<form action="" method="get">
+		<!-- Firefox2/3,opera3/3,chrome2/3,safari-IE NO -->
+		<input id="state" type="button" value="select state"/>
+		Webpage: 
+		
+		<input type="text" list="url_list" name="link1" />
+		
+		<datalist id="url_list">
+			
+		</datalist>
+		
+		
+		
+		
+		
+		<input type="submit" />
+	</form>
+	<script>
+		document.getElementById('state').addEventListener('click',test);
+		
+		function test(){
+			console.log("ji")
+			document.getElementById('url_list').innerHTML='<option label="tn" value="tamilnadu" /><option label="kk" value="kerala" />';
+		}
+	
+	</script>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+   This is a jQuery Tools standalone demo. Feel free to copy/paste.
+   http://flowplayer.org/tools/demos/
+
+   Do *not* reference CSS files and images from flowplayer.org when in
+   production Enjoy!
+-->
+<head>
+  <title>jQuery Tools standalone demo</title>
+
+    <!-- include the Tools -->
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <script src="script/ajaxLoad.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/test-common.css" media="screen, projection, print" />
+  <script>
+
+    jQuery(".parent").live('change',function () {
+          var str;
+          jQuery(".parent option:selected").each(function () {
+                str= jQuery(this).html();
+				if(str=='Tab 1'){
+					ajaxLoad('ajax1.html');
+				}
+				else if(str=='Tab 2'){
+					ajaxLoad('ajax2.html');
+				}
+				else if(str=='Tab 3'){
+					ajaxLoad('ajax3.html');
+				}
+              });
+        
+        });
+        
+		
+
+</script>
+
+  
+</head>
+<body>
+<select  class="parent">
+		<option><a href="ajax1.html">Tab 1</a></option>
+		<option><a href="ajax2.html">Tab 2</a></option>
+		<option><a href="ajax3.html">Tab 3</a></option>
+		
+</select>		
+<div class="css-panes">
+	  
+</div>
+
+
+</body>
+</html>

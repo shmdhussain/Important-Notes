@@ -1,0 +1,25 @@
+         .float-left{float:left}
+         .float-right{float:right}
+         .clear{clear:both}
+         .w100{width:100%}
+         .header,.footer{background-color:#E0DCDE}
+         .w60{width:60%}
+         .w20{width:20%}
+         .main-pad{padding:50px}
+         .ls,.rs{background:#D7FBFC}
+         .center{text-align:center}
+         p{margin:0}
+         .ls,.rs,.content{height:400px;}
+         .content{background-color:#E1E8E8}
+        .PadTop10{padding-top:10px}
+        .PadTop20{padding-top:20px}
+        .PadTop5{padding-top:5px}
+        .labRightPad{padding-right:30px}
+        .labLeftPad{padding-left:10px}
+        .right{text-align:right}
+        .labLeftSec{width:250px}
+        .displayNone{display:none}
+        .PadAll30{padding:30px}
+        .strong{font-weight:bold}
+        .font18{font-size:18px}
+.error{color:red}

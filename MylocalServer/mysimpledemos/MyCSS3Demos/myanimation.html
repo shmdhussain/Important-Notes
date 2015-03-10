@@ -1,0 +1,77 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+div
+{
+width:100px;
+height:100px;
+background:red;
+
+
+
+
+
+animation-name:myfirst;
+animation-duration:8s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+
+-moz-animation-name:myfirst;
+-moz-animation-duration:8s;
+-moz-animation-timing-function:linear;
+-moz-animation-delay:2s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-direction:alternate;
+-moz-animation-play-state:running;
+
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:8s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+
+}
+
+@keyframes myfirst
+{
+0%   {background:red;transform:rotate(-180deg);}
+25%  {background:yellow;transform:rotate(-180deg);}
+50%  {background:blue;transform:rotate(-180deg);}
+100% {background:green;transform:rotate(-180deg);}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:red;-moz-transform:  rotate(-180deg)}
+25%  {background:yellow;-moz-transform:  rotate(0deg)}
+50%  {background:blue;-moz-transform:  rotate(-180deg)}
+100% {background:green;-moz-transform:  rotate(0deg)}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red;-webkit-transform:  rotate(-180deg) }
+25%  {background:yellow;-webkit-transform:  rotate(0deg) }
+50%  {background:blue;-webkit-transform:  rotate(-180deg) }
+100% {background:green;-webkit-transform:  rotate(0deg) }
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer and Opera.</p>
+<p><b>Note:</b> When an animation is finished, it changes back to its original style.</p>
+
+<div>this is</div>
+
+</body>
+</html>
+
+

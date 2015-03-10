@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+
+    
+      <script src="js/myscript.js" ></script>
+</head>
+
+<body>
+    <!--Remove child3 and add text node to the child4 and create a and append child5 node with content.-->
+    <div class="parent">
+       
+    </div>
+    <div>
+        <span class="PadTime hour">00</span>:<span class="min PadTime">00</span>:<span class="sec PadTime">00</span>
+    </div>
+    <div>
+       <input onClick="start();" type="button" style="padding-left:30px" value="start" />
+       <input onClick="stop();" type="button" value="stop" />
+       <input onClick="pause();" type="button" value="pause" />
+
+    </div>
+    <script>
+
+        function start() {
+            interval= setInterval(sec, 1);
+        }
+
+        function sec() {
+            var secVal = eval(document.querySelector('.sec').innerText);
+
+            if (secVal >= 60) {
+                min();
+                document.querySelector('.sec').innerText = "00";
+                
+            }
+            else {
+                var sec = eval(document.querySelector('.sec').innerText);
+                sec++
+                if (sec < 9) {
+                    sec = "0" + sec;
+                    document.querySelector('.sec').innerText = sec;
+                }
+                else {
+                    document.querySelector('.sec').innerText =sec;
+                }
+            }
+        }
+        function min() {
+            console.log("min");
+            var secVal = eval(document.querySelector('.min').innerText);
+            //console.log(secVal);
+            if (secVal >= 60) {
+                hour();
+                document.querySelector('.min').innerText = "00";
+            }
+            else {
+               
+                var min = eval(document.querySelector('.min').innerText);
+                min++;
+                //console.log(min);
+                if (min <=9) {
+                    min = "0" + min;
+                    document.querySelector('.min').innerText = min;
+                }
+                else {
+                    document.querySelector('.min').innerText = min;
+                }
+               
+            }
+        }
+        function hour() {
+            var secVal = eval(document.querySelector('.hour').innerText);
+            if (secVal >= 24) {
+                stop();
+                document.querySelector('.hour').innerText = "00";
+            }
+            else {
+                var hour = eval(document.querySelector('.hour').innerText);
+                hour++;
+                if (hour <= 9) {
+                    hour = "0" + hour;
+                    document.querySelector('.hour').innerText = hour;
+                    
+                }
+                else {
+                    document.querySelector('.hour').innerText =hour;
+                }
+            }
+        }
+        function stop() {
+            clearInterval(interval);
+            document.querySelector('.sec').innerText = "00";
+            document.querySelector('.min').innerText = "00";
+            document.querySelector('.hour').innerText = "00";
+        }
+        function pause() {
+            clearInterval(interval);
+            
+        }
+
+     </script>
+
+</body>
+</html>

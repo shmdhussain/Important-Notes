@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<style type="text/css"> 
+
+</style>
+<script src="/jquery.min.js" ></script>
+<script>
+$(fnDomReady);
+function fnDomReady(){
+
+	
+
+}
+function updateTextInput(val) {
+	console.log(val);
+	document.getElementById('sliderval').innerHTML=val; 
+	$('.newspaper').css({'-webkit-column-count' : val, '-moz-column-count' : val, 'column-count' : val})
+}
+</script>
+</head>
+<body>
+
+<p><b>Note:</b> Internet Explorer does not support the column-count property.</p>
+
+<div class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+</div>
+
+<div class="range">
+	<input type="range" step="1" max="5" min="1" onchange="updateTextInput(this.value);"/>
+	 <label id="sliderval"></label>
+</div>
+
+</body>
+</html>

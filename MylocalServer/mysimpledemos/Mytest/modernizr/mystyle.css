@@ -1,0 +1,6 @@
+.mytest{
+				box-shadow:6px 12px 25px red;
+				-moz-box-shadow:6px 12px 25px red;
+				-webkit-box-shadow:6px 12px 25px red;
+				width:200px;height:200px;margin:100px;background-color:blue;
+			}

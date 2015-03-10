@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/jquery-ui-1.10.0.custom.css"></link>
+	
+     <script src="js/jquery-1.6.2.js" ></script>
+     <script src="js/jquery-ui-1.10.0.custom.js" ></script>
+	 
+	<script>
+	$(fnDocReady);
+	function fnDocReady(){
+		console.log("Doc Ready");
+		var teamchart={manu:[{fn:"rooney",role:'striker',age:'26'},{fn:"vanpersie",role:'striker',age:'29'},{fn:"vidic",role:'defender',age:'30'}],
+					   real:[{fn:"cr7",role:'striker',age:'28'},{fn:"kaka",role:'midfield',age:'31'},{fn:"casillas",role:'gk',age:'33'}]
+					  }	
+		for(i=0;i<teamchart.manu.length;i++){
+			var playerdetails="<tr><td>"+teamchart.manu[i].fn+"</td><td>"+teamchart.manu[i].role+"</td><td>"+teamchart.manu[i].age+"</td></tr>";
+			$("table.playerdetails tbody").append(playerdetails);
+		}
+			
+		
+	}
+	</script>
+	<style>
+		td,th{border:2px solid black;padding:10px}
+		th{font-weight:bold}
+	</style>
+</head>
+
+
+<body>
+    
+   <div class="">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+						<div id="json">
+							<table class="playerdetails">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Role</th>
+										<th>Age</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								</tbody>
+							
+							</table>
+						</div>
+					<!--END: Your Content-->
+			  
+			     </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

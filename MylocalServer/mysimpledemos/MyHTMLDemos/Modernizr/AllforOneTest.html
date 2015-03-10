@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Check Features in Browsers</title>
+  <script src="modernizr.custom.js"></script>
+  <script type="text/javascript">
+  	  var txt="You browser";
+  	  //Checking for Support for Canvas
+  	  if (Modernizr.canvas) {
+    	 txt+=" can draw,";
+	  } else {
+    	txt+=" cannot draw,";
+	  }
+
+	  //Checking for Support for Video
+	  if (Modernizr.video) {
+	    txt+=" play video,";
+	  } else {
+	    txt+=" does not play video,";
+	  }
+
+	  //Checking for Support for LocalStorage
+	  if (Modernizr.localstorage) {
+	  	txt+=" supports localstorage,";
+	  } else {
+	  	txt+=" does not support localstorage,";
+	  }
+
+	  //Checking for Support for OfflineCache
+	  if (Modernizr.applicationcache) {
+	  	txt+=" supports offlinecaching,";
+	  } else {
+	  	txt+=" does not support offlinecaching,";
+	  }
+
+	  //Checking for Support for Geolocation
+	  if (Modernizr.geolocation) {
+	   	txt+=" can find where you are!";
+	  } else {
+	   	txt+=" has no clue where you are!:-(";
+	  }
+
+	document.write('<div>'+txt+'</div>');
+  </script>
+</head>
+</html>
+</html>

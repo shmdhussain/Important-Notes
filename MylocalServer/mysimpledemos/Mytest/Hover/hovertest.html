@@ -1,0 +1,77 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		 <title>Untitled Page</title>
+		 <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+		 <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+
+		 <script src="/jquery-my.js" ></script>
+		<script>
+			jQuery(function($){
+				var groupTab = $("ul").children("li");	
+				groupTab.hover(function(){
+				if(!($(this).children("a").hasClass("current")))
+				{
+					$(this).siblings("li").children("a").removeClass("hoverBG");			
+					$(this).children("a").addClass("hoverBG");
+				}					
+				});			
+				groupTab.mouseout(function(){
+					$(this).children("a").removeClass("hoverBG");				
+				});
+			});
+			
+		</script>
+		<style>
+			li{background-color:#DCDEDB;
+				border:1px solid black;
+				padding:20px;
+			}
+			.hoverBG{
+				background-color:red;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		
+		<div class="">
+				<ul class="" id="">
+					
+					   <li class=" ">
+							<a class="current" href="#" >
+								<span class="">
+									MyName
+								</span>
+								<br>
+								<span class="">MyData</span>
+							</a>
+						</li>
+					
+					   <li class="" >
+							<a class="" href="#" >
+								<span class="">
+									MyName
+								</span>
+								<br>
+								<span class="">MyData</span>
+							</a>
+						</li>
+					
+					   <li class="" >
+							<a class="" href="#">
+								<span class="">
+									MyName
+								</span>
+								<br>
+								<span class="">MyData</span>
+							</a>
+						</li>
+				</ul>
+
+	 </div>
+	</body>
+
+
+	</html>

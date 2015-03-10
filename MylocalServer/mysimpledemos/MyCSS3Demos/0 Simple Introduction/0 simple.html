@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="JavaScript">
+function fnChange(){
+	e=document.getElementById("f1");
+	e.style.color="blue";
+}
+function fnChange2(){
+	e=document.getElementById("f1");
+	e.style.color="red";
+
+}
+</script>
+<style>
+	#f1{
+		color:red;
+		}
+	#f2{
+		color:green;
+	}
+</style>
+</head>
+<body>
+	<h1 id="f1" onMouseOver="fnChange()" onMouseOut="fnChange2()">Hello</h1>
+	<h1 id="f2">Hello</h1>
+
+</body>
+<html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Welcome</title>
+	</head>
+	<script>
+	function test(){
+	 myVid=document.getElementById('myvid');
+	 myVid.pause()
+	}
+	
+	setTimeout(test,3000);
+	</script>
+	<body>
+		<h1>Hello World</h1>
+		<video autoplay id="myvid" width="320" height="240" controls="controls">
+		  <source src="movie.mp4" type="video/mp4" />
+		  
+		  Your browser does not support the video tag.
+		</video>
+	</body>
+</html>

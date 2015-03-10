@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCinemas</title>
+    <link rel="stylesheet" type="text/css" href="style/reset.css"></link>
+    <link rel="stylesheet" type="text/css"  href="style/mystyle.css"></link>
+	<link rel="stylesheet" type="text/css"  href="style/jquery-ui-1.10.1.custom.min.css"></link>
+	
+	
+	
+	 <script src="lib/js/users.js" ></script>
+    <script src="lib/js/screens.js" ></script>
+    <script src="lib/js/movies.js" ></script>
+    <script src="lib/js/booking.js" ></script>
+	
+	
+	<script src="/jquery.min.js" ></script>
+	<script src="lib/js/jquery-ui-1.10.1.custom.js" ></script>
+    <script src="lib/js/timer.js" ></script>
+    <script src="lib/js/myscript.js" ></script>
+	<!--START:External JS Files For Sliders-->
+	<script type="text/javascript" src="lib/js/external/jquery.easing.1.3.min.js"></script>
+	<script type="text/javascript" src="lib/js/external/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>
+	<!--END:External JS Files For Sliders-->
+    <script src="lib/js/utility.js" ></script>
+	
+	<!--START:External CSS Files For Sliders-->
+	<link rel="stylesheet" type="text/css" href="lib/css/sliderkit-core.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="lib/css/sliderkit-demos.css" media="screen, projection" />
+	<!--END:External CSS Files For Sliders-->
+  
+
+</head>
+
+<body>
+    
+   <div class="iCinemaConatiner">
+        <div class="maincontainer">
+			<div class=""></div>
+			<!--START:Header-->
+			<div class="header">
+				<div class="loginBox ">
+					<form id="login" class="loginform">
+						<div class="myloginbox float-right">
+							<div class="PadLeft20 float-left">
+								<label class="cb strong PadRight7 cursive  ">Email ID:</label>
+								<input required="required"  tabindex="12"  type="email" id="uid" class="" placeholder="emailid@domain.com"></input>
+							</div>
+							<div class="PadLeft20 float-left">
+								<label class="cb strong PadRight7 cursive  ">Password:</label>
+								<input required="required"  tabindex="13"  type="password" id="pwd" class="" placeholder="Password"></input>
+							</div>
+							
+							<div class="PadLeft20 float-left loginsignout">
+								<input id="loginbtn" tabindex="14"   type="button" class="loginbt" value="Login" /> 
+							</div>
+							<div class="clear"></div>
+						
+							<div class="float-left signupbox">
+								<p class="right cb strong cursive  weltext">Hi Guest! <a  tabindex="15"    href="#" class="PadLeft7 signup cb">sign up here</a></p>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!--START:sign up form-->
+						<div class="mysignup abs">
+							<div class="">
+								<div class="mysignuphead">
+									<p class="cb float-left center font24 cursive strong mysignuphead1">Signup Form</p>
+									<div class="float-left">
+										<a class=" float-left font15 signupclose colorWhite " href="#" >close</a>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<div class="mysignupform">
+									<div class="PadTop30 ">
+										<div class="signupLHS float-left right">
+											<label class="cb strong PadRight7 cursive strong right">email id:</label>
+										</div>
+										<div class="signupRHS float-left">
+											<input required type="email" id="uid1" tabindex="1" class=" PadRight7" placeholder="enter email id"></input>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="PadTop30 ">
+										<div class="signupLHS float-left right">
+											<label class="cb strong PadRight7 cursive  strong right">Name:</label>
+										</div>
+										<div class="signupRHS float-left">
+											<input required type="text" id="name1" tabindex="2"  class=" PadRight7" placeholder="enter name"></input>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="PadTop30 ">
+										<div class="signupLHS float-left right">
+											<label class="cb strong PadRight7 cursive  strong right">Phone no:</label>
+										</div>
+										<div class="signupRHS float-left">
+											<input required type="number" id="ph1"  tabindex="3"  class=" PadRight7" placeholder="enter phone no"></input>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="PadTop30 ">
+										<div class="signupLHS float-left right">
+											<label class="cb strong PadRight7 cursive  strong right">Password:</label>
+										</div>
+										<div class="signupRHS float-left">
+											<input required type="password" id="pwd1" tabindex="4"   class=" PadRight7" placeholder="enter password"></input>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="PadTop30 makecenterHor">
+										<div class="displayInlineBlock">
+											<input id="signupbtn" type="button" class="center signupbt" value="Sign Up" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--START:sign up form-->
+						<div class="clear"></div>
+					</form>
+					
+				</div>
+				<div class="headerbanner ">
+					<div class="float-left">
+						<p class="cb cursive strong mainheader">iCinemas</p>
+						<p class="cb cursive  tagmainheader">reserve your seats for the silverscreen...</p>
+					</div>
+					<div class="float-right">
+						
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				
+			</div>
+			<!--END:Header-->
+			
+			<!--START:Content-->
+			<div class="content">
+				<div class="contentContainerPad">
+					<!--START: LHS-->
+					<div class="lhs float-left ">
+						<div class="booktkt">
+							<p class="cbl cursive  head1">Book Your Ticket...</p>
+						</div>
+						<div class="PadTop30 booktktcont">
+							<form id="bookform">
+							<!--START: Date-->
+							<div class="bookdate">
+								<div class="labelLHS float-left right">
+									<label class="cbl strong PadRight7 cursive  right">Date:</label>
+								</div>
+								<div class="labelRHS float-left">
+									<input required type="text" id="date" tabindex="5" class=" PadRight7" placeholder="Select Date"></input>
+									<img src="img/calender.jpg" height="20px" width="20px" class="rel curpointer dobImg"></img>
+								</div>
+								<div class="clear"></div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-date dns">
+									<div class="labelLHS float-left right">
+										<label class="cbl strong PadRight7 cursive  right">&nbsp;</label>
+									</div>
+									<div class="labelRHS float-left">
+										<p class="PadTop5 cursive error">Please Enter Valid Date</p>
+									</div>
+									
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							<!--START: Date-->
+							
+							<!--START: Movies-->
+							<div class="PadTop20 bookmovie">
+								<div class="labelLHS float-left right">
+									<label class="cbl strong PadRight7 cursive  right">Movies:</label>
+								</div>
+								<div class="labelRHS float-left">
+									<select  tabindex="6" class="movieDD" id="movies">
+										<option  class="defaultval" value="">Select Your Movies</option>
+									</select>
+								</div>
+								<div class="clear"></div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-movieDD dns">
+									<div class="labelLHS float-left right">
+										<label class="cbl strong PadRight7 cursive  right">&nbsp;</label>
+									</div>
+									<div class="labelRHS float-left">
+										<p class="PadTop5 cursive error">Please select movie</p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							<!--START: Movies-->
+							<!--START: Screens-->
+							<div class="PadTop20 bookscreen">
+								<div class="labelLHS float-left right">
+									<label class="cbl strong PadRight7 cursive  right">Screens:</label>
+								</div>
+								<div class="labelRHS float-left">
+									<select  tabindex="7" class="screensDD" id="screens">
+										<option class="defaultval" value="">Select Your Screen</option>
+									</select>
+								</div>
+								<div class="clear"></div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-screensDD dns">
+									<div class="labelLHS float-left right">
+										<label class="cbl strong PadRight7 cursive  right">&nbsp;</label>
+									</div>
+									<div class="labelRHS float-left">
+										<p class="PadTop5 cursive error">Please select screen</p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							<!--START: Screens-->
+							<!--START: timings-->
+							<div class="PadTop20 ">
+								<div class="labelLHS float-left right">
+									<label class="cbl strong PadRight7 cursive  right">Timings:</label>
+								</div>
+								<div class="labelRHS float-left">
+									<select  tabindex="8" class="timingsDD" id="timings">
+										<option class="defaultval" value="">Select Your timings</option>
+									</select>
+								</div>
+								<div class="clear"></div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-timingsDD dns">
+									<div class="labelLHS float-left right">
+										<label class="cbl strong PadRight7 cursive  right">&nbsp;</label>
+									</div>
+									<div class="labelRHS float-left">
+										<p class="PadTop5 cursive error">Please select timings</p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							<!--START: timings-->
+							<!--START: No Of Tickets-->
+							<div class="PadTop20 bookoofTickets">
+								<div class="labelLHS float-left right">
+									<label class="cbl strong PadRight7 cursive  right">No Of Tickets:</label>
+								</div>
+								<div class="labelRHS float-left">
+									<input  tabindex="9" type="number" id="no1" class=""/>
+								</div>
+								<div class="clear"></div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-no1 dns">
+									<div class="labelLHS float-left right">
+										<label class="cbl strong PadRight7 cursive  right">&nbsp;</label>
+									</div>
+									<div class="labelRHS float-left">
+										<p class="PadTop5 cursive error">Please enter no of tickets </p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							
+							<!--START: timings-->
+							<!--START: Book it Button-->
+							<div class="PadTop20 bookoofTickets makecenterHor">
+								<div class="labelRHS displayInlineBlock">
+									<input   tabindex="10" type="button" id="booktktbtn" class="booktktbt" value="Book Ticket"/>
+									<a  tabindex="11"  class="resetbookform cbl cursive PadLeft10" href="">reset form</a>
+								</div>
+								<!--START: Error Treatment-->
+								<div class="errbk err-seatsav dns">
+									<div class=" ">
+										<p class="PadTop5 cursive error"></p>
+									</div>
+									<div class="clear"></div>
+								</div>
+								<!--END: Error Treatment-->
+							</div>
+							
+							<!--START: Book it Button-->
+						</form>
+						</div>
+					</div>
+					<!--END: LHS-->
+					
+					
+					<div class="bordersep float-left"></div>
+					
+					<!--START: RHS-->
+					<div class="rhs float-left">
+					
+						<!--START:TicketDetails-->
+						
+						<div class="sliderCont ">
+							<div class="">
+								<p class="cbl cursive  head1">Movies in Screens</p>
+							</div>
+							<div class="PadTop20 PadLeft25">
+								<!-- Start slideshow-carousel -->
+								<div class="sliderkit slideshow-carousel">
+									<div class="sliderkit-nav">
+										<div class="sliderkit-nav-clip">
+											<ul>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-01.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-02.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-03.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-04.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-05.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-06.jpg" alt="[Alternative text]" /></a></li>
+												<li><a href="#" title="[link title]"><img src="lib/images/photos/mini/sample-07.jpg" alt="[Alternative text]" /></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="sliderkit-controls">
+										<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-prev"><a href="#" title="Previous"><span>Previous</span></a></div>
+										<div class="sliderkit-btn sliderkit-play-btn"><a href="#" title="Play/Pause"><span>Play</span></a></div>
+										<div class="sliderkit-btn sliderkit-go-btn sliderkit-go-next"><a href="#" title="Next"><span>Next</span></a></div>
+									</div>
+									<div class="sliderkit-panels">
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-01.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-02.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-03.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-04.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-05.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-06.jpg" alt="[Alternative text]" />
+										</div>
+										<div class="sliderkit-panel">
+											<img src="lib/images/photos/sample-07.jpg" alt="[Alternative text]" />
+										</div>
+									</div>
+								</div>		
+								<!-- // end of slideshow-carousel -->
+							</div>
+						</div>
+						<!--END:TicketDetails-->
+						
+						<!--START:Confirmation Screen-->
+						<div class="TicketDetCont dns">
+							<div class="PadBot30">
+								<p class="cbl cursive  head1">Ticket Confirmation Details</p>
+							</div>
+							<div class="">
+								<div class="PadLeft25">
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class=" cbl cursive font14 right">Movie Name:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="cmovie cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class=" cbl cursive font14 right">Screen Name:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="cscreenname cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class="cbl cursive font14 right">Seat Nos:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="cseatnos cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+									
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class="cbl cursive font14 right">Date:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="cdate cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class="cbl cursive font14 right">Time:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="ctime cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+									<div class="tktConRow">
+										<div class="tLHS float-left">
+											<label id="" class="cbl cursive font14 right">Amount:</label>
+										</div>
+										<div class="PadLeft10 tRHS float-left">
+											<label id="" class="camt cbl cursive font14"></label>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!--START:Confirmation Screen-->
+						<style>
+							
+							
+						</style>
+						<!--START:SeatSelection-->
+						<div class="seatSelectorCont dns">
+							<div class="">
+								<p class="cbl cursive  head1 ">Select Your Seats</p>
+							</div>
+							<div class="infoseatbooked">
+								<p class="cblori cursive font14 dns"></p>
+							</div>
+							<div class="seatSelector">
+							
+								<div class="Legend PadLeft25 PadTop20">
+									<div class="">
+										<div class="seatrow">
+											<span class="seats avail center">&nbsp;</span><span class="PadRight20 font12 cursive strong cblori">&nbsp;- available</span>
+											<span class="seats booked center">&nbsp;</span><span class="PadRight20 font12 cursive strong cblori">&nbsp;- already booked</span>
+											<span class="seats sel center">&nbsp;</span><span class="PadRight20 font12 cursive strong  cblori">&nbsp;- your selected seats</span>
+										</div>
+									</div>
+								</div>
+								<div class="PadAll15 myseatSelector PadRight10Force">
+									<div class="seatrow">
+										<span class="seats avail center">1</span>
+										<span class="seats avail center">2</span>
+										<span class="seats avail center">3</span>
+										<span class="seats booked center">1</span>
+										<span class="seats booked center">2</span>
+										<span class="seats booked center">3</span>
+										<span class="seats avail center">1</span>
+										<span class="seats  sel center">2</span>
+										<span class="seats  sel center">3</span>
+										<span class="seats  sel center">1</span>
+									</div>
+									<div class="seatrow">
+										<span class="seats avail center">4</span>
+										<span class="seats booked center">5</span>
+										<span class="seats avail center">6</span>
+									</div>
+								</div>
+								
+								
+								<div class="screenplace">
+									<div class="">
+										<p class="center PadTop5 cursive cblori">Main Screen</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--END:SeatSelection-->
+						
+					</div>
+					<!--END: RHS-->
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--END:Content-->
+			<style>
+				
+			</style>
+			
+			
+			<!--START:Footer-->
+			<div class="footer">
+				
+			</div>
+			<!--END:Footer-->			
+
+		</div>
+   </div>
+</body>
+</html>

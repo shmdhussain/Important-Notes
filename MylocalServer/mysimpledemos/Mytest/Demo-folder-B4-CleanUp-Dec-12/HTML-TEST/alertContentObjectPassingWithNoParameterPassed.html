@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>TEST</title>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<meta name="robots" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--START: Adding of javaScript library -->
+<script type="text/javascript" src="jquery.min.js"></script>
+<!--END:   Adding of javaScript library-->
+<!--START: Adding of javaScript library need internet Connection-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--END: Adding of javaScript library need internet Connection-->
+<script type="text/javascript">
+/*START: Plugin to alert  the content present in the matched elements*/
+(function( $ ) {
+jQuery.fn.alertContent = function(options) {
+//Creating the default object with values for the ?irstName?and ?astName?when both or one of them is not passed from function call.
+	var defaults= {FirstName:"No FirstName is mentioned",LastName:"No Last Name is mentioned"};
+	//Merging the properties of the defaults and options object and forming a new object
+	//If Suppose I pass only FirstName and not passing LastName means, plugin takes FirstName from the object passed(i.e options object) from function call and LastName from the default object.
+	var ParameterObject=$.extend({}, defaults, options);
+		 this.each(function() {
+				var content = jQuery(this).html();
+			   alert("First name:  "+ParameterObject.FirstName );
+			   alert("Last name:  "+ParameterObject.LastName);
+				alert(content);
+
+		 });
+		 return this;  //This line returns the Jquery Object Which refers to the matched set of elements by which this plugin is called. Here ?his?keyword refers the JQuery Object.
+	};
+})( jQuery );
+
+/*END: Plugin to alert  the content present in the matched elements*/
+/*START: Plugin is called to display the content present in the paragraph*/
+jQuery(function(){
+
+	jQuery('p').alertContent();
+
+	}
+);
+/*END: Plugin is called to display the content present in the paragraph*/
+</script>
+</head>
+
+<body id="top" class="">
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>ParaGraph 3</p>
+
+</body>
+
+
+</html>

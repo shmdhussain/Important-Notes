@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <style>
+     .multiTable td,th{
+         
+         border:2px solid black;
+         padding:10px;
+         
+         
+      }
+      .content{height:700px}
+     .ls{height:700px}
+     .rs{height:700px}
+     </style>
+    <script>
+
+        function fnMulti() {
+            var no = document.getElementById('no').value;
+            console.log(no);
+            var tBodyObj = document.getElementById('tbodymul');
+            var trString="";
+            //if (isNaN(no)) {
+                console.log(isNaN(no));
+                for(i = 1; i <= 10; i++) {
+                    var mulans = i * no;
+                    trString += "<tr><td>" + i + "</td><td>" + no + "</td><td>" + mulans + "</td></tr>";
+                }
+                tBodyObj.innerHTML = trString;
+            //}
+        }
+        
+    </script>
+     
+
+      <script src="js/myscript.js" ></script>
+</head>
+
+<body>
+    
+   <div class"main-pad">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+           <div class="PadAll30">
+               <form class="" id="" action="">
+                    <p class="strong font18 center">table</p>
+                    <div class="PadTop20">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">enter no:</label>
+                        </div>
+                       <div class="float-left">
+                             <input id="no" type="text" value=""/>
+                       </div>
+                       <div class="clear"></div>
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                        <div class="float-left">
+                           <div id="errorNo" class="PadTop5 error displayNone"><p>Please enter no</p></div>
+                       </div>
+                        <div class="clear"></div>
+                    </div>
+                     <div class="PadTop10">
+                        <div class="float-left labLeftSec">
+                             <label class="labRightPad right">&nbsp;</label>
+                        </div>
+                       <div class="float-left">
+                            <input type="button" onClick="fnMulti();" value="get multiply table"/>
+                       </div>
+                       <div class="clear"></div>
+                    </div>
+                 </form>
+              </div>
+           
+           <div class="PadAll30">
+                <table class="multiTable">
+                <thead>
+                    <tr>
+                          <td class="">X</td>
+                          <td>Y</td>
+                          <td> X*Y</td>
+                    </tr>
+                </thead>
+                <tbody id="tbodymul">
+                    
+                
+                </tbody>
+                </table>
+           
+           </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

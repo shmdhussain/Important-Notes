@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<!--
+   This is a jQuery Tools standalone demo. Feel free to copy/paste.
+   http://flowplayer.org/tools/demos/
+
+   Do *not* reference CSS files and images from flowplayer.org when in
+   production Enjoy!
+-->
+<head>
+  <title>jQuery Tools standalone demo</title>
+
+    <!-- include the Tools -->
+  <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/test-common.css" media="screen, projection, print" />
+  
+</head>
+<body>
+	<div class="parent">
+		<div class="PadLeft10 PadRight20 float-left"><a href="ajax1.html">Tab 1</a></div>
+		<div class="PadLeft10 PadRight20 float-left"> <a href="ajax2.html">Tab 2</a></div>
+		<div class="PadLeft10 PadRight20 float-left"> <a href="ajax3.html">Tab 3</a></div>
+		<div class="clear"></div>
+	</div>
+
+<!-- this time we have three unique panes for each tab-->
+<div class="css-panes">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- activate tabs with JavaScript -->
+<script>
+    jQuery(function() {
+        jQuery(".parent").tabs("div.css-panes > div", {effect: 'ajax',event:'mouseover', onClick: function(){alert('ff');}});
+ 
+  
+	
+    });
+</script>
+</body>
+</html>

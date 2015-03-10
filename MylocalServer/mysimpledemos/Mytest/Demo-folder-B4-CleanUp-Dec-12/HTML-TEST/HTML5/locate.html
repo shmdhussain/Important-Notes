@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starter page</title>
+	<meta charset="utf-8" />
+	<!--Doubt 1:
+				Whether this viewport is needed.
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!--Doubt 2:
+				I commented out this below css file, which gives default styling to the tags which are present in the page, this css file is present in the jquery mobile site
+	-->
+	<link rel="stylesheet" href="styles/jquery.mobile-1.0.min.css" />
+	<script src="scripts/jquery-1.6.4.min.js"></script>
+	<script src="scripts/jquery.mobile-1.0.min.js"></script>
+	<style>
+	
+	
+	</style>
+</head>
+
+<body>
+	<!-- Start of first page -->
+<div data-role="page" id="foo">
+
+	<div data-role="header">
+		<h1>External page</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<h2>Foo</h2>
+		<p>I'm first in the source order so I'm shown as the page.</p>		
+		<p>View internal page called <a href="#bar">bar</a></p>	
+		<p>View internal page called <a href="#baz" data-rel="dialog" data-transition="pop">baz</a> as a dialog.</p>
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<h2>Bar</h2>
+		<p>I'm the bar page.</p>		
+		<p><a href="#foo" >Back to foo</a></p>	
+		<p>Or view an <a rel="external" href="navigation.html">external page Foo</a> from here!</p>
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="baz">
+
+	<div data-role="header">
+		<h1>Baz</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<h2>Baz</h2>
+		<p>I'm the baz page, viewed as a dialog.</p>		
+		<p><a href="#foo" data-rel="back">Back to foo</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

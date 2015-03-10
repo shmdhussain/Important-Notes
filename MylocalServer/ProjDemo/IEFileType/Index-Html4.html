@@ -1,0 +1,32 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+	
+		<!--START: Adding of javaScript library need internet Connection-->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<!--END: Adding of javaScript library need internet Connection-->
+		
+		<style>
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="">
+			<input type='file' value='C:\fakepath' />
+		</div>	
+		<script type="text/javascript">
+			var input = document.getElementsByTagName('input')[0];
+
+			input.onclick = function () {
+				this.value = null;
+			};
+
+			input.onchange = function () {
+				alert(this.value);
+			};
+		</script>
+	</body>
+</html>

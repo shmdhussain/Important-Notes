@@ -1,0 +1,6 @@
+CACHE MANIFEST
+main_page.html
+page1.html
+offline.html
+FALLBACK:
+/Myhtml5/21_Offline/ /Myhtml5/21_Offline/offline.html

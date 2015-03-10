@@ -1,0 +1,5 @@
+YourWebPage:<input type="url" name="usrhomepage" /><br/>
+DON        :<input type="date" name="usrdob" /><br/>
+
+JL:<input type="number" name="usrcno"  min="2" max="9"/><br/>
+   Exp in infy  :<input type="range" name="usrage" min="1"max="45" /><br/>

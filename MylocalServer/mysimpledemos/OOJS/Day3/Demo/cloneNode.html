@@ -1,0 +1,29 @@
+﻿<html>
+ <head>
+   <title>Clone Node example</title>
+     <script language="JavaScript">
+         function functionClone() {
+             var clonenode = buttonww.cloneNode(true);
+             alert("created clone node" + clonenode);
+             buttonww.disabled = true;
+         } 
+     </script>
+  </head>
+  <body>
+     <p align="center">&nbsp;</p>
+     <div style="background: #cf2255; width:'100%';"
+          align="center">
+     <font color="#ffffcc" size="12pt">
+       <b>Creating Clone Node</b>
+     </font>
+     </div>
+       <center>
+	<p>
+	 <button id="buttonww" 
+                 onclick="functionClone();">
+                      Create clone node
+         </button>
+	</p>
+	</center>
+	</body>
+</html>

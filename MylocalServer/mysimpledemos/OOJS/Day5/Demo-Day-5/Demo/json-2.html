@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/jquery-ui-1.10.0.custom.css"></link>
+	
+     <script src="js/jquery-1.6.2.js" ></script>
+     <script src="js/jquery-ui-1.10.0.custom.js" ></script>
+	 
+	<script>
+	$(fnDocReady);
+	function fnDocReady(){
+		console.log("Doc Ready");
+		var teamchart=[{fn:"rooney",role:'striker'},{fn:"vanpersie",role:'striker'},{fn:"vidic",role:'defender'},{fn:"giggs",role:'midfield'}]
+		teamchart[2].fn="rio";
+		$('p.name').each(function(i){
+			$(this).html(teamchart[i].fn);
+		});
+	}
+	</script>
+	<style>
+		td,th{border:2px solid black;padding:10px}
+	</style>
+</head>
+
+
+<body>
+    
+   <div class="">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div>
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+						<div id="json">
+							<table>
+								<thead>
+									<tr>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							
+							</table>
+						</div>
+					<!--END: Your Content-->
+			  
+			     </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

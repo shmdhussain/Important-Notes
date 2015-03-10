@@ -1,0 +1,24 @@
+<html>
+ <head>
+  <script type="application/javascript">
+   function draw(){
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  // Filled triangle
+	  ctx.beginPath();
+	  ctx.moveTo(25,25);
+	  ctx.lineTo(105,25);
+	  ctx.lineTo(25,105);
+	  ctx.lineTo(25,155);
+	   ctx.closePath();
+	  ctx.stroke();
+	
+	 // ctx.closePath();
+	 
+	 
+	}
+  </script>
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="500"></canvas>
+ </body>
+</html>

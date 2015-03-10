@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Using Respond JS</title>
+	<link href="test.css" rel="stylesheet"/>
+	<script src="respond.src.js"></script>
+</head>
+<body>
+
+	<p>
+		<a href="https://github.com/scottjehl/Respond">Respond.js</a>: A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
+	</p>
+
+	<p>
+		<strong>Force:</strong><br />
+		<a href="#480" class="option px480" onclick="respond.force(480);">480</a>
+		<a href="#620" class="option px620" onclick="respond.force(620);">620</a>
+		<a href="#800" class="option px800" onclick="respond.force(800);">800</a>
+		<a href="#1100" class="option px1100" onclick="respond.force(1100);">1100</a>
+		<a href="#1300" class="option px1300" onclick="respond.force(1300);">1300</a>
+		<a href="#RESET" class="option reset" onclick="respond.force(false);">RESET</a>
+		<br style="clear:both;" />
+	</p>
+
+	<hr />
+
+	<p>The media queries in the included CSS file simply change the body's background color depending on the browser width. If you see any colors aside from black, then the media queries are working in your browser. You can resize your browser window to see it change on the fly.</p>
+
+</body>
+</html>

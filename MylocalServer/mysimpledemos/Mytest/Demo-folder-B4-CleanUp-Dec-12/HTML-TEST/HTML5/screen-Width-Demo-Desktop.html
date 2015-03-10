@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starter page</title>
+	<meta charset="utf-8" />
+	
+	
+	
+	<script src="scripts/jquery-1.6.4.min.js"></script>
+	<style>
+	.content{background-coler:red;height:450px;}
+	
+	</style>
+	<script>
+		function fnwidth(){
+			console.log("The Screen Width(these dimensions are measured in device pixels because they never change: they’re a feature of the monitor, and not of the browser.)");
+			console.log("the screen device width in dev ps is " + screen.width);
+			console.log("the screen device height in dev ps is " + screen.height);
+			console.log(" inner width of the window is measured in CSS pixels");
+			console.log("the browser width in dev ps is " + window.innerWidth);
+			console.log("the browser width height in dev ps is " + window.innerHeight);
+			console.log(" window.pageXOffset and window.pageYOffset, contain the horizontal and vertical scrolling offsets of the document.These properties are measured in CSS pixels,");
+			console.log("the scrolling offset width in dev ps is " + window.pageXOffset);
+			console.log("the browser width height in dev ps is " + window.pageYOffset);
+			console.log("In theory, if the user scrolls up and then zooms in, window.pageX/YOffset will change. However, the browsers try to keep web pages consistent by keeping the same element at the top of the visible page when the user zooms. That doesn’t always work perfectly, but it means that in practice window.pageX/YOffset doesn’t really change: the number of CSS pixels that have been scrolled out of the window remains (roughly) the same.");
+			console.log("You might want to know the dimensions of the viewport(in css equal to browser window). They can be found in ");
+			console.log("viewport wide " + window.pageXOffset);
+			console.log("viewport height " + window.pageYOffset);
+			
+		}
+	</script>
+</head>
+
+<body>
+	<!--START: Entire Container-->
+	<div class="main-container">
+		<!--START:Page1 Container-->
+		<div id="page1">
+			
+			<!--START: PreHeader-->
+			<div class="Header">
+				<p>header</p>
+			</div>
+			<!--END: PreHeader-->
+			
+			<!--START: Content-->
+			<div  class="content">
+				
+				<input class="widthbutton" type="button" onClick="fnwidth();" value="get width"/>
+						
+						
+					
+			</div>
+			<!--END:Content-->
+			
+			<!--START: Footer-->
+			<div  class="Footer" >
+				<p>footer</p>
+			</div>
+
+			<!--END: Footer-->
+			
+		</div>
+		<!--START:Page1 Container-->
+	</div>
+	<!--END: Entire Container-->
+</body>
+</html>

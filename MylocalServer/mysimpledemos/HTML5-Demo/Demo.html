@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Picture Album</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+    <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+	<script src="/jquery.min.js" ></script>
+     <script src="scripts/timer.js" ></script>
+     <script src="scripts/myscriptpic.js" ></script>
+     
+	<script>
+		
+		function updateTextInput(val) {
+			console.log(val);
+		    document.getElementById('sliderval').innerHTML=val; 
+		}
+	</script>
+	<style>
+		.font32{font-size:32px}
+		
+		
+		.header{
+			border-bottom: 2px solid #4A4A4A;
+			padding-bottom: 10px;
+		}
+		.content{padding-top:60px}
+		
+		.contenthead{
+			 border-bottom: 2px solid #333333;
+			 padding-bottom: 10px;
+			 margin-bottom:20px;
+		 }
+		 .contentsec{
+			padding-left:25px;
+			padding-bottom:20px;
+		 
+		 }
+		 .rhs{width:61.5%}
+		 .lhs{width:35%}
+		 
+		 
+		.leftdragdropbox{width:58%;border:2px solid #333;margin-right:30px;}
+		.rightdragdropbox{width:38%;border:2px solid #333}
+		.imgpreviewcont img{
+			height:150px;width:150px;
+			padding:10px;
+			transition:all .25s ease;
+			-moz-transition:all .25s ease; /* Firefox 4 */
+			-webkit-transition:all .25s ease; /* Safari and Chrome */
+			-o-transition:all .25s ease; /* Opera */
+		
+		}
+		
+		
+		.imgpreviewcont img:hover{
+			 transform:     scale(1.05);
+			-webkit-transform:   scale(1.05);
+			-o-transform:   scale(1.05);
+			-moz-transform:  scale(1.05);
+			 cursor:move;
+		}
+		.imgshower{
+		    border: 2px solid #333333;
+			border-radius: 15px 15px 15px 15px;
+			height:200px;
+			width:250px;
+			margin-bottom:20px;
+		}
+		.imgshower img{
+			height:199px;
+			border-radius: 15px 15px 15px 15px;
+			border: 1px solid #333333;
+			width:248px;
+			opacity:1 !important;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+    
+   <div class="picAlbumConatiner">
+        <div class="maincontainer">
+			<div class=""></div>
+			<!--START:Header-->
+			<div class="header">
+				<p class="center font32">Photo Album Using HTML5 and CSS3</p>
+			</div>
+			<!--END:Header-->
+			
+			<!--START:Content-->
+			<div class="content">
+				<!--START:GeoLocation-->
+				<div class="GPSSection">
+					<div class="contenthead">
+							<p class=" font24">Your Location</p>
+					</div>
+					<div class="contentsec">
+						<div class="float-left">
+								<p class="center font14">You are now in <span></span></p>
+						</div>
+						<div class="float-left">
+								
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<!--START:GeoLocation-->
+				<!--START:AudioSection-->
+				<div class="AudioSection PadTop30">
+					<div class="contenthead">
+							<p class=" font24">Your Song</p>
+					</div>
+					<div class="contentsec">
+						<div class="float-left lhs">
+								<p class="right font14">Select the Song To be Played in Audio Player</p>
+						</div>
+						<div class="rhs PadLeft40 float-left">
+							<select id="selectaudio">
+								<option selected="selected" value="1">Kalimba</option>
+								<option value="2">Maid with the Flaxen Hair</option>
+								<option value="4">sura-001</option>
+								<option value="5">sura-112</option>
+							</select>
+						</div>
+						<div class="clear"></div>
+						<div class="PadTop20">
+								<div class="lhs float-left">
+									<p class=" right font14">Song Playing now is <span class="strong font18 cursong"></span></p>
+								</div>
+								<div class="rhs  PadLeft40 float-left audioplayer">
+										<audio loop="true" controls="controls">
+										   <source src="" type="audio/mpeg" />
+											Your browser does not support the audio element.
+										</audio>
+								</div>
+								<div class="clear"></div>
+						</div>
+					</div>
+					
+				</div>
+				<!--START:AudioSection-->
+				<!--START:DragDrop-->
+				<div class="DragDrop PadTop30">
+					<div class="contenthead">
+							<p class=" font24">Drag and Drop</p>
+					</div>
+					<div class="contentsec">
+						<div class="float-left ">
+								<p class="right font14">Drag image from the RHS preview pane and drop it in LHS show tile </p>
+						</div>
+						<div class="clear"></div>
+						
+						<div class="PadTop20">
+							<div class="dragdropbox">
+								<div class="leftdragdropbox borderRadius10 float-left">
+									<div class="PadBot5 MarLR20TB10 botborder2pxblack">
+										<p draggable="true" class="center font20 ">Image Show Panel</p>
+									</div>
+									<div class="makecenterHor">
+										<div class="center imgshower displayInlineBlock MarLR20TB10">
+										
+										</div>
+									</div>
+								</div>
+								<div class="">
+									<div class="rightdragdropbox borderRadius10 float-left">
+										<div class="PadBot5 MarLR20TB10 botborder2pxblack">
+											<p class="center font20 ">Preview Images</p>
+										</div>
+										<div class="center imgpreviewcont MarLR20TB10">
+											<img id="img1" draggable="true" src="img/nat1.jpg" alt="gg" class="img" name="actualImage">
+											<img id="img2" draggable="true" src="img/nat2.jpg" alt="gg" class="img" name="actualImage2">
+											<img id="img3" draggable="true" src="img/nat3.jpg" alt="gg" class="img" name="actualImage3">
+											<img id="img4" draggable="true" src="img/nat4.jpg" alt="gg" class="img" name="actualImage4">
+											<img id="img5" draggable="true" src="img/nat5.jpg" alt="gg" class="img" name="actualImage5">
+											<img id="img6" draggable="true" src="img/nat6.jpg" alt="gg" class="img" name="actualImage6">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<!--END:DragDrop-->
+				<!--START:ImageSlider-->
+				<div class="AudioSection PadTop30">
+					<div class="contenthead">
+							<p class=" font24">Image Slider</p>
+					</div>
+					<div class="contentsec">
+						
+						<div class="sliderimageCont rel makecenterHor">
+							<div class="displayInlineBlock float-left PadLeft260">
+								<div class="abs imagemain">
+									<img id="" class="" src=""/>
+								</div>
+								<div class="abs titleSlider">
+									<div class="PadAll30">
+										<p>this is paragraph 1</p>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							
+						</div>
+						<div class="slidermove makecenterHor">
+							<div class="displayInlineBlock">
+								<div class="slideprevnext slideprev float-left">
+									<img id="Sprev" src="img/prev.png" alt="gg" class="sprev disabled" name="next"/>
+								</div>
+								
+									<div style="overflow:hidden;width:966px;height:158px" class="rel float-left slidermoveImgCont center ">
+										<div style="width:1923px;" class="animatediv abs">
+											<img id="SImg1"  src="img/nat1.jpg" alt="gg" class="float-left first simg alwaysfirst" name="actualImage1">
+											<img id="SImg2"  src="img/nat2.jpg" alt="gg" class="float-left  simg" name="actualImage2">
+											<img id="SImg3"  src="img/nat3.jpg" alt="gg" class="float-left  simg" name="actualImage3">
+											<img id="SImg4"  src="img/nat4.jpg" alt="gg" class="float-left  simg" name="actualImage4">
+											<img id="SImg5"  src="img/nat5.jpg" alt="gg" class="float-left  simg" name="actualImage5">
+											<img id="SImg6"  src="img/nat6.jpg" alt="gg" class="float-left  last simg" name="actualImage6">
+											<img id="SImg7"  src="img/nat7.jpg" alt="gg" class="float-left  dns simg" name="actualImage7">
+											<img id="SImg8"  src="img/nat8.jpg" alt="gg" class="float-left  dns simg" name="actualImage8">
+											<img id="SImg9"  src="img/nat9.jpg" alt="gg" class="float-left  dns simg" name="actualImage9">
+											<img id="SImg10" src="img/nat10.jpg" alt="gg" class=" float-left dns simg" name="actualImage10">
+											<img id="SImg11" src="img/nat12.jpg" alt="gg" class=" float-left dns simg" name="actualImage10">
+											<img id="SImg12" src="img/nat11.jpg" alt="gg" class="float-left alwayslost dns simg" name="actualImage11">
+											<span class="clear"></span>
+										</div>
+									</div>
+							
+								<div class="slidenext slideprevnext float-left">
+									<img id="Snext" src="img/next.png" alt="gg" class="snext active" name="next"/>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					<style>
+					.titleSlider{height:100px;background-color:rgba(255,255,255,.71);width:500px;top:430px}
+					.imagemain img{height:500px;width:500px}
+					.sliderimageCont{background-color:rgba(0,0,0,.71);height:250px;margin-bottom:10px;padding:30px 60px;height:500px;}
+					.snext.disabled,.sprev.disabled{opacity:0.5}
+					.slidermoveImgCont img{
+						position:relative;
+						height:150px;width:149px;margin:0px 5px;cursor:pointer;
+						transition:all .25s ease;
+						-moz-transition:all .25s ease; /* Firefox 4 */
+						-webkit-transition:all .25s ease; /* Safari and Chrome */
+						-o-transition:all .25s ease; /* Opera */
+					}
+					.slidermoveImgCont img.first{
+						height:150px;width:150px;cursor:pointer;border:3px solid white;
+						transition:all .25s ease;
+						-moz-transition:all .25s ease; /* Firefox 4 */
+						-webkit-transition:all .25s ease; /* Safari and Chrome */
+						-o-transition:all .25s ease; /* Opera */
+						transform:     scale(1.05);
+						-webkit-transform:   scale(1.05);
+						-o-transform:   scale(1.05);
+						-moz-transform:  scale(1.05);
+					}
+					.slidermove{border: 1px solid #333333;padding:10px;background-color:rgba(0,0,0,.71)}
+					.slideprevnext{padding-top:50px;cursor:pointer}
+					.slidenext{padding-left:10px}
+					.slideprev{padding-right:10px}
+					.slidermoveImgCont img:hover{
+						 transform:     scale(1.05);
+						-webkit-transform:   scale(1.05);
+						-o-transform:   scale(1.05);
+						-moz-transform:  scale(1.05);
+					}
+					</style>
+				</div>
+				<!--END:ImageSlider-->
+			</div>
+			<!--END:Content-->
+			
+			
+			
+			<!--START:Footer-->
+			<div class="footer">
+			
+			</div>
+			<!--END:Footer-->			
+
+		</div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+     <title>Untitled Page</title>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/mystyle.css"></link>
+     <link rel="stylesheet" type="text/css"  href="css/jquery-ui-1.10.0.custom.css"></link>
+	
+     <script src="js/jquery-1.6.2.js" ></script>
+	
+     <script src="js/jquery-ui-1.10.0.custom.js" ></script>
+	  <script>
+		$('#myTabs ul li,#myTabs ul li a').click(function(){
+			console.log('done');
+			$(this).stopImmediatePropagation();
+		});
+	 </script>	
+	 <script>
+		
+		$(fnDocReady);
+		var options={
+						heightStyle:"auto",event: "mouseeeover"
+		}
+		function fnDocReady(){
+			$('#myTabs').tabs(options);
+			$("#date").datepicker({
+				changeMonth:true,changeYear:true
+			});
+			$('.dobImg').click(fnShowCal);
+			$('.next').click(fnShowEduTab);
+			
+		};
+		
+		<!--START: Function to show datepicker if i click the button also-->
+		function fnShowCal(){
+			$("#date").trigger('focus');
+		}
+		<!--END: Function to show datepicker if i click the button also-->
+		
+		<!--START: Function to go to education tab if i click next-->
+		function fnShowEduTab(){
+			console.log("test");
+			$( "#myTabs" ).tabs( "option", "active", 1 );
+		}
+		<!--END: Function to go to education tab if i click next-->
+	
+	
+	</script>
+	<style>
+		.ls,.rs,.content{height:auto;}
+		.bgInteg,body{background-color:#D7FBFC}
+		
+	</style>
+</head>
+
+
+<body>
+    
+   <div class="">
+       <div class="header w100 ">
+            <p class="center">header</p>
+       </div>
+       <div class="bgInteg">
+           <div class="float-left ls w20">
+                <p class="center">I am float left</p>
+           </div>
+           <div class="float-left w60 content">
+				<div class="PadAll30">
+					<!--START: Your Content-->
+						<div id="myTabs">
+								<ul class="" id="" >
+									<li><a href="#t1">Personal</a></li>
+									<li><a href="#t2">Education</a></li>
+									<li><a href="#t3">Summary</a></li>
+								</ul>
+								<!--START:Personal Info-->
+									<div id="t1">
+										<div class="PadAll30">
+										   <form class="" id="" action="">
+												<!--START:FN-->
+												<div class="PadTop20">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">First Name*</label>
+													</div>
+												   <div class="float-left">
+														 <input id="fn" type="text" value=""/>
+												   </div>
+												   <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+													   <div id="errorFirstName" class="PadTop5 error displayNone"><p>Please enter your first name</p></div>
+												    </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:FN-->
+												
+												<!--START:MN-->
+												<div class="PadTop20">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Middle Name</label>
+													</div>
+												   <div class="float-left">
+														 <input id="ln" type="text" value=""/>
+												   </div>
+												   <div class="clear"></div>
+												</div>
+												<!--END:MN-->
+												
+												<!--START:LN-->
+												<div class="PadTop20">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Last Name*</label>
+													</div>
+												   <div class="float-left">
+														 <input id="ln" type="text" value=""/>
+												   </div>
+												   <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+													   <div id="errorLastName" class="PadTop5 error displayNone"><p>Please enter your last name</p></div>
+												    </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:LN-->
+												
+												<!--START:Gender-->
+												<div class="PadTop10">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Gender*</label>
+													</div>
+													<div class="float-left">
+														<input type="radio" value"male" name="gend"/>
+														<label class="labLeftPad " value="">Male</label>
+														<input type="radio" name="gend" value"female"/>
+														<label class="labLeftPad ">Female</label>
+													</div>
+													<div class="clear"></div>
+													 <div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+														<div id="errorGend" class="PadTop5  error displayNone"><p>Please select your gender</p></div>
+												   </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:Gender-->
+												
+												<!--START:DOB-->
+												<div class="PadTop20">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Date Of Birth *</label>
+													</div>
+												   <div class="float-left">
+														<input id="date" type="text" />
+														<img src="img/calender.jpg" height="30px" width="30px" class="dobImg"></img>
+												   </div>
+												    <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+													   <div id="errorDob" class="PadTop5 error displayNone"><p>Please enter your Dob</p></div>
+												    </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:DOB-->
+												
+												<!--START:Phone-->
+												<div class="PadTop20">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Phone Number *</label>
+													</div>
+												   <div class="float-left">
+														 <input id="phone" type="text" value=""/>
+												   </div>
+												   <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+													   <div id="errorPhone" class="PadTop5 error displayNone"><p>Please enter your phone no</p></div>
+												    </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:Phone-->
+												
+												<!--START:Email-->
+												<div class="PadTop10">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Email *</label>
+													</div>
+												   <div class="float-left">
+														 <input id="email" type="text" value=""/>
+												   </div>
+												   <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+														 <div id="errorEmail" class="PadTop5  error displayNone"><p>Please enter your email</p></div>
+												   </div>
+													<div class="clear"></div>
+												   
+												</div>
+												<!--END:Email-->
+												
+												
+												<!--START:Address-->
+												<!--START:Email-->
+												<div class="PadTop10">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">Address *</label>
+													 </div>
+												    <div class="float-left">
+														 <textarea class="" id="address"></textarea>
+												    </div>
+												    <div class="clear"></div>
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+													<div class="float-left">
+														 <div id="errorAddress" class="PadTop5  error displayNone"><p>Please enter your address</p></div>
+												    </div>
+													<div class="clear"></div>
+												</div>
+												<!--END:Email-->
+												
+												<!--END:Address-->
+												
+												
+												<!--START:Next Link-->
+												<div class="PadTop10">
+													<div class="float-left labLeftSec">
+														 <label class="labRightPad right">&nbsp;</label>
+													</div>
+												   <div class="float-right">
+														<a class="next" href="#">Next<a>
+												   </div>
+												   <div class="clear"></div>
+												</div>
+												<!--END:Next Link-->
+												
+												
+												
+											  </form>
+										  </div>
+									  
+									</div>
+								<!--END:Personal Info-->
+								<!--START:Education Info-->
+									<div id="t2">
+									
+									</div>
+								<!--END:Education Info-->
+								<!--START:Summary Info-->
+									<div id="t3">
+									
+									</div>
+								<!--START:Summary Info-->
+						</div>
+					<!--END: Your Content-->
+			  
+			     </div>
+           </div>
+           <div class="float-right rs w20">
+                <p class="center">I am float right</p>
+           </div>
+           <div class="clear"></div>
+       </div>
+       <div class="footer w100">
+            <p class="center">Footer</p>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Drag n Drop</title>
+		<script type="text/javascript" src="/jquery.min.js"></script>
+		<style type="text/css">
+			.preview {
+				width: 120px;
+				height: 90px;
+				margin: 20px 10px 20px 30px;
+			}			
+			#actualImage {
+				width: 250px;
+				height: 200px;				
+				float: left;
+			}
+			
+			#thumbTitle {
+				font-weight: bold;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainWindow">
+			<div id="thumbnails" name="tn"></div><img id="actualImage" src="" alt="gg" class="img" name="actualImage">
+		</div>
+		<script type="text/javascript" charset="utf-8">
+		var currElement = null;
+		$(document).ready(function(){
+			for(var i=1;i<=6;i++){
+				var fileName = 'images/nat' + i + '.JPG';
+				var tag = '<img height="" width="" id="img' + i + '" src="' + fileName + '" class="preview" draggable />';
+				$('#thumbnails').html($('#thumbnails').html() + tag);
+			}
+			
+			
+			var thumbs = document.getElementsByClassName('preview');
+			for(var j=0;j<thumbs.length;j++){
+				thumbs[j].addEventListener('dragstart', function(e){
+
+				}, true);
+			}
+			
+			
+			var pane = document.getElementById('actualImage');
+			pane.addEventListener('dragover', function(e){
+				if (e.preventDefault){ e.preventDefault(); } 
+			}, true);
+			pane.addEventListener('drop', function(e){
+				if (e.preventDefault) e.preventDefault();
+				var src =  e.dataTransfer.getData('text/uri-list');
+				this.src = src;
+			}, true);
+		});
+			
+		</script>
+	</body>
+</html>

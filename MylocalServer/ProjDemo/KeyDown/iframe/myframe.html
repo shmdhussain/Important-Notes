@@ -1,0 +1,62 @@
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+		<head>
+			<!--START: Adding of javaScript library -->
+			<script type="text/javascript" src="/lib/jquery.min.js"></script>
+			<!--END:   Adding of javaScript library-->
+		<script type="text/javascript">
+		jQuery(function(){
+			jQuery(".href").focus(function(e){
+				jQuery(this).keydown(function(e) {
+					console.log("inside keydown");
+					var code = e.keyCode || e.which;
+					if (code == '9') {
+						console.log("inside tab");
+						if(e.shiftKey){
+							console.log("inside shift tab");
+						}
+						else{
+							console.log("inside  no shift tab");
+						}
+					} 
+				});	
+			});	
+		});
+		</script>
+			
+		</head>
+		
+		<body>
+				<div class="">
+			
+			<a href="#" class="href">
+				111
+			</a>
+			<br>
+			<br>
+			<a href="#" class="href">
+				222
+			</a>
+			<br>
+			<br>
+			<a href="#" class="href">
+				333
+			</a>
+			<br>
+			<br>
+			<a href="#" class="href">
+				444
+			</a>
+			<br>
+			<br>
+			<a href="#" class="href">
+				555
+			</a>
+		</div>	
+		
+	
+			
+		</body>
+	</html>
+
