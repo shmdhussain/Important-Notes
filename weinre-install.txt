@@ -74,3 +74,8 @@ weinre --boundHost -all- --httpPort 8082
 netsh int tcp set global autotuninglevel=disabled
 
 http://10.87.136.56:8082/client/#hus
+
+WTN: 4445554035
+qay2002mj4035@att.net
+testing123
+Network rat:yqu735
