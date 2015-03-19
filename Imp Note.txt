@@ -17,3 +17,22 @@ C:\Users\mohamed_hussain01.ITLINFOSYS\AppData\Roaming\Notepad++\plugins\config\Z
 zen_settings.py	
 ------------------------------------------
 
+git checkout -b leftbar
+
+git branch -d leftbar
+
+git commit -m "added notes"
+
+git checkout gh-pages
+
+git merge master
+
+git push
+
+push local branch to remote
+
+git push -u origin local_branch_name
+
+59269302
+Manchester@60
+shmdhussain
