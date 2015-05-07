@@ -1,0 +1,221 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Quality Event</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">		
+	function fnInputNoWS(userinput){
+		userinput = userinput.replace(/^\s+/, '').replace(/\s+$/, '');
+		console.log("user input: "+userinput)
+		return userinput;
+	}
+	
+	$(function(){
+		//To hide other country row
+		$("#objCountryRow").hide();
+		$("#txtOtherCountry").val("");
+		//On change event for Country
+		$("#txtCountry").change(function(e) {
+			//To show Other country row
+			if ($("#txtCountry option:selected").text() == "Others") {
+				$("#objCountryRow").show();
+			} else {
+				//To hide Other country row
+				$("#objCountryRow").hide();
+				$("#txtOtherCountry").val("");
+				
+			}
+	
+		});
+		//Validation before submitting
+		$("#form1")
+				.submit(
+						function(e) {
+							//To get objects for textboxes 
+							var objName = $("#txtName");
+							var objAge = $("#numAge");
+							var ObjPass = $("#txtPass");
+							var objOtherCountry = $("#txtOtherCountry");
+							//To check name field is null or not
+							if (fnInputNoWS(objName.val())!= "") {
+								//To check password field is null or not
+								if (fnInputNoWS(ObjPass.val()) != "") {
+									//To check age filed is number and should be less than 100 
+									if ($.isNumeric(objAge.val())
+											&& objAge.val() < 100 && objAge.val() > 0) {
+										//To check country filed selected or not
+										if (fnInputNoWS($("#txtCountry").val()) != "") {
+										
+											if($("#txtCountry")
+													.val() != "Others"){
+													alert("Form Submitted Successfully");
+												    return true;
+											}
+											else if ($("#txtCountry")
+													.val() == "Others"
+													&& objOtherCountry.val() != "") {
+												alert("Form Submitted Successfully");
+												return true;
+											}
+											
+										}
+									}
+								}
+							}
+							
+							alert("Enter valid data in all rows");
+							return false;
+	
+						});
+		//On blur event to validate/adjust the date 
+		$("#numDobDay").blur(function() {
+			var numDobDay = $("#numDobDay").val();
+			
+			if (!$.isNumeric(numDobDay) || numDobDay > 31 || numDobDay < 1) {
+				alert("Please enter valid date");
+				$("#numDobDay").val("");
+				$("#numDobDay").focus();
+			} else if (numDobDay < 10 ) {
+				$("#numDobDay").val("0" + numDobDay);
+			}
+		});
+		//On blur event to validate/adjust the month 
+		$("#numDobMonth").blur(function() {
+			var numDobMonth = $("#numDobMonth").val();
+			if (!$.isNumeric(numDobMonth) || numDobMonth > 12 || numDobMonth < 1) {
+				alert("Please enter valid month");
+				$("#numDobMonth").val("");
+				$("#numDobMonth").focus();
+			} else if (numDobMonth < 10 ) {
+				$("#numDobMonth").val("0" + numDobMonth);
+			}
+		});
+		//On blur event to validate the year
+		$("#numDobYear").blur(function() {
+			var numDobYear = $("#numDobYear").val();
+			if (!$.isNumeric(numDobYear) || numDobYear.length != 4) {
+				alert("Please enter valid year");
+				$("#numDobYear").val("");
+				$("#numDobYear").focus();
+			}
+	
+		});
+		//On blur event to validate/adjust the date 
+		$("#numJoinDay").blur(function() {
+			var numJoinDay = $("#numJoinDay").val();
+			if (!$.isNumeric(numJoinDay) || numJoinDay > 31 || numJoinDay < 1) {
+				alert("Please enter valid date");
+				$("#numJoinDay").val("");
+				$("#numJoinDay").focus();
+			} else if (numJoinDay < 10) {
+				$("#numJoinDay").val("0" + numJoinDay);
+			}
+		});
+		//On blur event to validate/adjust the month 
+		$("#numJoinMonth").blur(
+				function() {
+					var numJoinMonth = $("#numJoinMonth").val();
+					if (!$.isNumeric(numJoinMonth) || numJoinMonth > 12
+							|| numJoinMonth < 1) {
+						alert("Please enter valid month");
+						$("#numJoinMonth").val("");
+						$("#numJoinMonth").focus();
+					} else if (numJoinMonth < 10 ) {
+						$("#numJoinMonth").val("0" + numJoinMonth);
+					}
+				});
+		//On blur event to validate the year
+		$("#numJoinYear").blur(function() {
+			var numJoinYear = $("#numJoinYear").val();
+			console.log()
+			if (!$.isNumeric(numJoinYear) || numJoinYear.length != 4) {
+				alert("Please enter valid year");
+				$("#numJoinYear").val("");
+				$("#numJoinYear").focus();
+			}
+	
+		});
+		
+		
+		//To validate filee
+		$("#objPhoto").change(function() {
+			var filename = $("#objPhoto").val();
+			// Use a regular expression to trim everything before final dot
+			var extension = filename.replace(/^.*\./, '');
+			console.log(extension);
+			console.log(filename);
+			if (extension != "JPEG" && extension != "JPG" && extension != "jpeg" && extension != "jpg") {
+				alert("Please upload jpeg image only");
+			}
+		});
+	
+	});
+	</script>
+	<style>
+	td {
+		padding-top: 10px;
+	}
+	</style>
+	</head>
+	<body>
+		<form id="form1" action="Welcome.html">
+			<table align="center">
+				<tr>
+					<td colspan="2" align="center"><h2>User Registeration</h2></td>
+				</tr>
+				<tr>
+					<td width="200px">User Name</td>
+					<td><input type="text" name="txtName" id="txtName" /></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="txtPass" id="txtPass" /></td>
+				</tr>
+	
+				<tr>
+					<td>Age</td>
+					<td><input type="text" name="numAge" id="numAge" /></td>
+				</tr>
+				<tr>
+					<td>Date of Birth</td>
+					<td>DD<input type="text" name="numDobDay" id="numDobDay"
+						size="1" maxlength="2"/>-MM<input type="text" name="numDobMonth"
+						id="numDobMonth" size="1" maxlength="2"/>-YYYY<input type="text"
+						name="numDobYear" id="numDobYear" size="3" maxlength="4"/></td>
+				</tr>
+				<tr>
+					<td>Country</td>
+					<td><select id="txtCountry" name="txtCountry">
+							<option value="">Select</option>
+							<option value="India">India</option>
+							<option value="China">China</option>
+							<option value="Russia">Russia</option>
+							<option value="Others">Others</option>
+					</select></td>
+				</tr>
+				<tr id="objCountryRow">
+					<td>Enter Country Name</td>
+					<td><input type="text" name="txtOtherCountry"
+						id="txtOtherCountry" /></td>
+				</tr>
+	
+				<tr>
+					<td>Joining Date</td>
+					<td>DD<input type="text" name="numJoinDay" id="numJoinDay"
+						size="1" maxlength="2"/>-MM<input type="text" name="numJoinMonth"
+						id="numJoinMonth" size="1" maxlength="2"/>-YYYY<input type="text"
+						name="numJoinYear" id="numJoinYear" size="3" maxlength="4"/></td>
+				</tr>
+				<tr>
+					<td>Upload Photo</td>
+					<td><input type="file" name="objPhoto" id="objPhoto" size="1" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit"
+						name="submit" value="Register"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	</html>
