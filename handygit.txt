@@ -1,0 +1,33 @@
+index.html
+app.js
+configuration.js.LOCAL
+loginCtrl.js
+myAttCtrl.js
+cookieHandlerService.js
+
+json_proxy.conf.json --- > Change Port or see the port number here
+
+node c:\Users\mohamed_hussain01.ITLINFOSYS\AppData\Roaming\npm\node_modules\json-proxy\server.js json-proxy -c config\json_proxy.conf.json
+
+git update-index --assume-unchanged -- app/index.html
+git update-index --assume-unchanged -- app/js/app.js 
+git update-index --assume-unchanged -- app/js/configuration/configuration.js.LOCAL 
+git update-index --assume-unchanged -- app/js/controllers/login/loginCtrl.js 
+git update-index --assume-unchanged -- app/js/controllers/myAttCtrl.js 
+git update-index --assume-unchanged -- app/js/services/global/cookieHandlerService.js 
+git update-index --assume-unchanged -- config/json_proxy.conf.json
+git update-index --assume-unchanged -- app\js\services\usage\unbilledUsageWirelessService.js
+
+
+git update-index --no-assume-unchanged -- app/js/services/usage/unbilledUsageWirelessService.js
+
+
+git update-index --no-assume-unchanged -- file3.txt
+
+git ls-files | tr '\n' ' ' | xargs git update-index --assume-unchanged
+
+git ls-files -z | xargs -0 git update-index --assume-unchanged
+git ls-files -z | xargs -0 git update-index --no-assume-unchanged
+
+git --version  Check git version
+

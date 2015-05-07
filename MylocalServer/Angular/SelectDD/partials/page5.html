@@ -1,0 +1,19 @@
+	<div ng-controller="Page5Ctrl">
+			app
+			<select ng-init="myOptionSub='null'" ng-change="populateModule()" ng-model="myOptionSub">
+			   <option style="display:none" value="null">select a app</option>
+			   <option ng-repeat="subjectobj in application_list" value="{{subjectobj}}">{{subjectobj}}</option>
+			</select>
+			<div>subject model: {{myOptionSub}}</div>
+			
+			module
+			<select ng-init="myOptionMod='null'"  ng-model="myOptionMod">
+			   <option style="display:none" value="null">select a module</option>
+			   <option ng-repeat="modobj in mod_list" value="{{modobj}}">{{modobj}}</option>
+			</select>
+			<div>subject model: {{myOptionMod}}</div>
+			
+			
+			
+			
+	</div>

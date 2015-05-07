@@ -1,0 +1,37 @@
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+		<head>
+			<!--START: Adding of javaScript library -->
+			<script type="text/javascript" src="/lib/jquery.min.js"></script>
+			<!--END:   Adding of javaScript library-->
+			<style>
+				.wrap{position:relative;top:0px;left:0px}
+			</style>
+			<script type="text/javascript">
+				var count=0;
+				function mainPageDisplayCount(){
+					jQuery('.countDisMainPage').html(count);
+				}
+			</script>
+			
+		</head>
+		
+		<body>
+			<a href="#" onclick="mainPageDisplayCount()">click to display count below</a>
+			<p class="countDisMainPage">
+				Cont Value
+			</p>
+			<iframe src="myframe.html"></iframe>
+			<!--START: Remove this Touch event, then code will work, in the page if thee is any touch events is being captured, 
+						and you are having the 
+			-->
+			<script>
+			function onTouch( e ){};
+			document.addEventListener( 'touchstart', onTouch, false );
+			</script>
+		</body>
+		
+		
+	</html>
+

@@ -1,0 +1,82 @@
+
+
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+		<head>
+			<!--START: Adding of javaScript library -->
+			<script type="text/javascript" src="/lib/jquery.min.js"></script>
+			<!--END:   Adding of javaScript library-->
+			<style>
+				.wrap{position:relative;top:0px;left:0px}
+			</style>
+			<script type="text/javascript">
+				count=1;
+				function iframeDisplayCount(){
+					jQuery('.countDisiFrame').html(count);
+				}
+			</script>
+			
+		</head>
+		
+		<body>
+			<a href="#" onclick="iframeDisplayCount()">click to display count below</a>
+			<p class="countDisiFrame">
+				Count Value
+			</p>
+			<div class="wrap">
+			
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<p>Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+				<form method="post">
+				<div><input type="text" name="a" maxlength="25" size="35" value="" onblur="myblur();" class="ac" id="an"> </div>
+				<div><input type="text" name="b" maxlength="25" size="35" value="" onblur="myblur();" class="bc" id="bn">  </div>
+				<div><input type="text" name="c" maxlength="25" size="35" value="" onblur="myblur();" class="cc" id="cn">  </div>
+				<div><input type="text" name="d" maxlength="25" size="35" value="" onblur="myblur();" class="dc" id="dn">  </div>
+				</form>
+			</div>	
+			<script>
+			function myblur(){
+			
+			  console.log("a: "+jQuery('#an').val());
+			  console.log("b: "+jQuery('#bn').val());
+			  console.log("c: "+jQuery('#cn').val());
+			  console.log("d: "+jQuery('#dn').val());
+			 // jQuery(".wrap").animate({ top: "+=400" });
+			  //jQuery(".wrap").animate({ left: "+=400" });
+
+			}
+			</script>
+			
+		</body>
+	</html>
+

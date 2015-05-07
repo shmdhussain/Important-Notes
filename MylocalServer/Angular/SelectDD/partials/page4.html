@@ -1,0 +1,19 @@
+	<div ng-controller="Page4Ctrl">
+			<select ng-init="myOptionSub='null'" ng-model="myOptionSub">
+			   <option style="display:none" value="null">select a type</option>
+			   <option ng-repeat="subjectobj in subject.subarray" value="{{subjectobj.code}}">{{subjectobj.name}}</option>
+			</select>
+			<div>subject model: {{myOptionSub}}</div>
+			<!-- <div>subject model: {{exam[myOptionSub]}}</div>
+
+			<select ng-model="myOptionExam" ng-options="examobj.examcode as examobj.name for examobj in exam[myOptionSub]">
+			   
+			</select>
+
+
+			<div>exam model: {{myOptionExam}}</div> -->
+			<select  ng-init="myOptionExam='null'" ng-model="myOptionExam" ng-options="examobj.examcode as examobj.name for examobj in exam[myOptionSub]">
+				 <option style="display:none" value="">select a type</option>
+			</select>
+			<div>exam model: {{myOptionExam}}</div>
+	</div>

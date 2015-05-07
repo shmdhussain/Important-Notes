@@ -1,0 +1,26 @@
+	<!DOCTYPE html>
+	<html ng-app="myapp">
+	<head>
+	<script src="/lib/angular.js"></script>
+	<script src="myscript.js"></script>
+	<meta charset=utf-8 />
+	<title>Demo</title>
+	  
+	  </head>
+	  
+	<body ng-controller="MyApp">
+		<!--It will fetch data from Mongo Using REST service through 
+		the angular factory ConsumptionEngineRESTService-->
+		<button type="button" ng-click="getAllData()">Get Data</button>
+		<h1>My Demo With filter</h1>
+		<div ng-repeat="Maindata in myFilteredKey" class="">
+			<h2>{{Maindata}}</h2>
+			<div ng-repeat="item in data | filter:{'key':Maindata}">
+				<p>My key is {{item.key}}</p>
+				<p>My val is {{item.value}}</p>
+			</div>
+		
+		</div>
+		
+	</body>
+	</html>

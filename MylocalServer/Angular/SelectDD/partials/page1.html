@@ -1,0 +1,19 @@
+<div ng-controller="Page1Ctrl" >
+	<select ng-change="changesecond()"
+		ng-model="myOptionSub"
+		ng-options="subjectobj.code as subjectobj.name for subjectobj in subject.subarray">
+	   
+	</select>
+	<div>subject model: {{myOptionSub}}</div>
+            <div>subject model: {{exam.myOptionSub}}</div>
+
+	<select
+		ng-model="myOptionExam"
+		ng-options="examobj.examcode as examobj.name for examobj in exam.myOptionSub">
+	   
+	</select>
+
+
+	<div>exam model: {{myOptionExam}}</div>
+	
+</div>
