@@ -31,3 +31,6 @@ git ls-files -z | xargs -0 git update-index --no-assume-unchanged
 
 git --version  Check git version
 
+To start the gitbash from the folder u are in, do it in cmd window
+
+start "" "%SYSTEMDRIVE%\Program Files (x86)\Git\bin\sh.exe" --login
