@@ -36,3 +36,13 @@ git push -u origin local_branch_name
 59269302
 Manchester@60
 shmdhussain
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+https://github.com/google/ios-webkit-debug-proxy
+
+http://intranet.att.com/isdcs/sandboxRS/Build/global/assets3.2.0/js/global-sandbox.js
+
+http://intranet.att.com/isdcs/sandboxRS/Build/global/assets3.2.0/css/sandbox-styles.min.css
+
+
