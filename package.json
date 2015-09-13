@@ -1,0 +1,8 @@
+{
+  "name": "MyLocalServer",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "~0.10.1"
+  }
+}
